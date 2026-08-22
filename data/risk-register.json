@@ -1,0 +1,8 @@
+[
+{"investment":"aguilas","category":"Legal","risk":"Cambio de uso inviable","probability":0.30,"impact":30000,"expectedLoss":9000,"mitigation":"Informe urbanístico y técnico previo","residualRisk":"Medio","assumption":true},
+{"investment":"aguilas","category":"Obra","risk":"Sobrecoste de conversión","probability":0.35,"impact":10000,"expectedLoss":3500,"mitigation":"Proyecto y presupuesto cerrado","residualRisk":"Medio","assumption":true},
+{"investment":"reus","category":"Mercado","risk":"Ocupación inferior al 70 %","probability":0.25,"impact":18000,"expectedLoss":4500,"mitigation":"Precomercialización y oferta competidora","residualRisk":"Medio","assumption":true},
+{"investment":"l3h2","category":"Operación","risk":"Vehículo inutilizado tres meses","probability":0.20,"impact":9000,"expectedLoss":1800,"mitigation":"Seguro, reserva y mantenimiento","residualRisk":"Medio","assumption":true},
+{"investment":"campers","category":"Operación","risk":"Reparación extraordinaria","probability":0.30,"impact":7500,"expectedLoss":2250,"mitigation":"Inspección, garantía y reserva","residualRisk":"Medio","assumption":true},
+{"investment":"tinamus","category":"Obra/financiación","risk":"Reforma +20k y tipos +2 puntos","probability":0.25,"impact":35000,"expectedLoss":8750,"mitigation":"Condición suspensiva, precio cerrado y tipo fijo","residualRisk":"Alto","assumption":true}
+]

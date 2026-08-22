@@ -1,7 +1,7 @@
 {
   "summary": [
     {
-      "name": "Águilas 35k → vivienda",
+      "name": "Águilas - local a vivienda",
       "capex": 55483.5,
       "cash_y1": -900.0,
       "cash_stable": 5364.0,
@@ -16,7 +16,7 @@
       "rank": 1
     },
     {
-      "name": "Reus 22k → 11 trasteros",
+      "name": "Reus - alquiler de trasteros",
       "capex": 45000.0,
       "cash_y1": 1920.0,
       "cash_stable": 5047.2,
@@ -31,7 +31,7 @@
       "rank": 2
     },
     {
-      "name": "2 L3H2 alquiler Madrid",
+      "name": "2 furgonetas para carsharing",
       "capex": 45000.0,
       "cash_y1": 10720.0,
       "cash_stable": 10720.0,
@@ -46,7 +46,7 @@
       "rank": 3
     },
     {
-      "name": "Tinamus → vivienda",
+      "name": "Madrid - local a vivienda",
       "capex": 144400.0,
       "cash_y1": -1800.0,
       "cash_stable": 8190.0,

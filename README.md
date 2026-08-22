@@ -75,3 +75,7 @@ npm run serve
 ### Rutas y GitHub Pages
 
 Los recursos se resuelven en `assets/js/common.js` desde `import.meta.url`. Por ello la misma versión funciona en la raíz local y en el subpath `/comparador-inversiones/`, sin hardcodear el nombre del repositorio. El loader central carga y valida JSON desde `data/`; `projection-engine.js` produce las series financieras y `report-engine.js` comparte ranking, recomendación y métricas entre resumen, analítica e informe. El workflow prueba primero el sitio y publica HTML, `assets/`, `data/`, `inversiones/` y `.nojekyll` como artefacto de Pages.
+
+## Nombres y presupuestos de arranque
+
+Los nombres visibles se centralizan en `data/investments.json` (`displayName`, `shortName` y `assetName`) sin cambiar los IDs ni las URLs. Los presupuestos LOW/BASE/HIGH, fases, timeline, checklist y pasos operativos de las cinco estrategias se mantienen en `data/startup-budgets.json`; `assets/js/startup-plan.js` los presenta de forma común en cada ficha. Purchase price, all-in cost, project cost y maximum cash requirement no son conceptos intercambiables.

@@ -4,7 +4,7 @@ import {spawn} from 'node:child_process';
 import {chromium} from 'playwright';
 
 const pages={
-  'projections.html':{heading:/Investment Projection Center/i,charts:10,content:['Águilas','Reus','L3H2','Campers','Tinamus']},
+  'projections.html':{heading:/Investment Projection Center/i,charts:10,content:['Águilas - local a vivienda','Reus - alquiler de trasteros','2 furgonetas para carsharing','2 camper vans para alquiler','Madrid - local a vivienda']},
   'executive-summary.html':{heading:/RESUMEN EJECUTIVO/i,charts:5,content:['TIR','VAN','MOIC','Confianza']},
   'analytics.html':{heading:/Analytics Center/i,charts:6,content:['Return Analytics','Cash Flow Analytics','Risk Analytics']},
   'data-quality.html':{heading:/Data Quality Center/i,charts:0,content:['VERIFIED','MARKET OBSERVED','UNKNOWN','Sensibilidad']},

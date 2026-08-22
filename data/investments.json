@@ -1,11 +1,128 @@
 {
- "capital":45000,
- "investments":[
-  {"id":"aguilas","name":"Águilas · local a vivienda","type":"Inmobiliario","risk":6,"passivity":8,"liquidity":5,"effort":3,"legalRisk":9,"operatingRisk":3,"scalability":4,"scores":{"cash":6,"residual":9,"inflation":9,"finance":6,"exit":6}},
-  {"id":"reus","name":"Reus · 11 trasteros","type":"Self-storage","risk":5,"passivity":8,"liquidity":4,"effort":3,"legalRisk":6,"operatingRisk":4,"scalability":7,"scores":{"cash":8,"residual":7,"inflation":8,"finance":5,"exit":5}},
-  {"id":"l3h2","name":"Madrid · 2 L3H2","type":"Movilidad","risk":8,"passivity":3,"liquidity":8,"effort":8,"legalRisk":4,"operatingRisk":9,"scalability":8,"scores":{"cash":9,"residual":3,"inflation":5,"finance":7,"exit":8}},
-  {"id":"campers","name":"2 campers · hub Madrid","type":"Hospitality","risk":9,"passivity":2,"liquidity":6,"effort":9,"legalRisk":6,"operatingRisk":10,"scalability":7,"scores":{"cash":8,"residual":5,"inflation":5,"finance":6,"exit":7}},
-  {"id":"tinamus","name":"Tinamus 25 · vivienda","type":"Inmobiliario","risk":8,"passivity":8,"liquidity":6,"effort":4,"legalRisk":10,"operatingRisk":3,"scalability":3,"scores":{"cash":5,"residual":10,"inflation":9,"finance":7,"exit":7}},
-  {"id":"local","name":"Local comercial genérico","type":"Inmobiliario","risk":null,"passivity":null,"liquidity":null,"effort":null,"legalRisk":null,"operatingRisk":null,"scalability":null,"scores":{}}
- ]
+  "capital": 45000,
+  "investments": [
+    {
+      "id": "aguilas",
+      "name": "Águilas - local a vivienda",
+      "type": "Inmobiliario",
+      "risk": 6,
+      "passivity": 8,
+      "liquidity": 5,
+      "effort": 3,
+      "legalRisk": 9,
+      "operatingRisk": 3,
+      "scalability": 4,
+      "scores": {
+        "cash": 6,
+        "residual": 9,
+        "inflation": 9,
+        "finance": 6,
+        "exit": 6
+      },
+      "shortName": "Águilas local→vivienda",
+      "assetName": "Local comercial de ~60 m² en el centro de Águilas",
+      "displayName": "Águilas - local a vivienda"
+    },
+    {
+      "id": "reus",
+      "name": "Reus - alquiler de trasteros",
+      "type": "Self-storage",
+      "risk": 5,
+      "passivity": 8,
+      "liquidity": 4,
+      "effort": 3,
+      "legalRisk": 6,
+      "operatingRisk": 4,
+      "scalability": 7,
+      "scores": {
+        "cash": 8,
+        "residual": 7,
+        "inflation": 8,
+        "finance": 5,
+        "exit": 5
+      },
+      "shortName": "Reus trasteros",
+      "assetName": "Local de 66 m² para 11 trasteros",
+      "displayName": "Reus - alquiler de trasteros"
+    },
+    {
+      "id": "l3h2",
+      "name": "2 furgonetas para carsharing",
+      "type": "Movilidad",
+      "risk": 8,
+      "passivity": 3,
+      "liquidity": 8,
+      "effort": 8,
+      "legalRisk": 4,
+      "operatingRisk": 9,
+      "scalability": 8,
+      "scores": {
+        "cash": 9,
+        "residual": 3,
+        "inflation": 5,
+        "finance": 7,
+        "exit": 8
+      },
+      "shortName": "2 furgonetas",
+      "assetName": "Dos furgonetas L3H2",
+      "displayName": "2 furgonetas para carsharing"
+    },
+    {
+      "id": "campers",
+      "name": "2 camper vans para alquiler",
+      "type": "Hospitality",
+      "risk": 9,
+      "passivity": 2,
+      "liquidity": 6,
+      "effort": 9,
+      "legalRisk": 6,
+      "operatingRisk": 10,
+      "scalability": 7,
+      "scores": {
+        "cash": 8,
+        "residual": 5,
+        "inflation": 5,
+        "finance": 6,
+        "exit": 7
+      },
+      "shortName": "2 campers",
+      "assetName": "Dos vehículos camper",
+      "displayName": "2 camper vans para alquiler"
+    },
+    {
+      "id": "tinamus",
+      "name": "Madrid - local a vivienda",
+      "type": "Inmobiliario",
+      "risk": 8,
+      "passivity": 8,
+      "liquidity": 6,
+      "effort": 4,
+      "legalRisk": 10,
+      "operatingRisk": 3,
+      "scalability": 3,
+      "scores": {
+        "cash": 5,
+        "residual": 10,
+        "inflation": 9,
+        "finance": 7,
+        "exit": 7
+      },
+      "shortName": "Madrid local→vivienda",
+      "assetName": "Tinamus 25",
+      "displayName": "Madrid - local a vivienda"
+    },
+    {
+      "id": "local",
+      "name": "Local comercial genérico",
+      "type": "Inmobiliario",
+      "risk": null,
+      "passivity": null,
+      "liquidity": null,
+      "effort": null,
+      "legalRisk": null,
+      "operatingRisk": null,
+      "scalability": null,
+      "scores": {}
+    }
+  ]
 }

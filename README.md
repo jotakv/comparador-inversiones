@@ -1,6 +1,12 @@
-# Investment Decision Lab V2
+# Investment Decision Lab V3
 
 Comparador estático, auditable y responsive de seis alternativas de inversión a diez años. Separa el coste total del proyecto, equity, deuda, circulante, caja y patrimonio; no confunde una estimación con un hecho.
+
+## Cómo usar Decision Lab
+
+Abra `decision-lab.html`, elija un perfil y cambie el benchmark y el valor de su hora. El ranking normaliza las métricas a 0–10, aplica pesos que se normalizan al 100 % y etiqueta diferencias inferiores al 5 % como empate técnico. Use `compare.html` para el cara a cara, `mi-decision.html` para límites obligatorios y `financing.html` para deuda y DSCR.
+
+Los datos se actualizan únicamente en `data/model-assumptions.json`, `data/investments.json` y `data/risk-register.json`. Las recomendaciones se derivan del motor; no se escriben ganadores fijos en HTML. Las probabilidades de riesgo están marcadas como supuestos y el resultado por defecto es **PRE-TAX**.
 
 ## Desarrollo local
 
@@ -43,7 +49,7 @@ configuración inicial y resolución de problemas.
 - `data/investments.json`: catálogo y evaluación multicriterio.
 - `data/market-data.json`, `*-listings.json`, `camperization-quotes.json`: muestras de mercado separadas del modelo.
 - `data/platforms.json` y `data/sources.json`: trazabilidad y asuntos pendientes de confirmación.
-- `assets/js/finance.js`: fórmulas puras; `app.js` y `investment.js`: presentación.
+- `assets/js/finance.js`: fórmulas puras; `assets/js/decision-engine.js`: normalización, perfiles, ranking y regret; los demás módulos presentan resultados.
 - `inversiones/`: una ficha por alternativa; `docs/`: auditoría e informe.
 
 ## Actualizar datos o añadir una inversión

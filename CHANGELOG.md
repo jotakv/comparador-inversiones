@@ -24,3 +24,9 @@
 - Corrected annual ROI/MOIC so acquisition CAPEX is not subtracted twice.
 - `projectCost` now includes deferred conversion works/capital calls exactly once across detail and comparison views.
 - Severe stress now applies the documented six-month revenue delay, in addition to revenue, OPEX and CAPEX shocks.
+# V3 — 2026-08-22
+
+- Añadido Decision Lab, scorecard normalizado, perfiles, benchmark pasivo y coste del tiempo.
+- Añadidos comparador head-to-head, restricciones personales, Financing Lab y risk register.
+- Añadidos expected value, capital at risk, minimax regret, fichas imprimibles y siete informes V3.
+- Centralizada la nueva lógica en `decision-engine.js` y ampliados los tests financieros reproducibles.

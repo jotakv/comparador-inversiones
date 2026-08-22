@@ -1,4 +1,4 @@
-import test from'node:test';import assert from'node:assert/strict';import{roi,irr,npv,reusRevenue,model}from'../assets/js/finance.js';import assumptions from'../data/model-assumptions.json' with {type:'json'};
+import test from'node:test';import assert from'node:assert/strict';import{roi,irr,npv,reusRevenue,model,moic,cagr,cashOnCash,dscr,expectedValue,normalize,weightedScore,sensitivity,seededRandom}from'../assets/js/finance.js';import assumptions from'../data/model-assumptions.json' with {type:'json'};
 test('Reus 11 × 60 × 12 × 90% = 7,128',()=>assert.equal(reusRevenue(11,60,.9),7128));
 test('ROI uses total value less investment',()=>assert.equal(roi(250,100),1.5));
 test('IRR and NPV reconcile',()=>{const flows=[-100,60,60];const r=irr(flows);assert.ok(Math.abs(npv(r,flows))<.01);assert.ok(r>.12&&r<.14)});
@@ -10,3 +10,9 @@ test('year-zero ROI does not double subtract acquisition',()=>{const m=model(ass
 test('severe stress applies its six-month revenue delay',()=>{const base=model(assumptions.l3h2);const severe=model(assumptions.l3h2,'base',{revenue:.7,opex:1.25,capex:1.2,delayMonths:6});assert.equal(severe.years[1].income,base.years[1].income*.7*.5)});
 test('camper model has exactly two units',()=>assert.equal(assumptions.campers.unitCount,2));
 test('L3H2 model has exactly two units',()=>assert.equal(assumptions.l3h2.unitCount,2));
+test('V3 ratios are auditable',()=>{assert.equal(moic(250,100),2.5);assert.equal(cashOnCash(10,100),.1);assert.equal(dscr(150,100),1.5);assert.ok(Math.abs(cagr(100,200,10)-.071773)<1e-5)});
+test('expected value normalizes probabilities',()=>assert.equal(expectedValue([0,100,200],[25,50,25]),100));
+test('normalization supports inverse and technical ties',()=>{assert.equal(normalize(10,0,10),10);assert.equal(normalize(10,0,10,{inverse:true}),0);assert.equal(normalize(100,98,100),5)});
+test('weighted score normalizes weights',()=>assert.equal(weightedScore({return:10,risk:0},{return:25,risk:25}),5));
+test('sensitivity identifies largest variable',()=>{const s=sensitivity(0,{price:100,cost:50},x=>x.price-x.cost);assert.equal(s[0].key,'price')});
+test('seeded Monte Carlo random is reproducible',()=>{const a=seededRandom(42),b=seededRandom(42);assert.deepEqual([a(),a(),a()],[b(),b(),b()])});

@@ -14,6 +14,8 @@
 | Ranking hardcodeado | Conclusión no responde a inputs | Rankings calculados y perfil multicriterio |
 | Cambio de uso tratado en escenario base sin puerta binaria | Riesgo de pérdida severa | Etiqueta pendiente y NO-GO condicionado a informe favorable |
 | Residual no tenía test explícito | Riesgo de doble contabilización | Motor añade residual una sola vez al flujo terminal |
+| ROI anual restaba dos veces el CAPEX inicial y el dashboard omitía CAPEX diferido al estimar financiación | Distorsionaba retorno intermedio y gap de capital | Retorno reconciliado con inversión acumulada; `projectCost` incluye cada capital call una vez |
+| Stress severo declaraba seis meses de retraso pero no lo calculaba | Downside excesivamente favorable | Primer año con ingresos se reduce proporcionalmente seis meses |
 
 ## Conservación
 

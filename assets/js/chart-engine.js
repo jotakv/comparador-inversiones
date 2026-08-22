@@ -1,0 +1,2 @@
+import {lineChart} from './charts.js';import {metricSeries} from './projection-engine.js';import {formatPercent} from './ui.js';
+export function projectionChart(set,metric,normalized=false){const format=normalized||['roi','moic','ltv','dscr'].includes(metric)?v=>['roi','ltv'].includes(metric)?formatPercent(v):v.toFixed(2):undefined;return lineChart(metricSeries(set,metric,normalized),format?{format}:{})}

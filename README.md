@@ -2,14 +2,40 @@
 
 Comparador estático, auditable y responsive de seis alternativas de inversión a diez años. Separa el coste total del proyecto, equity, deuda, circulante, caja y patrimonio; no confunde una estimación con un hecho.
 
-## Ejecutar y comprobar
+## Desarrollo local
 
 ```bash
 python3 -m http.server 8000
-npm test
 ```
 
 Abra `http://localhost:8000`. Servir por HTTP es necesario porque la aplicación carga JSON con `fetch`.
+
+En Windows también puede usar `python -m http.server 8000`.
+
+## Tests
+
+En otra terminal, ejecute:
+
+```bash
+npm test
+```
+
+## GitHub Pages
+
+### Producción
+
+La aplicación está preparada para publicarse como Project Pages en
+`https://<usuario>.github.io/<repositorio>/`, sin fijar el usuario ni el nombre
+del repositorio en el código. Los recursos estáticos se resuelven dentro del
+subdirectorio de la aplicación.
+
+### Despliegue
+
+Cada `push` a `main` inicia GitHub Actions: instala las herramientas de test,
+ejecuta `npm test`, prepara únicamente el sitio público y lo despliega con las
+acciones oficiales de GitHub Pages. Consulte
+[`docs/github-pages-deployment.md`](docs/github-pages-deployment.md) para la
+configuración inicial y resolución de problemas.
 
 ## Arquitectura
 

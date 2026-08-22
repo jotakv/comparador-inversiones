@@ -3,10 +3,10 @@ import{appUrl}from'./common.js';
 export const INVESTMENT_COLORS={aguilas:'var(--aguilas)',reus:'var(--reus)',l3h2:'var(--l3h2)',campers:'var(--campers)',tinamus:'var(--tinamus)',local:'var(--local)'};
 export const COLOR_HEX={aguilas:'#2f6fda',reus:'#16805e',l3h2:'#d17a00',campers:'#a94366',tinamus:'#7555a5',local:'#687386'};
 export const metricHelp={irr:'Rentabilidad anualizada implícita que hace que el VAN sea cero. Más alta es favorable, pero no incorpora por sí sola el riesgo.',roi:'Ganancia total respecto al capital invertido. No es una tasa anual.',npv:'Valor actual neto de los flujos descontados al 8 %. Positivo indica creación de valor bajo esa tasa.',moic:'Euros recuperados por cada euro invertido. No considera cuándo se cobran.',payback:'Tiempo hasta recuperar el desembolso mediante caja. Menor suele ser mejor.',residual:'Valor estimado del activo al final del horizonte. No es caja hasta vender.',risk:'Índice interno 1–10 de exposición. Menor es favorable.',passivity:'Índice interno de baja dedicación operativa. Mayor es más pasivo.'};
-export const formatCurrency=n=>Number.isFinite(n)?new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n):'N/A';
-export const formatCompactCurrency=n=>Number.isFinite(n)?`${n<0?'−':''}€${Math.abs(n)>=1e6?(Math.abs(n)/1e6).toFixed(1)+'M':Math.abs(n)>=1e3?Math.round(Math.abs(n)/1e3)+'k':Math.round(Math.abs(n))}`:'N/A';
-export const formatPercent=n=>Number.isFinite(n)?new Intl.NumberFormat('es-ES',{style:'percent',minimumFractionDigits:1,maximumFractionDigits:1}).format(n):'N/A';
-export const formatMultiple=n=>Number.isFinite(n)?`${n.toFixed(2)}×`:'N/A';
+export const formatCurrency=n=>Number.isFinite(n)?new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n):'N/D';
+export const formatCompactCurrency=n=>Number.isFinite(n)?`${n<0?'−':''}€${Math.abs(n)>=1e6?(Math.abs(n)/1e6).toFixed(1)+'M':Math.abs(n)>=1e3?Math.round(Math.abs(n)/1e3)+'k':Math.round(Math.abs(n))}`:'N/D';
+export const formatPercent=n=>Number.isFinite(n)?new Intl.NumberFormat('es-ES',{style:'percent',minimumFractionDigits:1,maximumFractionDigits:1}).format(n):'N/D';
+export const formatMultiple=n=>Number.isFinite(n)?`${n.toFixed(2)}×`:'N/D';
 export const formatYears=n=>Number.isFinite(n)?`${n.toFixed(1)} años`:'>10 años';
 export const tooltip=(key)=>`<button class="help" type="button" aria-label="Ayuda: ${key}" title="${metricHelp[key]||key}">?</button>`;
 export function kpiCard({label,value,context='',tone='',icon='◆',help}){return`<article class="kpi ${tone}"><span class="kpi-icon" aria-hidden="true">${icon}</span><div class="kpi-label">${label} ${help?tooltip(help):''}</div><div class="kpi-value">${value}</div><div class="kpi-context">${context}</div></article>`}

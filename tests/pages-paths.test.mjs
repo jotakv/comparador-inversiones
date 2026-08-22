@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const publicHtml = [
-  'index.html', 'escenarios.html', 'riesgos.html', 'metodologia.html',
+  'index.html', 'projections.html', 'executive-summary.html', 'analytics.html', 'data-quality.html', 'report.html', 'decision-lab.html', 'compare.html', 'escenarios.html', 'riesgos.html', 'metodologia.html',
   'fuentes.html', 'glosario.html', 'inversiones/aguilas.html',
   'inversiones/reus-trasteros.html', 'inversiones/l3h2-madrid.html',
   'inversiones/campers.html', 'inversiones/tinamus.html',
@@ -78,5 +78,5 @@ test('all published datasets are valid JSON', async () => {
 test('resource resolver derives the Project Pages base from its module URL', async () => {
   const source = await readFile(join(root, 'assets/js/common.js'), 'utf8');
   assert.match(source, /new URL\('\.\.\/\.\.\/',import\.meta\.url\)/);
-  assert.match(source, /fetch\(appUrl\(path\)\)/);
+  assert.match(source, /url=appUrl\(path\),response=await fetch\(url\)/);
 });

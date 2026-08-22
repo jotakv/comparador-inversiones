@@ -59,3 +59,19 @@ Actualice primero las observaciones fechadas en `data/`, manteniendo URL, estado
 ## Límites
 
 Es una herramienta pre-fiscal de decisión, no una tasación ni asesoramiento. Precios de anuncios no son precios de cierre. Comisiones, seguro, IVA, licencias y cambios de uso requieren confirmación escrita antes de comprometer capital.
+
+## Ejecución y pruebas de V4
+
+La aplicación es estática y debe servirse por HTTP (no mediante `file://`):
+
+```bash
+npm ci
+npm run serve
+# http://localhost:8000/
+```
+
+`npm test` valida el modelo, los JSON, las rutas y las series. `npm run test:browser` abre las cinco vistas V4 con Playwright, falla ante errores de consola o de red y comprueba contenido y SVG visibles. Para instalar Chromium por primera vez: `npx playwright install --with-deps chromium`.
+
+### Rutas y GitHub Pages
+
+Los recursos se resuelven en `assets/js/common.js` desde `import.meta.url`. Por ello la misma versión funciona en la raíz local y en el subpath `/comparador-inversiones/`, sin hardcodear el nombre del repositorio. El loader central carga y valida JSON desde `data/`; `projection-engine.js` produce las series financieras y `report-engine.js` comparte ranking, recomendación y métricas entre resumen, analítica e informe. El workflow prueba primero el sitio y publica HTML, `assets/`, `data/`, `inversiones/` y `.nojekyll` como artefacto de Pages.

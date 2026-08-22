@@ -1,0 +1,12 @@
+node_modules/
+
+# Generated distribution and local artifacts
+*.zip
+/artifacts/
+/exports/
+/generated/
+/tmp/
+/temp/
+
+# Local visual QA output (not required by the static application)
+/docs/screenshots/v4-fix/

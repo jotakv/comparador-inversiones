@@ -2,7 +2,7 @@ import{model}from'./finance.js';
 export function buildResults(catalog,assumptions,scenario='base'){
   return catalog.investments.filter(i=>i.id!=='local').map(investment=>{
     const metrics=model(assumptions[investment.id],scenario);
-    const totalCost=metrics.projectCost+(metrics.settings.delayedCapex||0);
+    const totalCost=metrics.projectCost;
     const cash10=metrics.years[10].cumulative;
     return{...investment,metrics,totalCost,cash10,fundingGap:Math.max(0,totalCost-catalog.capital),capitalRemaining:Math.max(0,catalog.capital-totalCost),financedShare:Math.max(0,totalCost-catalog.capital)/Math.max(totalCost,1),totalWealth:cash10+metrics.residual,efficiency:(cash10+metrics.residual)/catalog.capital,complexity:investment.effort};
   });

@@ -19,3 +19,8 @@
 - Añadidos Tinamus unlevered/levered, DSCR/LTV y distinción project IRR/equity IRR.
 - Añadidos dashboard, riesgo-retorno, rankings múltiples y matriz configurable.
 - Añadidos fuentes trazables, auditoría, informe V2, glosario y tests financieros.
+
+### Fixed — audit reconciliation
+- Corrected annual ROI/MOIC so acquisition CAPEX is not subtracted twice.
+- `projectCost` now includes deferred conversion works/capital calls exactly once across detail and comparison views.
+- Severe stress now applies the documented six-month revenue delay, in addition to revenue, OPEX and CAPEX shocks.

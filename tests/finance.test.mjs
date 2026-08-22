@@ -5,5 +5,8 @@ test('IRR and NPV reconcile',()=>{const flows=[-100,60,60];const r=irr(flows);as
 test('cumulative cash has no double counting',()=>{const m=model(assumptions.reus);assert.equal(m.years[2].cumulative,m.years[1].flow+m.years[2].flow-m.projectCost)});
 test('residual is added once in terminal flow',()=>{const m=model(assumptions.l3h2);assert.equal(m.flows[10],m.years[10].flow+m.residual)});
 test('Tinamus includes future conversion capex',()=>{const m=model(assumptions.tinamus);assert.equal(m.years[2].investment,32500)});
+test('project cost includes future capital calls exactly once',()=>{const m=model(assumptions.tinamus);assert.equal(m.projectCost,144400)});
+test('year-zero ROI does not double subtract acquisition',()=>{const m=model(assumptions.reus);assert.equal(m.years[0].roi,0);assert.equal(m.years[0].moic,1)});
+test('severe stress applies its six-month revenue delay',()=>{const base=model(assumptions.l3h2);const severe=model(assumptions.l3h2,'base',{revenue:.7,opex:1.25,capex:1.2,delayMonths:6});assert.equal(severe.years[1].income,base.years[1].income*.7*.5)});
 test('camper model has exactly two units',()=>assert.equal(assumptions.campers.unitCount,2));
 test('L3H2 model has exactly two units',()=>assert.equal(assumptions.l3h2.unitCount,2));

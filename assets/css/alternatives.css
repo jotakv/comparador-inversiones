@@ -13,6 +13,8 @@
 .stage-grid .card{grid-column:span 3}
 .evidence-grid .card{grid-column:span 4}
 .evidence-grid h4{margin-top:0}
+.decision-split,.decision-split>article{min-width:0}
+.table-wrap,.chart-scroll{max-width:100%}
 @media(max-width:1050px){.alternative-filters{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:850px){.alternative-filters{grid-template-columns:1fr 1fr}.stage-grid .card,.evidence-grid .card{grid-column:1/-1}.alternative-legend{grid-template-columns:1fr}}
 @media(max-width:520px){.alternative-filters{grid-template-columns:1fr}.alternative-scatter,.alternative-line{min-width:560px}}

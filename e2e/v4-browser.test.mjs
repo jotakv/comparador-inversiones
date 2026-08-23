@@ -7,7 +7,7 @@ const pages={
   'projections.html':{heading:/Investment Projection Center/i,charts:10,content:['Águilas - local a vivienda','Reus - alquiler de trasteros','2 furgonetas para carsharing','2 camper vans para alquiler','Madrid - local a vivienda']},
   'executive-summary.html':{heading:/RESUMEN EJECUTIVO/i,charts:5,content:['TIR','VAN','MOIC','Confianza']},
   'analytics.html':{heading:/Analytics Center/i,charts:6,content:['Return Analytics','Cash Flow Analytics','Risk Analytics']},
-  'alternatives.html':{heading:/Capital productivo/i,charts:3,content:['28.000 €','Top 10 oportunidades','Frontera eficiente','Clinic AI OS','Benchmarks','Moonshots']},
+  'alternatives.html':{heading:/Capital productivo/i,charts:3,content:['45.000 €','28.000 €','12.000 €','5.000 €','Top 10 oportunidades','Frontera eficiente','Clinic AI OS','Edge-AI visual','Benchmarks','Moonshots']},
   'data-quality.html':{heading:/Data Quality Center/i,charts:0,content:['VERIFIED','MARKET OBSERVED','UNKNOWN','Sensibilidad']},
   'report.html':{heading:/RESUMEN DEL INFORME/i,charts:5,content:['Capital','Ranking','Due diligence','Próximos pasos']}
 };
@@ -20,6 +20,7 @@ test('alternatives filters and detail remain interactive on mobile',async()=>{
   const page=await browser.newPage({viewport:{width:390,height:844}}),errors=[];
   page.on('console',message=>message.type()==='error'&&errors.push(message.text()));
   await page.goto('http://127.0.0.1:8765/comparador-inversiones/alternatives.html',{waitUntil:'networkidle'});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),390,'mobile page must not overflow the viewport');
   await page.selectOption('#filter-capital','20000');
   assert.match(await page.locator('#filter-summary').innerText(),/1 de 10/);
   assert.equal(await page.locator('#alternative-ranking tbody tr').count(),1);

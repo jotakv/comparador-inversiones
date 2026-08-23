@@ -1,5 +1,5 @@
 import{appUrl,euro,load,mount,pct,table}from'./common.js';
-import{benchmarkRows,projectScenario,scoreAlternatives,scoreFormula}from'./alternative-engine.js';
+import{allocateCapital,benchmarkRows,projectScenario,scoreAlternatives,scoreFormula}from'./alternative-engine.js';
 
 const[data,catalog,assumptions]=await Promise.all([
   load('data/alternative-investments.json'),
@@ -15,14 +15,14 @@ const sepeClass=rating=>rating==='Alta'?'ok':rating==='Condicionada'?'warn':'dan
 const sepeTag=rating=>`<span class="tag ${sepeClass(rating)}">${rating}</span>`;
 const months=value=>value===null?'No recupera ≤5A':`${value.toFixed(1)} meses`;
 const intensityRank={baja:1,media:2,alta:3};
-const annualized=row=>row.annualizedEconomicReturn;
+const annualized=row=>Number.isFinite(row.annualizedEconomicReturn)?row.annualizedEconomicReturn:-.1;
 const maxBy=(items,key)=>[...items].sort((a,b)=>key(b)-key(a))[0];
 const minBy=(items,key)=>[...items].sort((a,b)=>key(a)-key(b))[0];
 const categories=[...new Set(rows.map(row=>row.category))].sort();
 const scoreLabels={profitability:'Rentabilidad potencial',sepeFit:'Compatibilidad SEPE',cashSpeed:'Velocidad de caja',risk:'Riesgo',scalability:'Escalabilidad',defensibility:'Barrera/defensibilidad',residual:'Valor residual',automation:'Automatización',liquidity:'Liquidez',founderFit:'Encaje con capacidades'};
 const riskLabels={commercial:'Comercial',financial:'Financiero',technological:'Tecnológico',regulatory:'Regulatorio',operational:'Operacional',demand:'Demanda',liquidity:'Liquidez'};
 
-document.querySelector('#capital-warning').innerHTML=`<b>Escenario independiente:</b> ${euro(data.capital.sepe)} de pago único · ${euro(data.capital.ownFunds)} de fondos propios · ${euro(data.capital.externalFinance)} de financiación externa. La clasificación SEPE describe compatibilidad aparente del negocio; <b>no confirma que cada factura sea elegible</b>.`;
+document.querySelector('#capital-warning').innerHTML=`<b>Tres bolsas separadas:</b> ${euro(data.capital.sepe)} de pago único SEPE · ${euro(data.capital.indemnification)} de indemnización · ${euro(data.capital.savings)} de ahorro · ${euro(data.capital.externalFinance)} de financiación externa. Total disponible: <b>${euro(data.capital.totalAvailable)}</b>. Los 17.000 € propios son flexibles; los 28.000 € SEPE deben coincidir con la memoria y justificarse. La clasificación SEPE <b>no confirma que cada factura sea elegible</b>.`;
 
 function renderKpis(){
   const bestReturn=maxBy(rows,row=>row.annualizedEconomicReturn);
@@ -30,7 +30,7 @@ function renderKpis(){
   const efficient=maxBy(rows,row=>row.capitalEfficiencyScore);
   const bestSepe=rows.find(row=>row.sepe.rating==='Alta');
   document.querySelector('#alternative-kpis').innerHTML=[
-    ['Capital analizado',euro(data.capital.sepe),'SEPE aislado'],
+    ['Capital analizado',euro(data.capital.totalAvailable),'28k SEPE + 17k propios'],
     ['Oportunidades',rows.length,`${data.universe.length} evaluadas`],
     ['Mejor retorno económico A5',pct(bestReturn.annualizedEconomicReturn),bestReturn.shortName],
     ['Menor payback',months(fastest.base.paybackMonths),fastest.shortName],
@@ -39,10 +39,18 @@ function renderKpis(){
   ].map(([label,value,note])=>`<article class="card"><span class="label">${label}</span><div class="kpi">${value}</div><small>${note}</small></article>`).join('');
 }
 
+function renderCapitalStrategies(){
+  document.querySelector('#capital-strategies').innerHTML=data.capitalStrategies.map(strategy=>{
+    const row=rows.find(item=>item.id===strategy.alternativeId);
+    const funding=allocateCapital(strategy.committed,data.capital);
+    return`<article class="card wide"><span class="tag ${strategy.verdict==='Recomendada'?'ok':'warn'}">${strategy.verdict}</span><h3>${strategy.name}</h3><p><b>${row.shortName}</b> · compromiso ${euro(strategy.committed)} · capital no comprometido ${euro(strategy.reserve)}</p><p>${strategy.thesis}</p><small>Aplicación teórica: SEPE ${euro(funding.sepe)} · indemnización ${euro(funding.indemnification)} · ahorro ${euro(funding.savings)}.</small></article>`;
+  }).join('');
+}
+
 function renderTopPicks(){
   const easiest=minBy(rows,row=>row.riskAverage+intensityRank[row.operatingIntensity]*1.25+row.timeToFirstRevenueMonths/4+(100-row.rubric.founderFit)/20);
   const picks=[
-    ['Mejor retorno',maxBy(rows,row=>row.base.ownerIrr5)],
+    ['Mejor retorno económico',maxBy(rows,row=>annualized(row))],
     ['Mejor riesgo/retorno',rows[0]],
     ['Más fácil de ejecutar',easiest],
     ['Más automatizable',maxBy(rows,row=>row.automationPct)],
@@ -50,14 +58,14 @@ function renderTopPicks(){
     ['Mayor residual',maxBy(rows,row=>row.base.years[5].residual)],
     ['Mejor encaje SEPE',maxBy(rows,row=>row.scoreInputs.sepeFit+row.score/100)],
     ['Mayor capacidad de escalar',maxBy(rows,row=>row.rubric.scalability)],
-    ['Mejor con solo 28.000 €',rows[0]],
+    ['Mejor con 45.000 € disponibles',rows[0]],
     ['Mejor frente a inmobiliario',maxBy(rows,row=>row.score*.7+row.scoreInputs.cashSpeed*.3)]
   ];
   document.querySelector('#top-picks').innerHTML=picks.map(([label,row])=>`<article class="card alternative-pick" data-select="${row.id}" tabindex="0"><span class="label">${label}</span><h3>${row.shortName}</h3><b>${row.score.toFixed(1)}/100</b> · ${sepeTag(row.sepe.rating)}</article>`).join('');
 }
 
 const filterDefinitions=[
-  ['capital','Capital máximo',[['28000','28.000 €'],['25000','25.000 €'],['22000','22.000 €'],['20000','20.000 €']]],
+  ['capital','Capital máximo',[['45000','45.000 €'],['40000','40.000 €'],['30000','30.000 €'],['28000','28.000 €'],['20000','20.000 €']]],
   ['roi','ROI total A5 mínimo',[['-999','Todos'],['0','0 %'],['50','50 %'],['100','100 %']]],
   ['payback','Payback máximo',[['999','Todos'],['18','18 meses'],['24','24 meses'],['36','36 meses']]],
   ['risk','Riesgo máximo',[['10','Todos'],['6','≤ 6/10'],['5','≤ 5/10'],['4','≤ 4/10']]],
@@ -93,6 +101,7 @@ function renderRanking(){
     ['Capital',row=>euro(row.initialInvestment)],
     ['Caja A3',row=>euro(row.base.years[3].ownerCash)],
     ['FCF eco. A3',row=>euro(row.base.years[3].economicFcf)],
+    ['TIR eco. A5',row=>pct(row.base.economicIrr5)],
     ['ROI A5',row=>pct(row.base.roi5.total)],
     ['Payback',row=>months(row.base.paybackMonths)],
     ['Riesgo',row=>row.riskAverage.toFixed(1)+'/10'],
@@ -105,16 +114,16 @@ function renderRanking(){
 
 function scatterSvg(items,{quadrant=false}={}){
   const width=660,height=330,left=58,bottom=285,plotWidth=570,plotHeight=245;
-  const yValues=items.map(row=>quadrant?row.base.ownerIrr5:annualized(row));
+  const yValues=items.map(row=>annualized(row));
   const minY=Math.min(0,...yValues),maxY=Math.max(...yValues,.01),span=maxY-minY||1;
   const color={Alta:'#087a55',Condicionada:'#a15c00',Dudosa:'#b42318'};
   const point=row=>{
     const xValue=quadrant?row.unconventionality:row.riskAverage;
     const x=left+(quadrant?xValue/10:(xValue-1)/9)*plotWidth;
-    const yValue=quadrant?row.base.ownerIrr5:annualized(row);
+    const yValue=annualized(row);
     const y=bottom-(yValue-minY)/span*plotHeight;
     const radius=7+Math.sqrt(row.initialInvestment)/35;
-    return`<circle cx="${x}" cy="${y}" r="${radius}" fill="${color[row.sepe.rating]}" opacity=".78" stroke="${row.efficient&&!quadrant?'#10233f':'white'}" stroke-width="${row.efficient&&!quadrant?4:2}"><title>${row.name} · riesgo ${row.riskAverage.toFixed(1)} · retorno ${pct(yValue)} · ${euro(row.initialInvestment)} · SEPE ${row.sepe.rating}</title></circle><text x="${x-5}" y="${y+4}" font-size="10" font-weight="800" fill="white">${rows.indexOf(row)+1}</text>`;
+    return`<circle cx="${x}" cy="${y}" r="${radius}" fill="${color[row.sepe.rating]}" opacity=".78" stroke="${row.efficient&&!quadrant?'#10233f':'white'}" stroke-width="${row.efficient&&!quadrant?4:2}"><title>${row.name} · riesgo ${row.riskAverage.toFixed(1)} · retorno ${pct(row.annualizedEconomicReturn)} · ${euro(row.initialInvestment)} · SEPE ${row.sepe.rating}</title></circle><text x="${x-5}" y="${y+4}" font-size="10" font-weight="800" fill="white">${rows.indexOf(row)+1}</text>`;
   };
   const labels=quadrant?`<text x="75" y="55">Alta rentabilidad · convencional</text><text x="390" y="55">Alta rentabilidad · disruptivo</text><text x="75" y="270">Baja rentabilidad · convencional</text><text x="390" y="270">Baja rentabilidad · disruptivo</text>`:'';
   return`<svg class="alternative-scatter" viewBox="0 0 ${width} ${height}" role="img"><line x1="${left}" y1="${bottom}" x2="${left+plotWidth}" y2="${bottom}"/><line x1="${left}" y1="35" x2="${left}" y2="${bottom}"/>${quadrant?`<line class="guide" x1="${left+plotWidth/2}" y1="35" x2="${left+plotWidth/2}" y2="${bottom}"/><line class="guide" x1="${left}" y1="${bottom-(0-minY)/span*plotHeight}" x2="${left+plotWidth}" y2="${bottom-(0-minY)/span*plotHeight}"/>`:''}${labels}${items.map(point).join('')}<text x="280" y="322">${quadrant?'Convencional → disruptivo':'Riesgo →'}</text><text x="8" y="22">Retorno ↑</text></svg>`;
@@ -129,9 +138,9 @@ function renderCharts(){
 
 function renderBenchmarks(){
   const alternativeRows=rows.map(row=>({
-    id:row.id,name:row.shortName,type:'alternativa',category:row.category,initialInvestment:row.initialInvestment,externalCapitalRequired:0,
+    id:row.id,name:row.shortName,type:'alternativa',category:row.category,initialInvestment:row.initialInvestment,capitalBeyondSepe:Math.max(0,row.initialInvestment-data.capital.sepe),externalCapitalRequired:Math.max(0,row.initialInvestment-data.capital.totalAvailable),
     annualCash:row.base.years[3].ownerCash,economicFcf:row.base.years[3].economicFcf,irr5:row.base.ownerIrr5,roi5:row.base.roi5.total,
-    paybackMonths:row.base.paybackMonths,residualValue:row.base.years[5].residual,riskAverage:row.riskAverage,liquidity:row.rubric.liquidity,
+    economicIrr5:row.base.economicIrr5,paybackMonths:row.base.paybackMonths,economicPaybackMonths:row.base.economicPaybackMonths,residualValue:row.base.years[5].residual,riskAverage:row.riskAverage,liquidity:row.rubric.liquidity,
     operatingIntensity:row.operatingIntensity,scalability:row.rubric.scalability,sepe:row.sepe
   }));
   const combined=[...alternativeRows,...benchmarks];
@@ -141,12 +150,15 @@ function renderBenchmarks(){
   document.querySelector('#benchmark-table').innerHTML=table(combined,[
     ['Modelo',row=>`${row.type==='benchmark'?'<span class="tag">Benchmark repo</span>':'<span class="tag ok">Nueva</span>'} ${row.name}`],
     ['Capital total',row=>euro(row.initialInvestment)],
-    ['Capital >28k',row=>euro(row.externalCapitalRequired)],
+    ['Capital adicional al SEPE',row=>euro(row.capitalBeyondSepe)],
+    ['Financiación externa >45k',row=>euro(row.externalCapitalRequired)],
     ['Caja anual',row=>euro(row.annualCash)],
     ['FCF eco.',row=>euro(row.economicFcf)],
     ['TIR A5',row=>pct(row.irr5)],
+    ['TIR eco. A5',row=>pct(row.economicIrr5)],
     ['ROI A5',row=>pct(row.roi5)],
     ['Payback',row=>months(row.paybackMonths)],
+    ['Payback eco.',row=>months(row.economicPaybackMonths)],
     ['Residual A5',row=>euro(row.residualValue)],
     ['Riesgo',row=>row.riskAverage.toFixed(1)+'/10'],
     ['Liquidez',row=>row.liquidity+'/100'],
@@ -166,6 +178,7 @@ function lineChart(row){
 
 function renderDetail(){
   const row=rows.find(item=>item.id===selectedId)||rows[0];
+  const funding=allocateCapital(row.initialInvestment,data.capital);
   const sourceMap=new Map(data.sources.map(source=>[source.id,source]));
   const scenarioRows=[row.conservative,row.base,row.optimistic];
   const scenarioLabel={conservative:'Conservador',base:'Base',optimistic:'Optimista'};
@@ -183,13 +196,19 @@ function renderDetail(){
     ].map(([label,value])=>`<article class="card"><span class="label">${label}</span><div class="kpi">${value}</div></article>`).join('')}</div>
     <div class="decision-split"><article><h3>Tesis y cliente</h3><p><b>Oportunidad.</b> ${row.opportunity}</p><p><b>Cliente.</b> ${row.client}</p><p><b>Modelo.</b> ${row.businessModel}</p><p><b>Ingresos.</b> ${row.revenueModels.join(' · ')}</p></article><article><h3>SEPE: ${row.sepe.rating}</h3><p>${row.sepe.summary}</p><p><b>Condición.</b> ${row.sepe.conditional}</p><p><b>No confundir.</b> ${row.sepe.notAutomaticallyEligible}</p></article></div>
     <h3>Escenarios financieros</h3>${table(scenarioRows,[
-      ['Escenario',model=>scenarioLabel[model.scenario]],['Ingresos A3',model=>euro(model.years[3].revenue)],['OPEX A3',model=>euro(model.years[3].opex)],['Margen',model=>pct(model.steadyMargin)],['Caja A3',model=>euro(model.years[3].ownerCash)],['FCF eco. A3',model=>euro(model.years[3].economicFcf)],['ROI A1',model=>pct(model.roi1.total)],['ROI A3',model=>pct(model.roi3.total)],['ROI A5',model=>pct(model.roi5.total)],['TIR A5',model=>pct(model.ownerIrr5)],['Payback',model=>months(model.paybackMonths)],['Break-even',model=>euro(model.breakEvenRevenue)]
+      ['Escenario',model=>scenarioLabel[model.scenario]],['Ingresos A3',model=>euro(model.years[3].revenue)],['OPEX A3',model=>euro(model.years[3].opex)],['Margen',model=>pct(model.steadyMargin)],['Caja A3',model=>euro(model.years[3].ownerCash)],['FCF eco. A3',model=>euro(model.years[3].economicFcf)],['ROI A1',model=>pct(model.roi1.total)],['ROI A3',model=>pct(model.roi3.total)],['ROI A5',model=>pct(model.roi5.total)],['TIR propietario',model=>pct(model.ownerIrr5)],['TIR económica',model=>pct(model.economicIrr5)],['Payback caja',model=>months(model.paybackMonths)],['Payback económico',model=>months(model.economicPaybackMonths)],['Break-even',model=>euro(model.breakEvenRevenue)]
     ])}
     <h3>Proyección base · Año 0–5</h3>${lineChart(row)}${table(row.base.years,[['Año',year=>year.year],['Ingresos',year=>euro(year.revenue)],['Gastos',year=>euro(year.opex)],['EBITDA',year=>euro(year.ebitda)],['CAPEX',year=>euro(year.maintenanceCapex)],['Caja',year=>euro(year.ownerCash)],['Trabajo imputado',year=>euro(year.founderLabor)],['FCF económico',year=>euro(year.economicFcf)],['Caja acumulada',year=>euro(year.cumulativeOwnerCash)],['Residual',year=>euro(year.residual)],['Valor económico',year=>euro(year.economicWealth)]])}
     <h3>Capital Efficiency y score</h3><div class="grid">${[
       ['Ingresos / capital',row.base.revenueToCapital.toFixed(2)+'×'],['EBITDA / capital',row.base.ebitdaToCapital.toFixed(2)+'×'],['Caja / capital',row.base.fcfToCapital.toFixed(2)+'×'],['FCF eco. / capital',row.base.economicFcfToCapital.toFixed(2)+'×'],['Retorno eco. anualizado',pct(row.annualizedEconomicReturn)],['Capital Efficiency',row.capitalEfficiencyScore.toFixed(0)+'/100']
     ].map(([label,value])=>`<article class="card"><span class="label">${label}</span><div class="kpi">${value}</div></article>`).join('')}</div>${table(Object.entries(row.scoreInputs).map(([criterion,value])=>({criterion,value})),[['Criterio',item=>scoreLabels[item.criterion]],['Input 0–100',item=>item.value.toFixed(1)],['Peso',item=>data.methodology.weights[item.criterion]+' %'],['Contribución',item=>(item.value*data.methodology.weights[item.criterion]/100).toFixed(1)]])}
     <h3>Despliegue de capital</h3>${table(row.budget,[['Partida',item=>item.label],['Tipo',item=>item.type],['Importe',item=>euro(item.amount)],['% capital',item=>pct(item.amount/row.initialInvestment)]])}
+    <h3>Fuentes de financiación</h3>${table([
+      {source:'Pago único SEPE',amount:funding.sepe,note:'Asignación financiera teórica; elegibilidad partida a partida pendiente.'},
+      {source:'Indemnización',amount:funding.indemnification,note:'Fondo propio flexible.'},
+      {source:'Ahorro',amount:funding.savings,note:'Fondo propio flexible; preservar si no mejora la validación.'},
+      {source:'Capital no comprometido',amount:funding.unused,note:'No se fuerza su gasto. Si pertenece al pago único recibido, no puede quedar sin justificar.'}
+    ],[['Fuente',item=>item.source],['Aplicación',item=>euro(item.amount)],['Tratamiento',item=>item.note]])}
     <div class="grid stage-grid">${[['Fase 1 · Validación',row.stages.validation],['Fase 2 · MVP',row.stages.mvp],['Fase 3 · Escala',row.stages.scale],['Capital at Risk antes de validar',row.capitalAtRiskBeforeValidation]].map(([label,value])=>`<article class="card"><span class="label">${label}</span><div class="kpi">${euro(value)}</div></article>`).join('')}</div>
     <h3>Stress test obligatorio</h3>${table(stressRows,[['Caso',item=>item.name],['Inversión',item=>euro(item.model.investment)],['Caja A3',item=>euro(item.model.years[3].ownerCash)],['FCF eco. A3',item=>euro(item.model.years[3].economicFcf)],['ROI A5',item=>pct(item.model.roi5.total)],['Payback',item=>months(item.model.paybackMonths)],['Residual',item=>euro(item.model.years[5].residual)]])}
     <div class="decision-split"><article><h3>Riesgos y cuello de botella</h3><p><b>Principal cuello.</b> ${row.bottleneck}</p><ul>${row.risks.map(risk=>`<li>${risk}</li>`).join('')}</ul>${table(Object.entries(row.risk).map(([category,value])=>({category,value})),[['Categoría',item=>riskLabels[item.category]],['Riesgo',item=>item.value+'/10']])}<p><b>Una persona.</b> ${row.onePerson}</p></article><article><h3>Escala</h3><p><b>50.000 €:</b> ${row.scaling['50000']}</p><p><b>100.000 €:</b> ${row.scaling['100000']}</p><p><b>250.000 €:</b> ${row.scaling['250000']}</p><p><b>Automatización:</b> ${row.automationPct}% · <b>intensidad:</b> ${row.operatingIntensity} · <b>encaje promotor:</b> ${row.rubric.founderFit}/100.</p></article></div>
@@ -214,4 +233,4 @@ document.addEventListener('keydown',event=>{const trigger=event.target.closest('
 document.querySelector('#alternative-filters').addEventListener('change',()=>{renderRanking();renderCharts()});
 document.querySelector('#reset-alternative-filters').addEventListener('click',()=>{document.querySelectorAll('#alternative-filters select').forEach(select=>select.selectedIndex=0);renderRanking();renderCharts()});
 
-renderKpis();renderTopPicks();renderRanking();renderCharts();renderBenchmarks();renderDetail();renderMoonshots();renderMethod();
+renderKpis();renderCapitalStrategies();renderTopPicks();renderRanking();renderCharts();renderBenchmarks();renderDetail();renderMoonshots();renderMethod();

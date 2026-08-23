@@ -76,8 +76,12 @@ export function interpolatedPayback(flows){
 
 export function validateAlternativeData(data){
   if(data.capital.sepe!==28000)throw new Error('El escenario independiente debe mantener 28.000 € SEPE');
+  if(data.capital.indemnification!==12000||data.capital.savings!==5000)throw new Error('Las fuentes propias deben mantenerse separadas: 12.000 € indemnización y 5.000 € ahorro');
+  if(data.capital.totalAvailable!==45000||data.capital.sepe+data.capital.indemnification+data.capital.savings!==data.capital.totalAvailable)throw new Error('Las fuentes de capital deben sumar 45.000 €');
+  if(data.capital.ownFunds!==data.capital.indemnification+data.capital.savings)throw new Error('Fondos propios debe sumar indemnización y ahorro');
   if(data.alternatives.length<8||data.alternatives.length>12)throw new Error('Deben existir entre 8 y 12 finalistas');
   const ids=new Set();
+  const sourceIds=new Set(data.sources.map(source=>source.id));
   for(const alternative of data.alternatives){
     if(ids.has(alternative.id))throw new Error(`ID duplicado: ${alternative.id}`);
     ids.add(alternative.id);
@@ -85,20 +89,24 @@ export function validateAlternativeData(data){
     if(budget!==alternative.initialInvestment)throw new Error(`${alternative.id}: presupuesto ${budget} != inversión ${alternative.initialInvestment}`);
     const staged=Object.values(alternative.stages).reduce((sum,value)=>sum+value,0);
     if(staged!==alternative.initialInvestment)throw new Error(`${alternative.id}: fases ${staged} != inversión ${alternative.initialInvestment}`);
+    if(alternative.initialInvestment>data.capital.totalAvailable)throw new Error(`${alternative.id}: inversión superior al capital consolidado`);
+    if(alternative.sources.some(source=>!sourceIds.has(source)))throw new Error(`${alternative.id}: referencia a fuente inexistente`);
     for(const scenario of ['conservative','base','optimistic']){
       const projection=projectScenario(alternative,scenario,data.capital.founderHourCost);
       if(projection.years.length!==6||projection.years.some(row=>Object.values(row).some(value=>typeof value==='number'&&!Number.isFinite(value))))throw new Error(`${alternative.id}: proyección no finita`);
     }
   }
+  const selectedUniverse=new Set(data.universe.filter(item=>item.selected).map(item=>item.id));
+  if(selectedUniverse.size!==ids.size||[...ids].some(id=>!selectedUniverse.has(id)))throw new Error('Universo seleccionado y finalistas no coinciden');
+  for(const strategy of data.capitalStrategies){
+    const alternative=data.alternatives.find(item=>item.id===strategy.alternativeId);
+    if(!alternative||strategy.committed!==alternative.initialInvestment)throw new Error(`${strategy.id}: alternativa o compromiso inconsistente`);
+    if(strategy.committed+strategy.reserve!==data.capital.totalAvailable)throw new Error(`${strategy.id}: compromiso y reserva no suman 45.000 €`);
+  }
   return true;
 }
 
-const normalize=(value,min,max,inverse=false)=>{
-  if(![value,min,max].every(Number.isFinite)||max===min)return 50;
-  const raw=100*(value-min)/(max-min);
-  return clamp(inverse?100-raw:raw);
-};
-const range=(rows,key)=>[Math.min(...rows.map(key)),Math.max(...rows.map(key))];
+const threshold=(value,worst,best)=>Number.isFinite(value)?clamp(100*(value-worst)/(best-worst)):0;
 const sepePoints={Alta:100,Condicionada:65,Dudosa:30,'No adecuada':0};
 
 export function scoreAlternatives(data){
@@ -109,34 +117,27 @@ export function scoreAlternatives(data){
     const optimistic=projectScenario(alternative,'optimistic',data.capital.founderHourCost);
     const downside=projectScenario(alternative,'base',data.capital.founderHourCost,{revenueFactor:.7,capexFactor:1.2});
     const riskAverage=Object.values(alternative.risk).reduce((sum,value)=>sum+value,0)/Object.values(alternative.risk).length;
-    const annualizedEconomicReturn=base.roi5.laborAdjusted<=-1?-1:(1+base.roi5.laborAdjusted)**(1/5)-1;
+    const annualizedEconomicReturn=Number.isFinite(base.economicIrr5)?base.economicIrr5:null;
     return{...alternative,base,conservative,optimistic,downside,riskAverage,annualizedEconomicReturn};
   });
-  const profitabilityRange=range(rows,row=>row.annualizedEconomicReturn);
-  const firstRevenueRange=range(rows,row=>row.timeToFirstRevenueMonths);
-  const paybackRange=range(rows,row=>row.base.paybackMonths??120);
-  const riskRange=range(rows,row=>row.riskAverage);
-  const residualRange=range(rows,row=>row.base.years[5].residual/row.initialInvestment);
-  const fcfRange=range(rows,row=>row.base.economicFcfToCapital);
-  const revenueRange=range(rows,row=>row.base.revenueToCapital);
-  const efficiencyPaybackRange=range(rows,row=>row.base.economicPaybackMonths??180);
   const weights=data.methodology.weights;
   for(const row of rows){
+    const economicPayback=row.base.economicPaybackMonths;
     const inputs={
-      profitability:normalize(row.annualizedEconomicReturn,...profitabilityRange),
+      profitability:threshold(row.annualizedEconomicReturn,-.10,.40),
       sepeFit:sepePoints[row.sepe.rating]??0,
-      cashSpeed:(normalize(row.timeToFirstRevenueMonths,...firstRevenueRange,true)+normalize(row.base.paybackMonths??120,...paybackRange,true))/2,
-      risk:normalize(row.riskAverage,...riskRange,true),
+      cashSpeed:.4*threshold(row.timeToFirstRevenueMonths,6,1)+.6*threshold(economicPayback,60,18),
+      risk:threshold(row.riskAverage,9,2),
       scalability:row.rubric.scalability,
       defensibility:row.rubric.defensibility,
-      residual:normalize(row.base.years[5].residual/row.initialInvestment,...residualRange),
+      residual:threshold(row.base.years[5].residual/row.initialInvestment,0,.60),
       automation:row.automationPct,
       liquidity:row.rubric.liquidity,
       founderFit:row.rubric.founderFit
     };
     row.scoreInputs=inputs;
     row.score=Object.entries(weights).reduce((sum,[key,weight])=>sum+inputs[key]*weight,0)/Object.values(weights).reduce((a,b)=>a+b,0);
-    row.capitalEfficiencyScore=.5*normalize(row.base.economicFcfToCapital,...fcfRange)+.2*normalize(row.base.revenueToCapital,...revenueRange)+.3*normalize(row.base.economicPaybackMonths??180,...efficiencyPaybackRange,true);
+    row.capitalEfficiencyScore=.5*threshold(row.base.economicFcfToCapital,0,.75)+.2*threshold(row.base.revenueToCapital,0,2)+.3*threshold(economicPayback,60,18);
   }
   rows.sort((a,b)=>b.score-a.score);
   const frontier=efficientFrontier(rows);
@@ -145,13 +146,22 @@ export function scoreAlternatives(data){
 }
 
 export function efficientFrontier(rows){
+  const value=row=>Number.isFinite(row.annualizedEconomicReturn)?row.annualizedEconomicReturn:-1;
   return rows.filter(candidate=>!rows.some(other=>other.id!==candidate.id&&
-    other.annualizedEconomicReturn>=candidate.annualizedEconomicReturn&&
+    value(other)>=value(candidate)&&
     other.riskAverage<=candidate.riskAverage&&
     other.initialInvestment<=candidate.initialInvestment&&
     other.rubric.liquidity>=candidate.rubric.liquidity&&
-    (other.annualizedEconomicReturn>candidate.annualizedEconomicReturn||other.riskAverage<candidate.riskAverage||other.initialInvestment<candidate.initialInvestment||other.rubric.liquidity>candidate.rubric.liquidity)
+    (value(other)>value(candidate)||other.riskAverage<candidate.riskAverage||other.initialInvestment<candidate.initialInvestment||other.rubric.liquidity>candidate.rubric.liquidity)
   ));
+}
+
+export function allocateCapital(initialInvestment,capital){
+  let remaining=initialInvestment;
+  const sepe=Math.min(remaining,capital.sepe);remaining-=sepe;
+  const indemnification=Math.min(remaining,capital.indemnification);remaining-=indemnification;
+  const savings=Math.min(remaining,capital.savings);remaining-=savings;
+  return{sepe,indemnification,savings,external:Math.max(0,remaining),unused:Math.max(0,capital.totalAvailable-initialInvestment)};
 }
 
 export function benchmarkRows(catalog,assumptions,data){
@@ -163,18 +173,25 @@ export function benchmarkRows(catalog,assumptions,data){
     const operatingCash5=result.years.slice(1,6).reduce((sum,row)=>sum+row.ebitda,0);
     const roi5=(operatingCash5+year5.asset-result.projectCost)/result.projectCost;
     const hoursMonth=item.effort*3;
+    const founderLabor=hoursMonth*12*data.capital.founderHourCost;
+    const economicFlows=result.flows.slice(0,6);
+    for(let year=1;year<economicFlows.length;year++)economicFlows[year]-=founderLabor;
+    economicFlows[5]+=year5.asset;
     return{
       id:item.id,
       name:item.name,
       type:'benchmark',
       category:item.type,
       initialInvestment:result.projectCost,
-      externalCapitalRequired:Math.max(0,result.projectCost-data.capital.sepe),
+      capitalBeyondSepe:Math.max(0,result.projectCost-data.capital.sepe),
+      externalCapitalRequired:Math.max(0,result.projectCost-data.capital.totalAvailable),
       annualCash:result.years[3].ebitda,
-      economicFcf:result.years[3].ebitda-hoursMonth*12*data.capital.founderHourCost,
+      economicFcf:result.years[3].ebitda-founderLabor,
       irr5:irr(flows),
+      economicIrr5:irr(economicFlows),
       roi5,
       paybackMonths:result.payback===null?null:result.payback*12,
+      economicPaybackMonths:interpolatedPayback(economicFlows),
       residualValue:year5.asset,
       riskAverage:item.risk,
       liquidity:item.liquidity*10,

@@ -2,7 +2,7 @@ export const euro=n=>Number.isFinite(n)?new Intl.NumberFormat('es-ES',{style:'cu
 export const pct=n=>Number.isFinite(n)?new Intl.NumberFormat('es-ES',{style:'percent',minimumFractionDigits:1,maximumFractionDigits:1}).format(n):'N/D';
 const appRoot=new URL('../../',import.meta.url);
 export const appUrl=path=>new URL(path.replace(/^\.\//,''),appRoot).href;
-export const nav=`<div class="top"><a class="brand" href="${appUrl('executive-summary.html')}">Investment Decision Lab <span class="tag">V4</span></a><nav class="nav"><a href="${appUrl('executive-summary.html')}">Resumen</a><a href="${appUrl('compare.html')}">Comparador</a><a href="${appUrl('projections.html')}">Proyecciones</a><a href="${appUrl('analytics.html')}">Analítica</a><a href="${appUrl('alternatives.html')}">Alternativas 28k</a><a href="${appUrl('risk-register.html')}">Riesgo</a><a href="${appUrl('data-quality.html')}">Datos</a><a href="${appUrl('report.html')}">Informe</a></nav></div>`;
+export const nav=`<div class="top"><a class="brand" href="${appUrl('executive-summary.html')}">Investment Decision Lab <span class="tag">V4</span></a><nav class="nav"><a href="${appUrl('executive-summary.html')}">Resumen</a><a href="${appUrl('compare.html')}">Comparador</a><a href="${appUrl('projections.html')}">Proyecciones</a><a href="${appUrl('analytics.html')}">Analítica</a><a href="${appUrl('alternatives.html')}">Alternativas 45k</a><a href="${appUrl('risk-register.html')}">Riesgo</a><a href="${appUrl('data-quality.html')}">Datos</a><a href="${appUrl('report.html')}">Informe</a></nav></div>`;
 const dataCache=new Map();
 export async function load(path){
   if(dataCache.has(path))return dataCache.get(path);

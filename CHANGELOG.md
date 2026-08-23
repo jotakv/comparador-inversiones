@@ -2,7 +2,7 @@
 
 ## Alternative Capitalization Lab — 2026-08-23
 
-- Added an independent €28,000 SEPE opportunity lab with 21 screened models, ten finalists and four moonshots.
+- Added a €45,000 opportunity lab with €28,000 SEPE, €12,000 indemnification and €5,000 savings kept separate; 24 screened models, ten finalists and four moonshots.
 - Added conservative/base/optimistic projections, owner cash, labour-adjusted FCF, ROI A1/A3/A5, IRR, payback, residual, break-even and combined downside stress.
 - Added deterministic 0–100 scoring, Capital Efficiency, Capital at Risk Before Validation, efficient frontier and conventional/disruptive matrix.
 - Reused the five repository investment models as financial benchmarks without duplicating their inputs.

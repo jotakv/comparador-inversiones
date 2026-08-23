@@ -1,1 +1,35 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Metodología</title><link rel="stylesheet" href="assets/css/style.css"></head><body><header><div class="top hero"><div class="eyebrow">Método auditable</div><h1>Metodología financiera</h1></div></header><main><h2>Clasificación de evidencia</h2><p><b>Hecho verificado</b>: documento primario comprobado. <b>Dato de mercado</b>: observación fechada. <b>Supuesto</b>: input elegido. <b>Estimación</b>: cálculo con incertidumbre. <b>Hipótesis optimista</b>: extremo favorable. <b>Pendiente de due diligence</b>: no usar para comprometer capital.</p><h2>Reglas del modelo</h2><ul><li>Horizonte 0–10, pre-fiscal y nominal.</li><li>El residual entra una sola vez, en el flujo terminal para TIR/VAN.</li><li>Project IRR usa todos los desembolsos del activo; equity IRR usa aportaciones y deuda.</li><li>VAN descuenta al 8 %. El coste futuro se registra en el año de pago.</li><li>Stress simultáneo modifica ingresos, OPEX y CAPEX.</li></ul><h2>IVA de vehículos</h2><p><b>Cash purchase price</b> es la salida bancaria. <b>Net economic cost</b> descuenta solo IVA efectivamente deducible. La aplicación contempla 100 %, 50 % prudente y 0 %, pero no determina el derecho: exige factura, afectación exclusiva y asesor fiscal.</p><h2>Limitaciones</h2><p>Los anuncios no son precios de cierre; el seguro y comisiones pueden cambiar; no se han modelado IRPF/IS ni costes de venta. Un cambio de uso solo existe financieramente después de informe urbanístico y técnico favorable.</p></main><footer></footer><script type="module">import{mount}from'./assets/js/common.js';mount()</script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Metodología</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header><div class="top hero"><div class="eyebrow">Método auditable</div><h1>Metodología financiera</h1></div></header>
+  <main>
+    <h2>Clasificación de evidencia</h2>
+    <p><b>Hecho verificado</b>: documento primario comprobado. <b>Dato de mercado</b>: observación fechada. <b>Supuesto</b>: input elegido. <b>Estimación</b>: cálculo con incertidumbre. <b>Hipótesis optimista</b>: extremo favorable. <b>Pendiente de due diligence</b>: no usar para comprometer capital.</p>
+    <h2>Reglas del modelo</h2>
+    <ul>
+      <li>Horizonte 0–10, pre-fiscal y nominal para los benchmarks históricos; horizonte 0–5 para las alternativas con 45.000 € disponibles.</li>
+      <li>El residual entra una sola vez, en el flujo terminal para TIR/ROI.</li>
+      <li>Project IRR usa todos los desembolsos del activo; equity IRR usa aportaciones y deuda.</li>
+      <li>VAN descuenta al 8 %. El coste futuro se registra en el año de pago.</li>
+      <li>Stress simultáneo modifica ingresos, OPEX y CAPEX.</li>
+      <li>El laboratorio muestra caja del propietario y FCF económico después de imputar el trabajo a 30 €/h.</li>
+    </ul>
+    <h2>Capital del laboratorio</h2>
+    <p>Los 45.000 € no son pago único íntegro: 28.000 € proceden del SEPE, 12.000 € de indemnización y 5.000 € de ahorro. Las fuentes se conservan separadas y el capital adicional requerido por los benchmarks se calcula después de los 45.000 €.</p>
+    <h2>Score de alternativas</h2>
+    <p>El score 0–100 pondera rentabilidad 20 %, compatibilidad SEPE 15 %, velocidad de caja 10 %, riesgo 10 %, escalabilidad 10 %, defensibilidad 5 %, residual 10 %, automatización 5 %, liquidez 5 % y encaje del promotor 10 %. Rentabilidad, velocidad, riesgo y residual se puntúan contra umbrales absolutos; las demás dimensiones usan escalas y rúbricas declaradas. Alta compatibilidad SEPE no confirma una factura.</p>
+    <h2>IVA de vehículos</h2>
+    <p><b>Cash purchase price</b> es la salida bancaria. <b>Net economic cost</b> descuenta solo IVA efectivamente deducible. La aplicación contempla 100 %, 50 % prudente y 0 %, pero no determina el derecho: exige factura, afectación exclusiva y asesor fiscal.</p>
+    <h2>Limitaciones</h2>
+    <p>Los anuncios no son precios de cierre; el seguro y comisiones pueden cambiar; no se han modelado IRPF/IS ni costes de venta. Un cambio de uso solo existe financieramente después de informe urbanístico y técnico favorable. Los ingresos de las nuevas alternativas son hipótesis de negocio: necesitan preventa y validación antes del CAPEX completo.</p>
+  </main>
+  <footer></footer>
+  <script type="module">import{mount}from'./assets/js/common.js';mount()</script>
+</body>
+</html>

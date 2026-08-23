@@ -2,7 +2,7 @@ export const euro=n=>Number.isFinite(n)?new Intl.NumberFormat('es-ES',{style:'cu
 export const pct=n=>Number.isFinite(n)?new Intl.NumberFormat('es-ES',{style:'percent',minimumFractionDigits:1,maximumFractionDigits:1}).format(n):'N/D';
 const appRoot=new URL('../../',import.meta.url);
 export const appUrl=path=>new URL(path.replace(/^\.\//,''),appRoot).href;
-export const nav=`<div class="top"><a class="brand" href="${appUrl('executive-summary.html')}">Investment Decision Lab <span class="tag">V4</span></a><nav class="nav"><a href="${appUrl('executive-summary.html')}">Resumen</a><a href="${appUrl('compare.html')}">Comparador</a><a href="${appUrl('projections.html')}">Proyecciones</a><a href="${appUrl('analytics.html')}">Analítica</a><a href="${appUrl('risk-register.html')}">Riesgo</a><a href="${appUrl('data-quality.html')}">Datos</a><a href="${appUrl('report.html')}">Informe</a></nav></div>`;
+export const nav=`<div class="top"><a class="brand" href="${appUrl('executive-summary.html')}">Investment Decision Lab <span class="tag">V4</span></a><nav class="nav"><a href="${appUrl('executive-summary.html')}">Resumen</a><a href="${appUrl('compare.html')}">Comparador</a><a href="${appUrl('projections.html')}">Proyecciones</a><a href="${appUrl('analytics.html')}">Analítica</a><a href="${appUrl('alternatives.html')}">Alternativas 45k</a><a href="${appUrl('risk-register.html')}">Riesgo</a><a href="${appUrl('data-quality.html')}">Datos</a><a href="${appUrl('report.html')}">Informe</a></nav></div>`;
 const dataCache=new Map();
 export async function load(path){
   if(dataCache.has(path))return dataCache.get(path);
@@ -12,4 +12,4 @@ export async function load(path){
 }
 export function table(rows,cols){return `<div class="table-wrap"><table><thead><tr>${cols.map(c=>`<th>${c[0]}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${cols.map(c=>`<td>${c[1](r)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
 export function bars(values){const max=Math.max(...values.map(x=>Math.abs(x.value)),1);return `<div class="chart"><svg viewBox="0 0 600 210">${values.map((x,i)=>`<text x="5" y="${28+i*34}" font-size="12">${x.label}</text><rect class="bar" x="150" y="${12+i*34}" height="22" width="${390*Math.abs(x.value)/max}"><title>${x.value.toFixed(1)}</title></rect><text x="${158+390*Math.abs(x.value)/max}" y="${28+i*34}" font-size="11">${x.text||x.value.toFixed(1)}</text>`).join('')}</svg></div>`}
-export function mount(){document.querySelector('header').insertAdjacentHTML('afterbegin',nav);document.querySelector('footer').textContent='Modelo V4 pre-fiscal · Actualizado 22/08/2026 · No sustituye due diligence técnica, jurídica, fiscal ni comercial.'}
+export function mount(){document.querySelector('header').insertAdjacentHTML('afterbegin',nav);document.querySelector('footer').textContent='Modelo V4 pre-fiscal · Actualizado 23/08/2026 · No sustituye due diligence técnica, jurídica, fiscal ni comercial.'}

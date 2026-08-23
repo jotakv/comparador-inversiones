@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const publicHtml = [
-  'index.html', 'projections.html', 'executive-summary.html', 'analytics.html', 'data-quality.html', 'report.html', 'decision-lab.html', 'compare.html', 'escenarios.html', 'riesgos.html', 'metodologia.html',
+  'index.html', 'projections.html', 'executive-summary.html', 'analytics.html', 'alternatives.html', 'data-quality.html', 'report.html', 'decision-lab.html', 'compare.html', 'escenarios.html', 'riesgos.html', 'metodologia.html',
   'fuentes.html', 'glosario.html', 'inversiones/aguilas.html',
   'inversiones/reus-trasteros.html', 'inversiones/l3h2-madrid.html',
   'inversiones/campers.html', 'inversiones/tinamus.html',

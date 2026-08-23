@@ -1,5 +1,13 @@
 # Changelog
 
+## Alternative Capitalization Lab — 2026-08-23
+
+- Added a €45,000 opportunity lab with €28,000 SEPE, €12,000 indemnification and €5,000 savings kept separate; 24 screened models, ten finalists and four moonshots.
+- Added conservative/base/optimistic projections, owner cash, labour-adjusted FCF, ROI A1/A3/A5, IRR, payback, residual, break-even and combined downside stress.
+- Added deterministic 0–100 scoring, Capital Efficiency, Capital at Risk Before Validation, efficient frontier and conventional/disruptive matrix.
+- Reused the five repository investment models as financial benchmarks without duplicating their inputs.
+- Added structured official SEPE/BOE evidence, item-level eligibility caveats, filters, detail cards, responsive charts and browser coverage under a GitHub Pages subpath.
+
 ## Investment Decision Lab V2 — BI interface redesign — 2026-08-22
 
 - Added persistent BI application shell, topbar, sidebar, breadcrumbs and global scenario state.

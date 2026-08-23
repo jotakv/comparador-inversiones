@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Alternativas de 28.000 € · Investment Decision Lab</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/alternatives.css">
+</head>
+<body data-page="alternatives">
+  <header>
+    <div class="top hero">
+      <div class="eyebrow">Pago único SEPE · laboratorio de oportunidades · pre-fiscal</div>
+      <h1>Alternativas a capitalizar el paro con esa inversión y con ese capital</h1>
+      <p class="lead">28.000 € como capital productivo: oportunidades empresariales alternativas, rentabilidad, riesgo, liquidez y compatibilidad con pago único.</p>
+    </div>
+  </header>
+  <nav class="lab-nav" aria-label="Secciones de alternativas">
+    <a href="#resumen">Resumen</a>
+    <a href="#ranking">Ranking</a>
+    <a href="#frontera">Frontera eficiente</a>
+    <a href="#benchmark">Benchmarks</a>
+    <a href="#detalle">Ficha</a>
+    <a href="#moonshots">Moonshots</a>
+    <a href="#metodologia">Método y fuentes</a>
+  </nav>
+  <main>
+    <section id="resumen">
+      <div class="section-kicker">28.000 € SEPE · sin mezclar fondos</div>
+      <h2>Capital productivo, no cartera de activos</h2>
+      <div id="capital-warning" class="notice"></div>
+      <div id="alternative-kpis" class="grid"></div>
+      <h2>Top picks por objetivo</h2>
+      <div id="top-picks" class="grid"></div>
+    </section>
+    <section id="ranking">
+      <h2>Top 10 oportunidades</h2>
+      <p>El ranking incluye el coste de oportunidad del trabajo del promotor. La caja real y el FCF económico se muestran por separado.</p>
+      <div id="alternative-filters" class="controls alternative-filters no-print"></div>
+      <p id="filter-summary" class="muted"></p>
+      <div id="alternative-ranking"></div>
+    </section>
+    <section id="frontera">
+      <h2>Frontera eficiente de oportunidades</h2>
+      <div class="decision-split">
+        <article><h3>Riesgo / retorno</h3><div id="efficient-frontier" class="chart-scroll"></div><p class="chart-note">X = riesgo medio · Y = retorno económico anualizado A5 · tamaño = capital · color = SEPE Fit. Borde grueso = no dominada.</p></article>
+        <article><h3>Aburrido vs disruptivo</h3><div id="disruption-matrix" class="chart-scroll"></div><p class="chart-note">La parte superior derecha combina retorno alto y modelo poco convencional. Ser aburrido no resta puntos al score.</p></article>
+      </div>
+    </section>
+    <section id="benchmark">
+      <h2>Comparación con inversiones existentes</h2>
+      <div id="benchmark-verdict" class="notice"></div>
+      <div id="benchmark-table"></div>
+    </section>
+    <section id="detalle">
+      <div class="section-kicker">Ficha seleccionada</div>
+      <div id="alternative-detail"></div>
+    </section>
+    <section id="moonshots">
+      <h2>Moonshots</h2>
+      <p>No compiten en igualdad con los diez finalistas: son hipótesis de validación barata y riesgo de ejecución alto.</p>
+      <div id="moonshot-grid" class="grid"></div>
+    </section>
+    <section id="metodologia">
+      <h2>Metodología, universo y fuentes</h2>
+      <div id="score-method"></div>
+      <h3>Universo inicial</h3>
+      <div id="universe-table"></div>
+      <h3>Marco SEPE</h3>
+      <div id="sepe-framework" class="grid"></div>
+      <h3>Fuentes estructuradas</h3>
+      <div id="alternative-sources"></div>
+    </section>
+  </main>
+  <footer></footer>
+  <script type="module" src="assets/js/alternatives.js"></script>
+</body>
+</html>

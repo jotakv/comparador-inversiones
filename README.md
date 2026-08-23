@@ -18,6 +18,12 @@ Abra `http://localhost:8000`. Servir por HTTP es necesario porque la aplicación
 
 En Windows también puede usar `python -m http.server 8000`.
 
+## Laboratorio de alternativas de 28.000 €
+
+`alternatives.html` analiza de forma independiente 28.000 € procedentes del pago único SEPE, sin mezclarlos con los 45.000 € del comparador histórico. Parte de 21 modelos, selecciona diez finalistas y reutiliza los cinco escenarios financieros existentes como benchmarks.
+
+Los inputs están en `data/alternative-investments.json`; `assets/js/alternative-engine.js` calcula proyecciones, ROI, TIR, payback, residual, stress, frontera eficiente y un score 0–100. La caja del propietario se separa del FCF económico, que imputa las horas del promotor a 20 €/h. Las etiquetas SEPE son una evaluación preliminar: no confirman la elegibilidad de una partida ni sustituyen la memoria, las facturas o la respuesta del SEPE.
+
 ## Tests
 
 En otra terminal, ejecute:

@@ -82,5 +82,6 @@ test('benchmarks reuse repository cost and split the 28k gap from external capit
     assert.equal(row.externalCapitalRequired,Math.max(0,existing.projectCost-45000));
     assert.ok(Number.isFinite(row.economicIrr5));
     assert.ok(row.economicPaybackMonths===null||Number.isFinite(row.economicPaybackMonths));
+    assert.ok(row.economicPaybackMonths===null||row.paybackMonths===null||row.economicPaybackMonths>=row.paybackMonths,'charging founder labor cannot accelerate operating payback');
   }
 });

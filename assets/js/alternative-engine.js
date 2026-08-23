@@ -174,8 +174,9 @@ export function benchmarkRows(catalog,assumptions,data){
     const roi5=(operatingCash5+year5.asset-result.projectCost)/result.projectCost;
     const hoursMonth=item.effort*3;
     const founderLabor=hoursMonth*12*data.capital.founderHourCost;
-    const economicFlows=result.flows.slice(0,6);
-    for(let year=1;year<economicFlows.length;year++)economicFlows[year]-=founderLabor;
+    const economicOperatingFlows=result.flows.slice(0,6);
+    for(let year=1;year<economicOperatingFlows.length;year++)economicOperatingFlows[year]-=founderLabor;
+    const economicFlows=[...economicOperatingFlows];
     economicFlows[5]+=year5.asset;
     return{
       id:item.id,
@@ -191,7 +192,10 @@ export function benchmarkRows(catalog,assumptions,data){
       economicIrr5:irr(economicFlows),
       roi5,
       paybackMonths:result.payback===null?null:result.payback*12,
-      economicPaybackMonths:interpolatedPayback(economicFlows),
+      // Payback measures recovery through operating cash only. Residual value is
+      // included in IRR/ROI, but adding a hypothetical sale to payback would make
+      // benchmarks incomparable with the alternative-business projections.
+      economicPaybackMonths:interpolatedPayback(economicOperatingFlows),
       residualValue:year5.asset,
       riskAverage:item.risk,
       liquidity:item.liquidity*10,

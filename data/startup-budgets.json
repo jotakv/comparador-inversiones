@@ -40,6 +40,31 @@
       "items":[["Dos furgones base",42000,50000,60000,"Mes 0","Adquisición","Baja","Vehículos"],["Camperización de dos unidades",26000,36000,48000,"Meses 1–5","Reforma","Baja","Conversión"],["Homologación e ITV",1800,2800,4200,"Mes 5","Licencias","Media","Conversión"],["Seguro de dos campers",1800,2600,3800,"Mes 6","Seguro","Baja","Apertura"],["Revisión, neumáticos y puesta a punto",1800,3000,4800,"Meses 0–6","Mantenimiento inicial","Media","Apertura"],["GPS, menaje y equipamiento",1800,3200,5000,"Mes 6","Equipamiento","Media","Apertura"],["Fotos, plataformas, web y marketing",700,1400,2500,"Mes 6","Marketing","Baja","Apertura"],["Gestoría y parking inicial",900,1600,2600,"Meses 1–6","Puesta en marcha","Media","Apertura"],["Capital circulante",3500,6000,9000,"Meses 1–9","Capital circulante","Media","Reserva"],["Contingencia",4200,7000,11000,"Antes de transformar","Contingencia","Baja","Reserva"],["Reserva de caja",2500,4500,7000,"Antes de publicar","Reserva de caja","Media","Reserva"]],
       "steps":[["Elegir ruta","0–1k €","operador","comparativa de ofertas","2 semanas","ninguna","coste incompleto","NO-GO sin coste homologado"],["Inspeccionar bases","400–800 €","taller","diagnóstico","1 semana","ruta","avería","NO-GO ante daño estructural"],["Comprar dos","44–64k €","empresa","facturas","1 mes","inspección","fiscalidad","GO con fondos"],["Camperizar y homologar","28–52k €","taller + ingeniero","proyecto/ITV","4–7 meses","compra","retraso/sobrepeso","NO-GO sin homologabilidad"],["Publicar y operar","8–15k €","operador","póliza/contratos","continuo","seguro","estacionalidad/daños","piloto 1+1 si falta capital"]],
       "checklist":["inspección mecánica","presupuesto cerrado de camperización","homologación y pesos","seguro profesional","elegibilidad de plataformas","parking y demanda estacional"]
-    }
+    },
+    "el-ejido-outsourced-last-mile": {
+    "what": "Un local comercial en propiedad y una operación logística externalizada en dos puntos; el segundo espacio se arrienda y no genera residual.",
+    "returnSources": ["renta del local en propiedad","margen unitario del servicio logístico externalizado","valor residual del único inmueble en propiedad"],
+    "timeline": [
+        ["Mes 0","Due diligence y compra del local"],
+        ["Mes 0–1","Validación contractual y puesta en marcha"],
+        ["Mes 1","Contratación del segundo espacio y colaborador"],
+        ["Años 1–10","Operación externalizada, alquiler y seguimiento contractual"]
+    ],
+    "items": [
+        ["Compra del inmueble",29000,29000,29000,"Mes 0","Adquisición","Media","Fase 1"],
+        ["Bolsa de adquisición + puesta en marcha",5000,5000,5000,"Mes 0–1","Puesta en marcha","Baja · sin desglose confirmado","Fase 1"],
+        ["Capital circulante no cuantificado (excluido)",0,0,0,"Antes de operar","Capital circulante","Pendiente · no equivale a coste cero","Fuera del presupuesto"],
+        ["Fianza y suministros segundo espacio (excluidos)",0,0,0,"Antes de operar","Contingencia","Pendiente · no equivale a coste cero","Fuera del presupuesto"],
+        ["Reserva de caja no cuantificada (excluida)",0,0,0,"Antes de operar","Reserva de caja","Pendiente · no equivale a coste cero","Fuera del presupuesto"]
+    ],
+    "steps": [
+        ["Validar inmueble y renta","Incluido en bolsa provisional","comprador + técnico","nota simple, contrato y revisión","1–3 semanas","ninguna","valor/renta no validados","NO-GO sin due diligence"],
+        ["Validar operador y delegación","Pendiente","titular + abogado","contrato operador","antes de compra","oferta operativa","delegación prohibida","NO-GO sin permiso escrito"],
+        ["Contratar colaborador","0,40 €/paquete","titular + colaborador","contrato mercantil","antes de operar","delegación permitida","economía insostenible","GO solo con cobertura y sustitución"],
+        ["Contratar segundo espacio","100 €/mes + importes pendientes","titular","arrendamiento, fianza y suministros","antes de operar","contrato operador","costes omitidos","GO tras cuantificar caja máxima"],
+        ["Operar dos puntos","Coste variable incluido","colaborador","SLA y trazabilidad de paquetes","continuo","contratos firmados","volumen/tarifa","revisar unit economics mensualmente"]
+    ],
+    "checklist": ["nota simple, cargas y estado del local","renta de mercado y solvencia del inquilino","contrato y volumen del operador","derecho escrito a delegar reparto","contrato, alta, seguro y sustitución del colaborador","fianza, suministros y condiciones del segundo espacio","cuota efectiva, fiscalidad y elegibilidad SEPE","circulante y maximum cash requirement"]
+}
   }
 }

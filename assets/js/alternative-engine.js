@@ -172,7 +172,7 @@ export function benchmarkRows(catalog,assumptions,data){
     flows[5]+=year5.asset;
     const operatingCash5=result.years.slice(1,6).reduce((sum,row)=>sum+row.ebitda,0);
     const roi5=(operatingCash5+year5.asset-result.projectCost)/result.projectCost;
-    const hoursMonth=item.effort*3;
+    const hoursMonth=assumptions[item.id].ownerOperatingHoursMonth??item.effort*3;
     const founderLabor=hoursMonth*12*data.capital.founderHourCost;
     const economicOperatingFlows=result.flows.slice(0,6);
     for(let year=1;year<economicOperatingFlows.length;year++)economicOperatingFlows[year]-=founderLabor;

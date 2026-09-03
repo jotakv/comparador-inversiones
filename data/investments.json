@@ -112,6 +112,37 @@
       "displayName": "Madrid - local a vivienda"
     },
     {
+      "id": "el-ejido-outsourced-last-mile",
+      "name": "El Ejido — Local + reparto externalizado",
+      "type": "Inversión híbrida",
+      "risk": 8,
+      "passivity": 7,
+      "liquidity": 5,
+      "effort": 2,
+      "legalRisk": 7,
+      "operatingRisk": 9,
+      "scalability": 6,
+      "scores": {
+        "cash": 9,
+        "residual": 6,
+        "inflation": 6,
+        "finance": 10,
+        "exit": 5
+      },
+      "shortName": "El Ejido Delegado",
+      "assetName": "Local comercial + operación logística externalizada",
+      "displayName": "El Ejido — Local + reparto externalizado",
+      "tags": [
+        "real-estate",
+        "operating-business",
+        "outsourced",
+        "last-mile",
+        "hybrid-investment",
+        "income-producing-asset"
+      ],
+      "ownerOperated": false
+    },
+    {
       "id": "local",
       "name": "Local comercial genérico",
       "type": "Inmobiliario",

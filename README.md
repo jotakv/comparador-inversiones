@@ -1,6 +1,6 @@
 # Investment Decision Lab V3
 
-Comparador estático, auditable y responsive de seis alternativas de inversión a diez años. Separa el coste total del proyecto, equity, deuda, circulante, caja y patrimonio; no confunde una estimación con un hecho.
+Comparador estático, auditable y responsive de siete alternativas de inversión a diez años. Separa el coste total del proyecto, equity, deuda, circulante, caja y patrimonio; no confunde una estimación con un hecho.
 
 ## Cómo usar Decision Lab
 

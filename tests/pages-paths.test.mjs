@@ -10,6 +10,7 @@ const publicHtml = [
   'fuentes.html', 'glosario.html', 'inversiones/aguilas.html',
   'inversiones/reus-trasteros.html', 'inversiones/l3h2-madrid.html',
   'inversiones/campers.html', 'inversiones/tinamus.html',
+  'inversiones/el-ejido-delegado.html',
   'inversiones/local-generico.html'
 ];
 

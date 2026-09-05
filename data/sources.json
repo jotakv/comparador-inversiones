@@ -1,1 +1,56 @@
-{"asOf":"2026-08-21","note":"Los enlaces de categoría y seeds orientan la muestra, pero cada anuncio y condición contractual está PENDIENTE DE REVALIDACIÓN por bloqueo de acceso durante esta revisión.","sources":[{"variable":"L3H2 usados","source":"Coches.net","url":"https://www.coches.net/furgonetas/segunda-mano/","location":"España","status":"mercado orientativo"},{"variable":"L3H2 usados","source":"AutoScout24","url":"https://www.autoscout24.es/","location":"España","status":"mercado orientativo"},{"variable":"Campers usadas","source":"Milanuncios","url":"https://www.milanuncios.com/autocaravanas-de-segunda-mano/","location":"España","status":"mercado orientativo"},{"variable":"IVA vehículos","source":"Agencia Tributaria","url":"https://sede.agenciatributaria.gob.es/","location":"España","status":"confirmar con asesor y factura"},{"variable":"ZBE Madrid","source":"Ayuntamiento de Madrid","url":"https://www.madrid.es/","location":"Madrid","status":"confirmar matrícula"},{"variable":"Plataformas","source":"condiciones oficiales","url":"https://www.yescapa.es/","location":"España","status":"confirmación escrita obligatoria"}]}
+{
+  "asOf": "2026-09-05",
+  "note": "Los enlaces de categoría y seeds orientan la muestra, pero cada anuncio y condición contractual está PENDIENTE DE REVALIDACIÓN por bloqueo de acceso durante esta revisión.",
+  "sources": [
+    {
+      "variable": "L3H2 usados",
+      "source": "Coches.net",
+      "url": "https://www.coches.net/furgonetas/segunda-mano/",
+      "location": "España",
+      "status": "mercado orientativo"
+    },
+    {
+      "variable": "L3H2 usados",
+      "source": "AutoScout24",
+      "url": "https://www.autoscout24.es/",
+      "location": "España",
+      "status": "mercado orientativo"
+    },
+    {
+      "variable": "Campers usadas",
+      "source": "Milanuncios",
+      "url": "https://www.milanuncios.com/autocaravanas-de-segunda-mano/",
+      "location": "España",
+      "status": "mercado orientativo"
+    },
+    {
+      "variable": "IVA vehículos",
+      "source": "Agencia Tributaria",
+      "url": "https://sede.agenciatributaria.gob.es/",
+      "location": "España",
+      "status": "confirmar con asesor y factura"
+    },
+    {
+      "variable": "ZBE Madrid",
+      "source": "Ayuntamiento de Madrid",
+      "url": "https://www.madrid.es/",
+      "location": "Madrid",
+      "status": "confirmar matrícula"
+    },
+    {
+      "variable": "Plataformas",
+      "source": "condiciones oficiales",
+      "url": "https://www.yescapa.es/",
+      "location": "España",
+      "status": "confirmación escrita obligatoria"
+    },
+    {
+      "variable": "Oliva — inmueble, proyecto, operación, financiación, funding y gates",
+      "source": "Informe de viabilidad cambio de uso Oliva",
+      "url": "inversiones/Informe_viabilidad_cambio_uso_Oliva (1).html",
+      "location": "Oliva, València",
+      "date": "05/09/2026",
+      "status": "DOCUMENTADO; cálculos derivados identificados; urbanismo/arquitectura/SEPE PENDIENTES o NO VERIFICADOS"
+    }
+  ]
+}

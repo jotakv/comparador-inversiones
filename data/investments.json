@@ -143,6 +143,41 @@
       "ownerOperated": false
     },
     {
+      "id": "oliva-cambio-uso-habitaciones",
+      "name": "Oliva — cambio de uso + alquiler por habitaciones",
+      "displayName": "Oliva — cambio de uso + alquiler por habitaciones",
+      "shortName": "Oliva habitaciones",
+      "assetName": "Almacén/entreplanta de 98 m² para conversión residencial",
+      "type": "Inmobiliario · value-add residencial",
+      "risk": 10,
+      "passivity": 7,
+      "liquidity": 4,
+      "effort": 5,
+      "legalRisk": 10,
+      "operatingRisk": 5,
+      "scalability": 3,
+      "scores": {
+        "cash": 6,
+        "residual": 8,
+        "inflation": 9,
+        "finance": 2,
+        "exit": 5
+      },
+      "tags": [
+        "real-estate",
+        "change-of-use",
+        "residential",
+        "room-rental",
+        "value-add",
+        "leveraged",
+        "conditional",
+        "urban-planning-risk"
+      ],
+      "scoreEvidence": "SUPUESTO DEL MODELO · calibrado frente a Águilas y Tinamus; no procede del informe",
+      "decisionStatus": "DUE DILIGENCE ONLY",
+      "executionEligibility": "NOT YET ELIGIBLE"
+    },
+    {
       "id": "local",
       "name": "Local comercial genérico",
       "type": "Inmobiliario",

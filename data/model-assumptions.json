@@ -1,1 +1,740 @@
-{"aguilas":{"label":"SUPUESTO · cambio de uso no validado","unitCount":1,"scenarios":{"pessimistic":{"capex":45840,"revenue":5760,"opex":2304,"growth":0.01,"opexGrowth":0.03,"assetValue":70000,"appreciation":0,"revenueStart":4,"delayedCapexYear":2,"delayedCapex":31500,"purchasePrice":38000,"closingCosts":6740,"technicalPrecheck":1100,"entryCost":45840,"futureCapex":31500},"base":{"capex":40780,"revenue":7200,"opex":1836,"growth":0.02,"opexGrowth":0.02,"assetValue":82500,"appreciation":0.02,"revenueStart":3,"delayedCapexYear":2,"delayedCapex":23700,"purchasePrice":35000,"closingCosts":5080,"technicalPrecheck":700,"entryCost":40780,"futureCapex":23700},"optimistic":{"capex":37160,"revenue":7800,"opex":1560,"growth":0.03,"opexGrowth":0.02,"assetValue":90000,"appreciation":0.025,"revenueStart":3,"delayedCapexYear":2,"delayedCapex":19700,"purchasePrice":33000,"closingCosts":3710,"technicalPrecheck":450,"entryCost":37160,"futureCapex":19700}}},"reus":{"label":"SUPUESTO · licencia y demanda pendientes","unitCount":11,"scenarios":{"pessimistic":{"capex":50000,"revenue":4752,"opex":2500,"growth":0.01,"opexGrowth":0.03,"assetValue":42000,"appreciation":0.005},"base":{"capex":45000,"revenue":7128,"opex":2040,"growth":0.02,"opexGrowth":0.02,"assetValue":56080,"appreciation":0.02},"optimistic":{"capex":42000,"revenue":8580,"opex":1900,"growth":0.025,"opexGrowth":0.02,"assetValue":65000,"appreciation":0.02}}},"l3h2":{"label":"ESTIMACIÓN · flota de DOS vehículos","unitCount":2,"vat":{"deductible":0.21,"nonDeductible":0,"prudent":0.105},"budgets":{"low":49500,"base":59600,"premium":72400},"phased":{"initialUnits":1,"secondUnitYear":2},"scenarios":{"pessimistic":{"capex":59600,"revenue":18720,"opex":15100,"growth":0.01,"opexGrowth":0.03,"assetValue":59600,"appreciation":-0.14,"residualFactor":1},"base":{"capex":59600,"revenue":34320,"opex":19450,"growth":0.02,"opexGrowth":0.025,"assetValue":59600,"appreciation":-0.13,"residualFactor":1},"optimistic":{"capex":72400,"revenue":57000,"opex":26700,"growth":0.025,"opexGrowth":0.025,"assetValue":72400,"appreciation":-0.12,"residualFactor":1}}},"campers":{"label":"ESTIMACIÓN · flota de DOS campers","unitCount":2,"budgets":{"conversion":{"low":78000,"base":96000,"premium":121000},"finished":{"low":93000,"base":108000,"premium":132000}},"seasonal":{"repositioning":10800,"lostDays":16,"revenueUplift":17500,"netUplift":6700},"financing":{"equity":45000,"debt":51000,"rate":0.065,"years":7},"phased":{"initialUnits":1,"secondUnitYear":2},"scenarios":{"pessimistic":{"capex":96000,"revenue":29200,"opex":24700,"growth":0.01,"opexGrowth":0.03,"assetValue":96000,"appreciation":-0.11},"base":{"capex":96000,"revenue":53100,"opex":32200,"growth":0.02,"opexGrowth":0.025,"assetValue":96000,"appreciation":-0.1},"optimistic":{"capex":121000,"revenue":82800,"opex":43800,"growth":0.025,"opexGrowth":0.025,"assetValue":121000,"appreciation":-0.09}}},"tinamus":{"label":"DATO DOCUMENTAL + SUPUESTO de conversión","unitCount":1,"leverage":{"equity":41400,"debt":70000,"rate":0.055,"years":15,"ltv":0.7},"scenarios":{"pessimistic":{"capex":111900,"revenue":9360,"opex":3744,"growth":0.01,"opexGrowth":0.03,"assetValue":160000,"appreciation":0.005,"revenueStart":4,"delayedCapexYear":2,"delayedCapex":42000},"base":{"capex":111900,"revenue":11700,"opex":3510,"growth":0.02,"opexGrowth":0.02,"assetValue":180000,"appreciation":0.02,"revenueStart":3,"delayedCapexYear":2,"delayedCapex":32500},"optimistic":{"capex":111900,"revenue":12600,"opex":3150,"growth":0.025,"opexGrowth":0.02,"assetValue":195000,"appreciation":0.025,"revenueStart":3,"delayedCapexYear":2,"delayedCapex":28500}}},"local":{"label":"N/D — falta modelo operativo","unitCount":0,"scenarios":{"base":{"capex":0,"revenue":0,"opex":0,"growth":0,"opexGrowth":0,"assetValue":0,"appreciation":0}}},"el-ejido-outsourced-last-mile":{"label":"SUPUESTO APORTADO · volumen, contratos, tarifa y costes pendientes de validación","unitCount":2,"classification":["real-estate","operating-business","outsourced","last-mile","hybrid-investment","income-producing-asset"],"ownerOperated":false,"ownerOperatingHoursMonth":0,"ownerRouteHours":0,"ownerDeliveryHours":0,"imputedOwnerLaborCost":0,"financing":{"equity":34000,"debt":0,"loanPrincipal":0,"monthlyLoanPayment":0},"operations":{"locations":2,"deliveryDaysMonth":26,"normalDaysYear":282,"peakDaysYear":30,"intensiveNormalDaysYear":234,"intensivePeakDaysYear":78,"revenuePerPackage":0.8,"outsourcedCostPerPackage":0.4,"peakPackagesPerDayPerLocation":120,"propertyRentMonth":350,"propertyRentMonths":11,"secondLocationRentMonth":100,"monthlyFixedCostsView":350.8333333333333,"propertyCosts":{"community":300,"ibi":180,"insurance":180,"maintenanceReserve":420},"otherAnnualCosts":{"ownerContributionBudget":1200,"accounting":380,"secondLocationRent":1200},"supplierHours":{"pessimistic":{"daily":5,"monthly":130},"base":{"daily":5.75,"monthly":149.5},"optimistic":{"daily":6.5,"monthly":169},"peak":{"daily":8,"monthly":208}},"packagesPerDayPerLocation":{"pessimistic":80,"base":90,"optimistic":100,"peak":120}},"taxReserveSensitivity":[0.15,0.2,0.3],"ownerContributionStep":{"year":2,"incrementalAnnualCost":2400,"status":"budget assumption, not a confirmed legal contribution"},"workingCapital":{"value":null,"status":"unconfirmed / excluded"},"property":{"purchasePrice":29000,"annualRent":3850,"annualCosts":1080,"noi":2770,"operatingYieldBasis":34000},"evidence":{"providedAssumptions":["Precio local 29.000 €","Bolsa de adquisición y puesta en marcha 5.000 €","Renta 350 €/mes durante 11 meses","Segundo espacio 100 €/mes","Tarifa 0,80 €/paquete","Pago colaborador 0,40 €/paquete","Volumen normal 80/90/100 y pico 120 paquetes/día/punto","26 días/mes y 30 días pico"],"calculated":["revenue","outsourcing cost","cash flow","ROI","IRR","payback","final wealth","residual"],"unconfirmed":["contrato operador logístico","volumen real","tarifa real","derecho a delegar reparto","contrato colaborador","continuidad colaborador","fianza segundo local","suministros","seguros","cuota efectiva","fiscalidad","valor residual","renta de mercado","elegibilidad SEPE"]},"scenarios":{"pessimistic":{"capex":34000,"entryCost":34000,"purchasePrice":29000,"closingAndStartup":5000,"revenue":45706.0,"opex":24788.0,"growth":0,"opexGrowth":0.02,"assetValue":29000,"appreciation":0.005,"packages":52320,"grossLogisticsRevenue":41856.0,"outsourcedDeliveryCost":20928.0,"logisticsContribution":20928.0,"propertyIncome":3850,"otherOperatingCosts":3860,"propertyNoi":2770,"ownerOperatingHours":0,"imputedOwnerLaborCost":0,"intensiveCampaignPreTax":22454.0,"opexStepYear":2,"opexStep":2400},"base":{"capex":34000,"entryCost":34000,"purchasePrice":29000,"closingAndStartup":5000,"revenue":50218.0,"opex":27044.0,"growth":0,"opexGrowth":0.02,"assetValue":29000,"appreciation":0.02,"packages":57960,"grossLogisticsRevenue":46368.0,"outsourcedDeliveryCost":23184.0,"logisticsContribution":23184.0,"propertyIncome":3850,"otherOperatingCosts":3860,"propertyNoi":2770,"ownerOperatingHours":0,"imputedOwnerLaborCost":0,"intensiveCampaignPreTax":24326.0,"opexStepYear":2,"opexStep":2400},"optimistic":{"capex":34000,"entryCost":34000,"purchasePrice":29000,"closingAndStartup":5000,"revenue":54730.0,"opex":29300.0,"growth":0,"opexGrowth":0.02,"assetValue":29000,"appreciation":0.025,"packages":63600,"grossLogisticsRevenue":50880.0,"outsourcedDeliveryCost":25440.0,"logisticsContribution":25440.0,"propertyIncome":3850,"otherOperatingCosts":3860,"propertyNoi":2770,"ownerOperatingHours":0,"imputedOwnerLaborCost":0,"intensiveCampaignPreTax":26198.0,"opexStepYear":2,"opexStep":2400}}}}
+{
+  "aguilas": {
+    "label": "SUPUESTO · cambio de uso no validado",
+    "unitCount": 1,
+    "scenarios": {
+      "pessimistic": {
+        "capex": 45840,
+        "revenue": 5760,
+        "opex": 2304,
+        "growth": 0.01,
+        "opexGrowth": 0.03,
+        "assetValue": 70000,
+        "appreciation": 0,
+        "revenueStart": 4,
+        "delayedCapexYear": 2,
+        "delayedCapex": 31500,
+        "purchasePrice": 38000,
+        "closingCosts": 6740,
+        "technicalPrecheck": 1100,
+        "entryCost": 45840,
+        "futureCapex": 31500
+      },
+      "base": {
+        "capex": 40780,
+        "revenue": 7200,
+        "opex": 1836,
+        "growth": 0.02,
+        "opexGrowth": 0.02,
+        "assetValue": 82500,
+        "appreciation": 0.02,
+        "revenueStart": 3,
+        "delayedCapexYear": 2,
+        "delayedCapex": 23700,
+        "purchasePrice": 35000,
+        "closingCosts": 5080,
+        "technicalPrecheck": 700,
+        "entryCost": 40780,
+        "futureCapex": 23700
+      },
+      "optimistic": {
+        "capex": 37160,
+        "revenue": 7800,
+        "opex": 1560,
+        "growth": 0.03,
+        "opexGrowth": 0.02,
+        "assetValue": 90000,
+        "appreciation": 0.025,
+        "revenueStart": 3,
+        "delayedCapexYear": 2,
+        "delayedCapex": 19700,
+        "purchasePrice": 33000,
+        "closingCosts": 3710,
+        "technicalPrecheck": 450,
+        "entryCost": 37160,
+        "futureCapex": 19700
+      }
+    }
+  },
+  "reus": {
+    "label": "SUPUESTO · licencia y demanda pendientes",
+    "unitCount": 11,
+    "scenarios": {
+      "pessimistic": {
+        "capex": 50000,
+        "revenue": 4752,
+        "opex": 2500,
+        "growth": 0.01,
+        "opexGrowth": 0.03,
+        "assetValue": 42000,
+        "appreciation": 0.005
+      },
+      "base": {
+        "capex": 45000,
+        "revenue": 7128,
+        "opex": 2040,
+        "growth": 0.02,
+        "opexGrowth": 0.02,
+        "assetValue": 56080,
+        "appreciation": 0.02
+      },
+      "optimistic": {
+        "capex": 42000,
+        "revenue": 8580,
+        "opex": 1900,
+        "growth": 0.025,
+        "opexGrowth": 0.02,
+        "assetValue": 65000,
+        "appreciation": 0.02
+      }
+    }
+  },
+  "l3h2": {
+    "label": "ESTIMACIÓN · flota de DOS vehículos",
+    "unitCount": 2,
+    "vat": {
+      "deductible": 0.21,
+      "nonDeductible": 0,
+      "prudent": 0.105
+    },
+    "budgets": {
+      "low": 49500,
+      "base": 59600,
+      "premium": 72400
+    },
+    "phased": {
+      "initialUnits": 1,
+      "secondUnitYear": 2
+    },
+    "scenarios": {
+      "pessimistic": {
+        "capex": 59600,
+        "revenue": 18720,
+        "opex": 15100,
+        "growth": 0.01,
+        "opexGrowth": 0.03,
+        "assetValue": 59600,
+        "appreciation": -0.14,
+        "residualFactor": 1
+      },
+      "base": {
+        "capex": 59600,
+        "revenue": 34320,
+        "opex": 19450,
+        "growth": 0.02,
+        "opexGrowth": 0.025,
+        "assetValue": 59600,
+        "appreciation": -0.13,
+        "residualFactor": 1
+      },
+      "optimistic": {
+        "capex": 72400,
+        "revenue": 57000,
+        "opex": 26700,
+        "growth": 0.025,
+        "opexGrowth": 0.025,
+        "assetValue": 72400,
+        "appreciation": -0.12,
+        "residualFactor": 1
+      }
+    }
+  },
+  "campers": {
+    "label": "ESTIMACIÓN · flota de DOS campers",
+    "unitCount": 2,
+    "budgets": {
+      "conversion": {
+        "low": 78000,
+        "base": 96000,
+        "premium": 121000
+      },
+      "finished": {
+        "low": 93000,
+        "base": 108000,
+        "premium": 132000
+      }
+    },
+    "seasonal": {
+      "repositioning": 10800,
+      "lostDays": 16,
+      "revenueUplift": 17500,
+      "netUplift": 6700
+    },
+    "financing": {
+      "equity": 45000,
+      "debt": 51000,
+      "rate": 0.065,
+      "years": 7
+    },
+    "phased": {
+      "initialUnits": 1,
+      "secondUnitYear": 2
+    },
+    "scenarios": {
+      "pessimistic": {
+        "capex": 96000,
+        "revenue": 29200,
+        "opex": 24700,
+        "growth": 0.01,
+        "opexGrowth": 0.03,
+        "assetValue": 96000,
+        "appreciation": -0.11
+      },
+      "base": {
+        "capex": 96000,
+        "revenue": 53100,
+        "opex": 32200,
+        "growth": 0.02,
+        "opexGrowth": 0.025,
+        "assetValue": 96000,
+        "appreciation": -0.1
+      },
+      "optimistic": {
+        "capex": 121000,
+        "revenue": 82800,
+        "opex": 43800,
+        "growth": 0.025,
+        "opexGrowth": 0.025,
+        "assetValue": 121000,
+        "appreciation": -0.09
+      }
+    }
+  },
+  "tinamus": {
+    "label": "DATO DOCUMENTAL + SUPUESTO de conversión",
+    "unitCount": 1,
+    "leverage": {
+      "equity": 41400,
+      "debt": 70000,
+      "rate": 0.055,
+      "years": 15,
+      "ltv": 0.7
+    },
+    "scenarios": {
+      "pessimistic": {
+        "capex": 111900,
+        "revenue": 9360,
+        "opex": 3744,
+        "growth": 0.01,
+        "opexGrowth": 0.03,
+        "assetValue": 160000,
+        "appreciation": 0.005,
+        "revenueStart": 4,
+        "delayedCapexYear": 2,
+        "delayedCapex": 42000
+      },
+      "base": {
+        "capex": 111900,
+        "revenue": 11700,
+        "opex": 3510,
+        "growth": 0.02,
+        "opexGrowth": 0.02,
+        "assetValue": 180000,
+        "appreciation": 0.02,
+        "revenueStart": 3,
+        "delayedCapexYear": 2,
+        "delayedCapex": 32500
+      },
+      "optimistic": {
+        "capex": 111900,
+        "revenue": 12600,
+        "opex": 3150,
+        "growth": 0.025,
+        "opexGrowth": 0.02,
+        "assetValue": 195000,
+        "appreciation": 0.025,
+        "revenueStart": 3,
+        "delayedCapexYear": 2,
+        "delayedCapex": 28500
+      }
+    }
+  },
+  "local": {
+    "label": "N/D — falta modelo operativo",
+    "unitCount": 0,
+    "scenarios": {
+      "base": {
+        "capex": 0,
+        "revenue": 0,
+        "opex": 0,
+        "growth": 0,
+        "opexGrowth": 0,
+        "assetValue": 0,
+        "appreciation": 0
+      }
+    }
+  },
+  "el-ejido-outsourced-last-mile": {
+    "label": "SUPUESTO APORTADO · volumen, contratos, tarifa y costes pendientes de validación",
+    "unitCount": 2,
+    "classification": [
+      "real-estate",
+      "operating-business",
+      "outsourced",
+      "last-mile",
+      "hybrid-investment",
+      "income-producing-asset"
+    ],
+    "ownerOperated": false,
+    "ownerOperatingHoursMonth": 0,
+    "ownerRouteHours": 0,
+    "ownerDeliveryHours": 0,
+    "imputedOwnerLaborCost": 0,
+    "financing": {
+      "equity": 34000,
+      "debt": 0,
+      "loanPrincipal": 0,
+      "monthlyLoanPayment": 0
+    },
+    "operations": {
+      "locations": 2,
+      "deliveryDaysMonth": 26,
+      "normalDaysYear": 282,
+      "peakDaysYear": 30,
+      "intensiveNormalDaysYear": 234,
+      "intensivePeakDaysYear": 78,
+      "revenuePerPackage": 0.8,
+      "outsourcedCostPerPackage": 0.4,
+      "peakPackagesPerDayPerLocation": 120,
+      "propertyRentMonth": 350,
+      "propertyRentMonths": 11,
+      "secondLocationRentMonth": 100,
+      "monthlyFixedCostsView": 350.8333333333333,
+      "propertyCosts": {
+        "community": 300,
+        "ibi": 180,
+        "insurance": 180,
+        "maintenanceReserve": 420
+      },
+      "otherAnnualCosts": {
+        "ownerContributionBudget": 1200,
+        "accounting": 380,
+        "secondLocationRent": 1200
+      },
+      "supplierHours": {
+        "pessimistic": {
+          "daily": 5,
+          "monthly": 130
+        },
+        "base": {
+          "daily": 5.75,
+          "monthly": 149.5
+        },
+        "optimistic": {
+          "daily": 6.5,
+          "monthly": 169
+        },
+        "peak": {
+          "daily": 8,
+          "monthly": 208
+        }
+      },
+      "packagesPerDayPerLocation": {
+        "pessimistic": 80,
+        "base": 90,
+        "optimistic": 100,
+        "peak": 120
+      }
+    },
+    "taxReserveSensitivity": [
+      0.15,
+      0.2,
+      0.3
+    ],
+    "ownerContributionStep": {
+      "year": 2,
+      "incrementalAnnualCost": 2400,
+      "status": "budget assumption, not a confirmed legal contribution"
+    },
+    "workingCapital": {
+      "value": null,
+      "status": "unconfirmed / excluded"
+    },
+    "property": {
+      "purchasePrice": 29000,
+      "annualRent": 3850,
+      "annualCosts": 1080,
+      "noi": 2770,
+      "operatingYieldBasis": 34000
+    },
+    "evidence": {
+      "providedAssumptions": [
+        "Precio local 29.000 €",
+        "Bolsa de adquisición y puesta en marcha 5.000 €",
+        "Renta 350 €/mes durante 11 meses",
+        "Segundo espacio 100 €/mes",
+        "Tarifa 0,80 €/paquete",
+        "Pago colaborador 0,40 €/paquete",
+        "Volumen normal 80/90/100 y pico 120 paquetes/día/punto",
+        "26 días/mes y 30 días pico"
+      ],
+      "calculated": [
+        "revenue",
+        "outsourcing cost",
+        "cash flow",
+        "ROI",
+        "IRR",
+        "payback",
+        "final wealth",
+        "residual"
+      ],
+      "unconfirmed": [
+        "contrato operador logístico",
+        "volumen real",
+        "tarifa real",
+        "derecho a delegar reparto",
+        "contrato colaborador",
+        "continuidad colaborador",
+        "fianza segundo local",
+        "suministros",
+        "seguros",
+        "cuota efectiva",
+        "fiscalidad",
+        "valor residual",
+        "renta de mercado",
+        "elegibilidad SEPE"
+      ]
+    },
+    "scenarios": {
+      "pessimistic": {
+        "capex": 34000,
+        "entryCost": 34000,
+        "purchasePrice": 29000,
+        "closingAndStartup": 5000,
+        "revenue": 45706,
+        "opex": 24788,
+        "growth": 0,
+        "opexGrowth": 0.02,
+        "assetValue": 29000,
+        "appreciation": 0.005,
+        "packages": 52320,
+        "grossLogisticsRevenue": 41856,
+        "outsourcedDeliveryCost": 20928,
+        "logisticsContribution": 20928,
+        "propertyIncome": 3850,
+        "otherOperatingCosts": 3860,
+        "propertyNoi": 2770,
+        "ownerOperatingHours": 0,
+        "imputedOwnerLaborCost": 0,
+        "intensiveCampaignPreTax": 22454,
+        "opexStepYear": 2,
+        "opexStep": 2400
+      },
+      "base": {
+        "capex": 34000,
+        "entryCost": 34000,
+        "purchasePrice": 29000,
+        "closingAndStartup": 5000,
+        "revenue": 50218,
+        "opex": 27044,
+        "growth": 0,
+        "opexGrowth": 0.02,
+        "assetValue": 29000,
+        "appreciation": 0.02,
+        "packages": 57960,
+        "grossLogisticsRevenue": 46368,
+        "outsourcedDeliveryCost": 23184,
+        "logisticsContribution": 23184,
+        "propertyIncome": 3850,
+        "otherOperatingCosts": 3860,
+        "propertyNoi": 2770,
+        "ownerOperatingHours": 0,
+        "imputedOwnerLaborCost": 0,
+        "intensiveCampaignPreTax": 24326,
+        "opexStepYear": 2,
+        "opexStep": 2400
+      },
+      "optimistic": {
+        "capex": 34000,
+        "entryCost": 34000,
+        "purchasePrice": 29000,
+        "closingAndStartup": 5000,
+        "revenue": 54730,
+        "opex": 29300,
+        "growth": 0,
+        "opexGrowth": 0.02,
+        "assetValue": 29000,
+        "appreciation": 0.025,
+        "packages": 63600,
+        "grossLogisticsRevenue": 50880,
+        "outsourcedDeliveryCost": 25440,
+        "logisticsContribution": 25440,
+        "propertyIncome": 3850,
+        "otherOperatingCosts": 3860,
+        "propertyNoi": 2770,
+        "ownerOperatingHours": 0,
+        "imputedOwnerLaborCost": 0,
+        "intensiveCampaignPreTax": 26198,
+        "opexStepYear": 2,
+        "opexStep": 2400
+      }
+    }
+  },
+  "oliva-cambio-uso-habitaciones": {
+    "label": "DOCUMENTADO + CALCULADO · viabilidad urbanística ND; SUPUESTOS DEL MODELO identificados",
+    "unitCount": 1,
+    "classification": [
+      "real-estate",
+      "change-of-use",
+      "residential",
+      "room-rental",
+      "value-add",
+      "leveraged",
+      "conditional",
+      "urban-planning-risk"
+    ],
+    "property": {
+      "address": "C/ Guillem de Castro 16, Esc. 1, Planta AL, Puerta 13, Oliva, València",
+      "cadastralReference": "0024606YJ5102S0068AS",
+      "cadastralUse": "ALMACÉN",
+      "privateAreaM2": 93,
+      "commonAreaM2": 5,
+      "builtAreaM2": 98,
+      "listingAreaM2": 101,
+      "yearBuilt": 2006,
+      "floor": "AL / entreplanta",
+      "urbanisticFeasibility": "ND — NO DETERMINADA"
+    },
+    "acquisition": {
+      "purchasePrice": 50000,
+      "itp": 4500,
+      "notaryRegistryManagement": 1300,
+      "technicalDocumentDueDiligence": 600,
+      "entryCost": 56400
+    },
+    "financing": {
+      "debt": 25000,
+      "loanPrincipal": 25000,
+      "rate": 0.0799,
+      "apr": 0.0829,
+      "years": 7,
+      "termMonths": 84,
+      "monthlyLoanPayment": 389.42,
+      "annualDebtService": 4673.04,
+      "totalPayments": 32711.28,
+      "nominalFinanceCost": 7711.28,
+      "status": "documented identified debt only; no automatic gap financing"
+    },
+    "funding": {
+      "ownFunds": 15000,
+      "loan": 25000,
+      "sepeConditional": 28000,
+      "sepeStatus": "conditional / not validated",
+      "declaredResources": 68000,
+      "safeResourcesWithoutSepe": 40000,
+      "baseMaximumCashRequirement": 103184,
+      "baseFundingGap": 35184,
+      "immediateGapWithoutSepe": 16400
+    },
+    "operations": {
+      "taxBasis": "PRE-TAX / before personal income tax",
+      "rentalModel": "Una única vivienda legal con cocina/salón comunes y alquiler estable por habitaciones",
+      "threeRooms": {
+        "rooms": 3,
+        "rentPerRoomMonth": 350,
+        "grossRent": 12600,
+        "economicOccupancy": 0.92,
+        "effectiveRent": 11592,
+        "opex": 4710,
+        "noi": 6882,
+        "netOperatingYield": 0.0797,
+        "annualDebtService": 4673.04,
+        "preTaxCashFlow": 2208.96,
+        "monthlyPreTaxCashFlow": 184.08,
+        "dscr": 1.47,
+        "cashOnCash": 0.036,
+        "simplePaybackYears": 27.8
+      },
+      "fourRooms": {
+        "rooms": 4,
+        "rentPerRoomMonth": 340,
+        "grossRent": 16320,
+        "economicOccupancy": 0.92,
+        "effectiveRent": 15014.4,
+        "reportedRoundedEffectiveRent": 15014,
+        "opex": 5500,
+        "noi": 9514,
+        "annualDebtService": 4673.04,
+        "preTaxCashFlow": 4840.96,
+        "monthlyPreTaxCashFlow": 403.41,
+        "dscr": 2.04,
+        "cashOnCash": 0.0655,
+        "simplePaybackYears": 15.3
+      }
+    },
+    "changeOfUse": {
+      "target": "una vivienda legal; no alquiler turístico ni microestudios",
+      "status": "ND",
+      "unconfirmed": [
+        "subzona urbanística",
+        "compatibilidad de vivienda en planta AL",
+        "densidad residencial",
+        "proyecto y licencia original",
+        "altura libre",
+        "ventanas, iluminación y ventilación",
+        "acceso y evacuación",
+        "saneamiento",
+        "estatutos y título constitutivo",
+        "nota simple",
+        "CTE",
+        "segunda pieza higiénica para 3+ dormitorios"
+      ]
+    },
+    "gates": [
+      {
+        "id": "urbanisticCompatibility",
+        "label": "Urbanismo",
+        "status": "pending",
+        "blocking": true,
+        "requirement": "Informe municipal favorable para crear una vivienda independiente"
+      },
+      {
+        "id": "technicalFeasibility",
+        "label": "Arquitectura / habitabilidad",
+        "status": "pending",
+        "blocking": true,
+        "requirement": "Demostrar al menos 3 dormitorios legales, preferiblemente 4"
+      },
+      {
+        "id": "registryCommunity",
+        "label": "Registro / comunidad",
+        "status": "pending",
+        "blocking": true,
+        "requirement": "Nota simple, título, estatutos, proyecto original y autorización de obras comunes"
+      },
+      {
+        "id": "funding",
+        "label": "Financiación",
+        "status": "failed",
+        "blocking": true,
+        "requirement": "Cerrar el funding gap central de 35.184 € hasta primer ingreso"
+      },
+      {
+        "id": "sepe",
+        "label": "SEPE",
+        "status": "critical",
+        "conditional": true,
+        "blocking": true,
+        "requirement": "Confirmación escrita antes de contar 28.000 € para uso residencial"
+      }
+    ],
+    "decisionStatus": "DUE DILIGENCE ONLY",
+    "executionEligible": false,
+    "evidence": {
+      "documented": [
+        "inmueble y adquisición",
+        "costes, plazos y caja de los tres escenarios",
+        "operación de 3 y 4 habitaciones",
+        "préstamo ING",
+        "fuentes declaradas y riesgo SEPE",
+        "rango residual no tasado"
+      ],
+      "calculated": [
+        "entryCost",
+        "capital diferido",
+        "rentas efectivas",
+        "NOI",
+        "cash flow pre-IRPF",
+        "DSCR",
+        "funding gaps"
+      ],
+      "derived": [
+        "Escenario adverso usa operación de 3 habitaciones como supuesto conservador derivado",
+        "Crecimientos, horas y scores son SUPUESTO DEL MODELO"
+      ],
+      "unconfirmed": [
+        "viabilidad urbanística y técnica",
+        "registro y comunidad",
+        "elegibilidad SEPE",
+        "financiación del gap",
+        "tasación y valor residual"
+      ]
+    },
+    "exitAssumptions": {
+      "status": "SUPUESTO DEL MODELO dentro del rango documentado; no tasación",
+      "range": [
+        105000,
+        125000
+      ],
+      "baseExample": 120000,
+      "mechanicalMarketReference": 119500,
+      "exitCostsRate": 0.06,
+      "exitCostsStatus": "ejemplo documental; no aplicado al motor común para evitar inconsistencia/doble cómputo"
+    },
+    "modelInputs": {
+      "ownerHoursMonth": 12,
+      "ownerHoursSource": "SUPUESTO DEL MODELO",
+      "probabilityLoss": 0.4,
+      "probabilityLossSource": "SUPUESTO DEL MODELO",
+      "dataConfidence": 0.3
+    },
+    "scenarios": {
+      "pessimistic": {
+        "scenarioMapping": "adverso documentado; operación 3 habitaciones = derived assumption conservadora",
+        "capex": 115400,
+        "projectCost": 115400,
+        "entryCost": 56400,
+        "futureCapex": 59000,
+        "delayedCapex": 59000,
+        "delayedCapexYear": 1,
+        "purchasePrice": 50000,
+        "revenue": 12600,
+        "opex": 4710,
+        "growth": 0.01,
+        "opexGrowth": 0.03,
+        "assetValue": 105000,
+        "appreciation": 0,
+        "monthsToFirstIncome": 16,
+        "monthsToReady": 15,
+        "stabilizationMonth": 19,
+        "waitingDebtService": 6231,
+        "maximumCashRequirement": 121631,
+        "fundingGap": 53631
+      },
+      "base": {
+        "scenarioMapping": "central documentado · 4 habitaciones",
+        "capex": 98900,
+        "projectCost": 98900,
+        "entryCost": 56400,
+        "futureCapex": 42500,
+        "delayedCapex": 42500,
+        "delayedCapexYear": 1,
+        "purchasePrice": 50000,
+        "revenue": 16320,
+        "opex": 5500,
+        "growth": 0.02,
+        "opexGrowth": 0.02,
+        "assetValue": 120000,
+        "appreciation": 0,
+        "monthsToFirstIncome": 11,
+        "monthsToReady": 10,
+        "stabilizationMonth": 14,
+        "waitingDebtService": 4284,
+        "maximumCashRequirement": 103184,
+        "fundingGap": 35184
+      },
+      "optimistic": {
+        "scenarioMapping": "menor coste documentado · 3 habitaciones; no implica mayor retorno",
+        "capex": 86400,
+        "projectCost": 86400,
+        "entryCost": 56400,
+        "futureCapex": 30000,
+        "delayedCapex": 30000,
+        "delayedCapexYear": 1,
+        "purchasePrice": 50000,
+        "revenue": 12600,
+        "opex": 4710,
+        "growth": 0.02,
+        "opexGrowth": 0.02,
+        "assetValue": 125000,
+        "appreciation": 0,
+        "monthsToFirstIncome": 7,
+        "monthsToReady": 6,
+        "stabilizationMonth": 10,
+        "waitingDebtService": 2726,
+        "maximumCashRequirement": 89126,
+        "fundingGap": 21126
+      }
+    }
+  }
+}

@@ -74,7 +74,7 @@ test('efficient frontier contains no dominated member',()=>{
 
 test('benchmarks reuse repository cost and split the 28k gap from external capital above 45k',()=>{
   const rows=benchmarkRows(catalog,assumptions,data);
-  assert.equal(rows.length,6);
+  assert.equal(rows.length,7);
   for(const row of rows){
     const existing=model(assumptions[row.id]);
     assert.equal(row.initialInvestment,existing.projectCost);

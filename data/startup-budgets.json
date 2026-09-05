@@ -2,69 +2,1518 @@
   "capitalAvailable": 45000,
   "investments": {
     "aguilas": {
-      "what":"Un inmueble comercial con opcionalidad de transformación residencial.",
-      "returnSources":["descuento de compra","utilidad empresarial","cambio de uso","alquiler residencial","apreciación"],
-      "timeline":[["Año 0","Compra"],["Año 0–1","Adecuación local"],["Año 1","Actividad comercial"],["Año 2","Proyecto + licencia de cambio de uso"],["Año 2","Reforma residencial y legalización"],["Años 3–10","Alquiler residencial de larga duración"]],
-      "items":[
-        ["Compra del local",33000,35000,38000,"Año 0","Adquisición","Media","Fase 1"],["ITP (supuesto 8 %)",2640,2800,3040,"Año 0","Impuestos","Baja","Fase 1"],["Notaría + registro",900,1200,1500,"Año 0","Notaría / Registro","Media","Fase 1"],["Agencia",0,800,1500,"Año 0","Agencia","Baja","Fase 1"],["Due diligence jurídica/técnica",600,900,1400,"Antes de arras","Due diligence","Media","Fase 1"],["Arquitecto: viabilidad inicial",450,700,1100,"Antes de arras","Proyecto técnico","Media","Fase 1"],["Adecuación comercial ligera",1800,3000,5000,"Meses 1–2","Reforma","Baja","Fase 1"],["Mobiliario de oficina",900,1600,2800,"Mes 2","Equipamiento","Media","Fase 1"],["Fibra, red y seguridad",350,650,1100,"Mes 2","Tecnología","Media","Fase 1"],["Seguro + gestoría inicial",650,1000,1500,"Año 1","Puesta en marcha","Media","Fase 1"],["Mantenimiento año 1",700,1200,2000,"Año 1","Mantenimiento inicial","Baja","Fase 1"],["Capital circulante",1800,3000,4500,"Año 1","Capital circulante","Media","Fase 1"],["Proyecto de cambio de uso",1800,2500,3500,"Año 2","Proyecto técnico","Baja","Fase 2"],["Tasas y licencias",900,1500,2500,"Año 2","Licencias","Baja","Fase 2"],["Reforma residencial",12500,14500,19000,"Año 2","Reforma","Baja","Fase 2"],["Certificados y legalización",700,1200,2000,"Año 2","Licencias","Baja","Fase 2"],["Contingencia",2500,4000,6500,"Años 0–2","Contingencia","Baja","Fase 2"],["Reserva de caja",2000,3500,5500,"Antes de alquilar","Reserva de caja","Media","Fase 2"]],
-      "steps":[["Validar el activo","600–1.100 €","abogado + arquitecto","nota simple, catastro e informe","1–2 semanas","ninguna","uso inviable","GO solo con compatibilidad escrita"],["Comprar y escriturar","36–43k €","comprador + notaría","arras y escritura","3–6 semanas","due diligence","cargas/fiscalidad","NO-GO con cargas no resueltas"],["Abrir como oficina","4–9k €","contratista + titular","licencia/seguro","1–2 meses","compra","sobrecoste","GO con presupuesto cerrado"],["Operar Año 1","4–7k €","empresa","alta de actividad","12 meses","apertura","uso ficticio","GO con actividad compatible real"],["Convertir Año 2","16–27k €","arquitecto + contratista","proyecto/licencia/certificados","6–12 meses","viabilidad municipal","licencia denegada","NO-GO sin autorización"],["Alquilar desde Año 3","2–4k €","propietario/agencia","contrato y seguro","2–6 semanas","legalización","vacancia","GO con renta contrastada"]],
-      "checklist":["nota simple y cargas","catastro y superficie","informe de arquitecto","planeamiento y cambio de uso","estatutos y actas de comunidad","presupuesto de reforma cerrado"]
+      "what": "Un inmueble comercial con opcionalidad de transformación residencial.",
+      "returnSources": [
+        "descuento de compra",
+        "utilidad empresarial",
+        "cambio de uso",
+        "alquiler residencial",
+        "apreciación"
+      ],
+      "timeline": [
+        [
+          "Año 0",
+          "Compra"
+        ],
+        [
+          "Año 0–1",
+          "Adecuación local"
+        ],
+        [
+          "Año 1",
+          "Actividad comercial"
+        ],
+        [
+          "Año 2",
+          "Proyecto + licencia de cambio de uso"
+        ],
+        [
+          "Año 2",
+          "Reforma residencial y legalización"
+        ],
+        [
+          "Años 3–10",
+          "Alquiler residencial de larga duración"
+        ]
+      ],
+      "items": [
+        [
+          "Compra del local",
+          33000,
+          35000,
+          38000,
+          "Año 0",
+          "Adquisición",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "ITP (supuesto 8 %)",
+          2640,
+          2800,
+          3040,
+          "Año 0",
+          "Impuestos",
+          "Baja",
+          "Fase 1"
+        ],
+        [
+          "Notaría + registro",
+          900,
+          1200,
+          1500,
+          "Año 0",
+          "Notaría / Registro",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "Agencia",
+          0,
+          800,
+          1500,
+          "Año 0",
+          "Agencia",
+          "Baja",
+          "Fase 1"
+        ],
+        [
+          "Due diligence jurídica/técnica",
+          600,
+          900,
+          1400,
+          "Antes de arras",
+          "Due diligence",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "Arquitecto: viabilidad inicial",
+          450,
+          700,
+          1100,
+          "Antes de arras",
+          "Proyecto técnico",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "Adecuación comercial ligera",
+          1800,
+          3000,
+          5000,
+          "Meses 1–2",
+          "Reforma",
+          "Baja",
+          "Fase 1"
+        ],
+        [
+          "Mobiliario de oficina",
+          900,
+          1600,
+          2800,
+          "Mes 2",
+          "Equipamiento",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "Fibra, red y seguridad",
+          350,
+          650,
+          1100,
+          "Mes 2",
+          "Tecnología",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "Seguro + gestoría inicial",
+          650,
+          1000,
+          1500,
+          "Año 1",
+          "Puesta en marcha",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "Mantenimiento año 1",
+          700,
+          1200,
+          2000,
+          "Año 1",
+          "Mantenimiento inicial",
+          "Baja",
+          "Fase 1"
+        ],
+        [
+          "Capital circulante",
+          1800,
+          3000,
+          4500,
+          "Año 1",
+          "Capital circulante",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "Proyecto de cambio de uso",
+          1800,
+          2500,
+          3500,
+          "Año 2",
+          "Proyecto técnico",
+          "Baja",
+          "Fase 2"
+        ],
+        [
+          "Tasas y licencias",
+          900,
+          1500,
+          2500,
+          "Año 2",
+          "Licencias",
+          "Baja",
+          "Fase 2"
+        ],
+        [
+          "Reforma residencial",
+          12500,
+          14500,
+          19000,
+          "Año 2",
+          "Reforma",
+          "Baja",
+          "Fase 2"
+        ],
+        [
+          "Certificados y legalización",
+          700,
+          1200,
+          2000,
+          "Año 2",
+          "Licencias",
+          "Baja",
+          "Fase 2"
+        ],
+        [
+          "Contingencia",
+          2500,
+          4000,
+          6500,
+          "Años 0–2",
+          "Contingencia",
+          "Baja",
+          "Fase 2"
+        ],
+        [
+          "Reserva de caja",
+          2000,
+          3500,
+          5500,
+          "Antes de alquilar",
+          "Reserva de caja",
+          "Media",
+          "Fase 2"
+        ]
+      ],
+      "steps": [
+        [
+          "Validar el activo",
+          "600–1.100 €",
+          "abogado + arquitecto",
+          "nota simple, catastro e informe",
+          "1–2 semanas",
+          "ninguna",
+          "uso inviable",
+          "GO solo con compatibilidad escrita"
+        ],
+        [
+          "Comprar y escriturar",
+          "36–43k €",
+          "comprador + notaría",
+          "arras y escritura",
+          "3–6 semanas",
+          "due diligence",
+          "cargas/fiscalidad",
+          "NO-GO con cargas no resueltas"
+        ],
+        [
+          "Abrir como oficina",
+          "4–9k €",
+          "contratista + titular",
+          "licencia/seguro",
+          "1–2 meses",
+          "compra",
+          "sobrecoste",
+          "GO con presupuesto cerrado"
+        ],
+        [
+          "Operar Año 1",
+          "4–7k €",
+          "empresa",
+          "alta de actividad",
+          "12 meses",
+          "apertura",
+          "uso ficticio",
+          "GO con actividad compatible real"
+        ],
+        [
+          "Convertir Año 2",
+          "16–27k €",
+          "arquitecto + contratista",
+          "proyecto/licencia/certificados",
+          "6–12 meses",
+          "viabilidad municipal",
+          "licencia denegada",
+          "NO-GO sin autorización"
+        ],
+        [
+          "Alquilar desde Año 3",
+          "2–4k €",
+          "propietario/agencia",
+          "contrato y seguro",
+          "2–6 semanas",
+          "legalización",
+          "vacancia",
+          "GO con renta contrastada"
+        ]
+      ],
+      "checklist": [
+        "nota simple y cargas",
+        "catastro y superficie",
+        "informe de arquitecto",
+        "planeamiento y cambio de uso",
+        "estatutos y actas de comunidad",
+        "presupuesto de reforma cerrado"
+      ]
     },
     "tinamus": {
-      "what":"Un local comercial madrileño con estrategia empresarial inicial y posible value-add residencial.",
-      "returnSources":["apreciación","transformación residencial","alquiler","venta","amortización de deuda si aplica"],
-      "timeline":[["Mes 0","Due diligence y adquisición"],["Meses 1–4","Adecuación para consultoría/agencia IT"],["Año 1","Actividad empresarial real"],["Año 2","Decisión GO/NO-GO y conversión condicionada"],["Año 3+","Alquiler o venta residencial, solo si legalizado"]],
-      "items":[["Local Calle Tinamus 25",95000,99900,105000,"Mes 0","Adquisición","Media","Fase 1"],["ITP",5700,5994,7350,"Mes 0","Impuestos","Baja","Fase 1"],["Notaría y registro",1200,1600,2100,"Mes 0","Notaría / Registro","Media","Fase 1"],["Tasación, banco y due diligence",1000,1500,2200,"Antes de compra","Due diligence","Media","Fase 1"],["Adecuación IT, electricidad e iluminación",4500,7000,11000,"Meses 1–4","Reforma","Baja","Fase 2"],["Fibra, mobiliario y seguro",1800,3000,4800,"Meses 2–4","Equipamiento","Media","Fase 2"],["Arquitecto y proyecto residencial",3000,4500,6500,"Año 2","Proyecto técnico","Baja","Fase 3"],["Licencias y tasas",1800,3000,5000,"Año 2","Licencias","Baja","Fase 3"],["Obra, cocina, baño y aislamiento",22000,30000,42000,"Año 2","Reforma","Baja","Fase 3"],["Ventilación, instalaciones y certificados",3500,6000,9000,"Año 2","Licencias","Baja","Fase 3"],["Muebles, fotos y comercialización",2000,3500,5500,"Año 3","Puesta en marcha","Media","Fase 4"],["Capital circulante",3000,5000,7500,"Años 1–3","Capital circulante","Media","Fase 4"],["Contingencia",6000,9000,14000,"Años 0–3","Contingencia","Baja","Fase 4"],["Reserva de caja",3500,6000,9000,"Antes de alquilar","Reserva de caja","Media","Fase 4"]],
-      "steps":[["Viabilidad","1–2k €","abogado + arquitecto","nota simple e informe","2–4 semanas","ninguna","conversión imposible","NO-GO si el caso local no se sostiene"],["Adquisición","104–117k €","comprador","escritura","1–2 meses","viabilidad","tasación/deuda","GO con financiación firme"],["Adecuación IT","6–16k €","contratista","licencia de actividad","2–4 meses","compra","sobrecoste","GO con uso compatible"],["Actividad empresarial","3–5k €","empresa","seguro/alta","12 meses","apertura","actividad incompatible","mantener uso registral local"],["Conversión opcional","30–58k €","arquitecto","proyecto y licencia","6–15 meses","GO técnico-jurídico","denegación","NO-GO sin permiso"],["Explotación","2–5k €","propietario","contrato","1–2 meses","legalización","vacancia","GO con demanda validada"]],
-      "checklist":["nota simple y estatutos","informe urbanístico escrito","arquitecto: luz, ventilación, altura y accesibilidad","tasación y financiación vinculante","tres presupuestos de obra","condición suspensiva en arras"]
+      "what": "Un local comercial madrileño con estrategia empresarial inicial y posible value-add residencial.",
+      "returnSources": [
+        "apreciación",
+        "transformación residencial",
+        "alquiler",
+        "venta",
+        "amortización de deuda si aplica"
+      ],
+      "timeline": [
+        [
+          "Mes 0",
+          "Due diligence y adquisición"
+        ],
+        [
+          "Meses 1–4",
+          "Adecuación para consultoría/agencia IT"
+        ],
+        [
+          "Año 1",
+          "Actividad empresarial real"
+        ],
+        [
+          "Año 2",
+          "Decisión GO/NO-GO y conversión condicionada"
+        ],
+        [
+          "Año 3+",
+          "Alquiler o venta residencial, solo si legalizado"
+        ]
+      ],
+      "items": [
+        [
+          "Local Calle Tinamus 25",
+          95000,
+          99900,
+          105000,
+          "Mes 0",
+          "Adquisición",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "ITP",
+          5700,
+          5994,
+          7350,
+          "Mes 0",
+          "Impuestos",
+          "Baja",
+          "Fase 1"
+        ],
+        [
+          "Notaría y registro",
+          1200,
+          1600,
+          2100,
+          "Mes 0",
+          "Notaría / Registro",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "Tasación, banco y due diligence",
+          1000,
+          1500,
+          2200,
+          "Antes de compra",
+          "Due diligence",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "Adecuación IT, electricidad e iluminación",
+          4500,
+          7000,
+          11000,
+          "Meses 1–4",
+          "Reforma",
+          "Baja",
+          "Fase 2"
+        ],
+        [
+          "Fibra, mobiliario y seguro",
+          1800,
+          3000,
+          4800,
+          "Meses 2–4",
+          "Equipamiento",
+          "Media",
+          "Fase 2"
+        ],
+        [
+          "Arquitecto y proyecto residencial",
+          3000,
+          4500,
+          6500,
+          "Año 2",
+          "Proyecto técnico",
+          "Baja",
+          "Fase 3"
+        ],
+        [
+          "Licencias y tasas",
+          1800,
+          3000,
+          5000,
+          "Año 2",
+          "Licencias",
+          "Baja",
+          "Fase 3"
+        ],
+        [
+          "Obra, cocina, baño y aislamiento",
+          22000,
+          30000,
+          42000,
+          "Año 2",
+          "Reforma",
+          "Baja",
+          "Fase 3"
+        ],
+        [
+          "Ventilación, instalaciones y certificados",
+          3500,
+          6000,
+          9000,
+          "Año 2",
+          "Licencias",
+          "Baja",
+          "Fase 3"
+        ],
+        [
+          "Muebles, fotos y comercialización",
+          2000,
+          3500,
+          5500,
+          "Año 3",
+          "Puesta en marcha",
+          "Media",
+          "Fase 4"
+        ],
+        [
+          "Capital circulante",
+          3000,
+          5000,
+          7500,
+          "Años 1–3",
+          "Capital circulante",
+          "Media",
+          "Fase 4"
+        ],
+        [
+          "Contingencia",
+          6000,
+          9000,
+          14000,
+          "Años 0–3",
+          "Contingencia",
+          "Baja",
+          "Fase 4"
+        ],
+        [
+          "Reserva de caja",
+          3500,
+          6000,
+          9000,
+          "Antes de alquilar",
+          "Reserva de caja",
+          "Media",
+          "Fase 4"
+        ]
+      ],
+      "steps": [
+        [
+          "Viabilidad",
+          "1–2k €",
+          "abogado + arquitecto",
+          "nota simple e informe",
+          "2–4 semanas",
+          "ninguna",
+          "conversión imposible",
+          "NO-GO si el caso local no se sostiene"
+        ],
+        [
+          "Adquisición",
+          "104–117k €",
+          "comprador",
+          "escritura",
+          "1–2 meses",
+          "viabilidad",
+          "tasación/deuda",
+          "GO con financiación firme"
+        ],
+        [
+          "Adecuación IT",
+          "6–16k €",
+          "contratista",
+          "licencia de actividad",
+          "2–4 meses",
+          "compra",
+          "sobrecoste",
+          "GO con uso compatible"
+        ],
+        [
+          "Actividad empresarial",
+          "3–5k €",
+          "empresa",
+          "seguro/alta",
+          "12 meses",
+          "apertura",
+          "actividad incompatible",
+          "mantener uso registral local"
+        ],
+        [
+          "Conversión opcional",
+          "30–58k €",
+          "arquitecto",
+          "proyecto y licencia",
+          "6–15 meses",
+          "GO técnico-jurídico",
+          "denegación",
+          "NO-GO sin permiso"
+        ],
+        [
+          "Explotación",
+          "2–5k €",
+          "propietario",
+          "contrato",
+          "1–2 meses",
+          "legalización",
+          "vacancia",
+          "GO con demanda validada"
+        ]
+      ],
+      "checklist": [
+        "nota simple y estatutos",
+        "informe urbanístico escrito",
+        "arquitecto: luz, ventilación, altura y accesibilidad",
+        "tasación y financiación vinculante",
+        "tres presupuestos de obra",
+        "condición suspensiva en arras"
+      ]
     },
     "l3h2": {
-      "what":"Dos vehículos industriales depreciables que generan rentas mediante alquiler.",
-      "returnSources":["precio por día","ocupación","extras","eficiencia operativa","valor residual"],
-      "timeline":[["Mes 0","Seleccionar y revisar dos unidades"],["Mes 1","Comprar, transferir y asegurar"],["Mes 1–2","Puesta a punto, GPS y fotografías"],["Mes 2","Alta en Amovens y plataformas compatibles"],["Mes 3+","Alquiler, limpieza, daños y mantenimiento recurrente"]],
-      "items":[["Vehículo 1: compra",18000,22500,28000,"Mes 0","Adquisición","Media","Vehículo 1"],["Vehículo 1: IVA/transferencia",900,1600,2600,"Mes 0","Impuestos","Baja","Vehículo 1"],["Vehículo 1: revisión, mantenimiento y neumáticos",1200,2200,3500,"Mes 0–1","Mantenimiento inicial","Media","Vehículo 1"],["Vehículo 1: seguro, GPS, llaves y limpieza",900,1500,2300,"Mes 1","Puesta en marcha","Baja","Vehículo 1"],["Vehículo 2: compra",18000,22500,28000,"Mes 0","Adquisición","Media","Vehículo 2"],["Vehículo 2: IVA/transferencia",900,1600,2600,"Mes 0","Impuestos","Baja","Vehículo 2"],["Vehículo 2: revisión, mantenimiento y neumáticos",1200,2200,3500,"Mes 0–1","Mantenimiento inicial","Media","Vehículo 2"],["Vehículo 2: seguro, GPS, llaves y limpieza",900,1500,2300,"Mes 1","Puesta en marcha","Baja","Vehículo 2"],["Parking y plataforma inicial",600,1200,2000,"Meses 1–3","Puesta en marcha","Baja","Común"],["Fotos, web, branding y marketing",350,800,1500,"Mes 1","Marketing","Media","Común"],["Gestoría",300,600,1000,"Mes 1","Gestoría","Media","Común"],["Capital circulante",2500,4000,6000,"Meses 1–3","Capital circulante","Media","Común"],["Contingencia / reserva averías",1750,3400,5100,"Antes de publicar","Contingencia","Baja","Común"],["Reserva de caja",1000,2000,3000,"Antes de publicar","Reserva de caja","Media","Común"]],
-      "steps":[["Filtrar unidades","0 €","operador","historial/ITV","1 semana","ninguna","mala unidad","NO-GO sin historial"],["Inspección independiente","200–400 €/ud","taller","diagnóstico","1 día","selección","avería oculta","NO-GO ante motor/caja"],["Comprar dos vehículos","38–61k €","empresa","factura y transferencia","1 semana","inspección","IVA incorrecto","GO con titularidad clara"],["Asegurar y preparar","5–12k €","operador","póliza/checklist","2–4 semanas","compra","cobertura excluida","NO-GO sin seguro de alquiler"],["Publicar","1–3k €","operador","contrato de plataforma","1 semana","elegibilidad","canal no compatible","GO multicanal"],["Operar","4–6k € circulante","operador","partes de entrega","continuo","reservas","daños/inmovilización","parar unidad insegura"]],
-      "checklist":["revisión mecánica independiente","historial, cargas e ITV","seguro válido para alquiler","elegibilidad en Amovens y alternativas","etiqueta ambiental/ZBE","precio y ocupación contrastados"]
+      "what": "Dos vehículos industriales depreciables que generan rentas mediante alquiler.",
+      "returnSources": [
+        "precio por día",
+        "ocupación",
+        "extras",
+        "eficiencia operativa",
+        "valor residual"
+      ],
+      "timeline": [
+        [
+          "Mes 0",
+          "Seleccionar y revisar dos unidades"
+        ],
+        [
+          "Mes 1",
+          "Comprar, transferir y asegurar"
+        ],
+        [
+          "Mes 1–2",
+          "Puesta a punto, GPS y fotografías"
+        ],
+        [
+          "Mes 2",
+          "Alta en Amovens y plataformas compatibles"
+        ],
+        [
+          "Mes 3+",
+          "Alquiler, limpieza, daños y mantenimiento recurrente"
+        ]
+      ],
+      "items": [
+        [
+          "Vehículo 1: compra",
+          18000,
+          22500,
+          28000,
+          "Mes 0",
+          "Adquisición",
+          "Media",
+          "Vehículo 1"
+        ],
+        [
+          "Vehículo 1: IVA/transferencia",
+          900,
+          1600,
+          2600,
+          "Mes 0",
+          "Impuestos",
+          "Baja",
+          "Vehículo 1"
+        ],
+        [
+          "Vehículo 1: revisión, mantenimiento y neumáticos",
+          1200,
+          2200,
+          3500,
+          "Mes 0–1",
+          "Mantenimiento inicial",
+          "Media",
+          "Vehículo 1"
+        ],
+        [
+          "Vehículo 1: seguro, GPS, llaves y limpieza",
+          900,
+          1500,
+          2300,
+          "Mes 1",
+          "Puesta en marcha",
+          "Baja",
+          "Vehículo 1"
+        ],
+        [
+          "Vehículo 2: compra",
+          18000,
+          22500,
+          28000,
+          "Mes 0",
+          "Adquisición",
+          "Media",
+          "Vehículo 2"
+        ],
+        [
+          "Vehículo 2: IVA/transferencia",
+          900,
+          1600,
+          2600,
+          "Mes 0",
+          "Impuestos",
+          "Baja",
+          "Vehículo 2"
+        ],
+        [
+          "Vehículo 2: revisión, mantenimiento y neumáticos",
+          1200,
+          2200,
+          3500,
+          "Mes 0–1",
+          "Mantenimiento inicial",
+          "Media",
+          "Vehículo 2"
+        ],
+        [
+          "Vehículo 2: seguro, GPS, llaves y limpieza",
+          900,
+          1500,
+          2300,
+          "Mes 1",
+          "Puesta en marcha",
+          "Baja",
+          "Vehículo 2"
+        ],
+        [
+          "Parking y plataforma inicial",
+          600,
+          1200,
+          2000,
+          "Meses 1–3",
+          "Puesta en marcha",
+          "Baja",
+          "Común"
+        ],
+        [
+          "Fotos, web, branding y marketing",
+          350,
+          800,
+          1500,
+          "Mes 1",
+          "Marketing",
+          "Media",
+          "Común"
+        ],
+        [
+          "Gestoría",
+          300,
+          600,
+          1000,
+          "Mes 1",
+          "Gestoría",
+          "Media",
+          "Común"
+        ],
+        [
+          "Capital circulante",
+          2500,
+          4000,
+          6000,
+          "Meses 1–3",
+          "Capital circulante",
+          "Media",
+          "Común"
+        ],
+        [
+          "Contingencia / reserva averías",
+          1750,
+          3400,
+          5100,
+          "Antes de publicar",
+          "Contingencia",
+          "Baja",
+          "Común"
+        ],
+        [
+          "Reserva de caja",
+          1000,
+          2000,
+          3000,
+          "Antes de publicar",
+          "Reserva de caja",
+          "Media",
+          "Común"
+        ]
+      ],
+      "steps": [
+        [
+          "Filtrar unidades",
+          "0 €",
+          "operador",
+          "historial/ITV",
+          "1 semana",
+          "ninguna",
+          "mala unidad",
+          "NO-GO sin historial"
+        ],
+        [
+          "Inspección independiente",
+          "200–400 €/ud",
+          "taller",
+          "diagnóstico",
+          "1 día",
+          "selección",
+          "avería oculta",
+          "NO-GO ante motor/caja"
+        ],
+        [
+          "Comprar dos vehículos",
+          "38–61k €",
+          "empresa",
+          "factura y transferencia",
+          "1 semana",
+          "inspección",
+          "IVA incorrecto",
+          "GO con titularidad clara"
+        ],
+        [
+          "Asegurar y preparar",
+          "5–12k €",
+          "operador",
+          "póliza/checklist",
+          "2–4 semanas",
+          "compra",
+          "cobertura excluida",
+          "NO-GO sin seguro de alquiler"
+        ],
+        [
+          "Publicar",
+          "1–3k €",
+          "operador",
+          "contrato de plataforma",
+          "1 semana",
+          "elegibilidad",
+          "canal no compatible",
+          "GO multicanal"
+        ],
+        [
+          "Operar",
+          "4–6k € circulante",
+          "operador",
+          "partes de entrega",
+          "continuo",
+          "reservas",
+          "daños/inmovilización",
+          "parar unidad insegura"
+        ]
+      ],
+      "checklist": [
+        "revisión mecánica independiente",
+        "historial, cargas e ITV",
+        "seguro válido para alquiler",
+        "elegibilidad en Amovens y alternativas",
+        "etiqueta ambiental/ZBE",
+        "precio y ocupación contrastados"
+      ]
     },
     "reus": {
-      "what":"Un local transformado en múltiples unidades de almacenamiento.","returnSources":["alquiler de unidades","ocupación","optimización de tamaños","automatización","valor residual"],
-      "timeline":[["Mes 0","Viabilidad, compra y proyecto"],["Meses 1–3","Licencia y obra"],["Meses 3–4","CCTV, acceso y software"],["Mes 4+","Comercialización y llenado progresivo"]],
-      "items":[["Compra del local",20000,22000,25000,"Mes 0","Adquisición","Media","Compra"],["ITP",1600,1760,2000,"Mes 0","Impuestos","Baja","Compra"],["Notaría y registro",800,1100,1400,"Mes 0","Notaría / Registro","Media","Compra"],["Proyecto y licencia",1800,2800,4200,"Meses 0–2","Proyecto técnico","Baja","Obra"],["Divisiones y puertas",7500,10500,14500,"Meses 2–3","Reforma","Baja","Obra"],["Electricidad e iluminación",1000,1800,2800,"Meses 2–3","Reforma","Media","Obra"],["CCTV y control de acceso",1500,2500,4000,"Mes 3","Tecnología","Media","Apertura"],["Incendios, pintura y suelo",2200,3500,5200,"Meses 2–3","Reforma","Baja","Obra"],["Web y software",600,1200,2000,"Mes 3","Tecnología","Media","Apertura"],["Marketing de apertura",500,1000,1800,"Meses 3–6","Marketing","Baja","Apertura"],["Capital circulante",1800,3000,4500,"Meses 0–6","Capital circulante","Media","Reserva"],["Contingencia",2200,3800,6000,"Antes de obra","Contingencia","Baja","Reserva"],["Reserva de caja",1200,2200,3500,"Antes de abrir","Reserva de caja","Media","Reserva"]],
-      "steps":[["Validar licencia y demanda","1–3k €","arquitecto + operador","informe/campaña","2–4 semanas","ninguna","uso o demanda insuficiente","NO-GO si no caben unidades rentables"],["Comprar","23–28k €","comprador","escritura","1 mes","viabilidad","cargas","GO con título limpio"],["Proyectar 11 unidades","2–4k €","arquitecto","proyecto","1 mes","medición","mal mix","GO con m² alquilables"],["Construir y securizar","12–23k €","contratista","certificados","2–3 meses","licencia","PCI/sobrecoste","NO-GO sin licencia"],["Lanzar y llenar","2–4k €","operador","contratos","3–12 meses","apertura","ocupación baja","ajustar mix/precio"]],
-      "checklist":["nota simple y superficie útil","compatibilidad urbanística","licencia y protección contra incendios","presupuesto por 11 unidades","tres comparables de demanda","humedad y seguro"]
+      "what": "Un local transformado en múltiples unidades de almacenamiento.",
+      "returnSources": [
+        "alquiler de unidades",
+        "ocupación",
+        "optimización de tamaños",
+        "automatización",
+        "valor residual"
+      ],
+      "timeline": [
+        [
+          "Mes 0",
+          "Viabilidad, compra y proyecto"
+        ],
+        [
+          "Meses 1–3",
+          "Licencia y obra"
+        ],
+        [
+          "Meses 3–4",
+          "CCTV, acceso y software"
+        ],
+        [
+          "Mes 4+",
+          "Comercialización y llenado progresivo"
+        ]
+      ],
+      "items": [
+        [
+          "Compra del local",
+          20000,
+          22000,
+          25000,
+          "Mes 0",
+          "Adquisición",
+          "Media",
+          "Compra"
+        ],
+        [
+          "ITP",
+          1600,
+          1760,
+          2000,
+          "Mes 0",
+          "Impuestos",
+          "Baja",
+          "Compra"
+        ],
+        [
+          "Notaría y registro",
+          800,
+          1100,
+          1400,
+          "Mes 0",
+          "Notaría / Registro",
+          "Media",
+          "Compra"
+        ],
+        [
+          "Proyecto y licencia",
+          1800,
+          2800,
+          4200,
+          "Meses 0–2",
+          "Proyecto técnico",
+          "Baja",
+          "Obra"
+        ],
+        [
+          "Divisiones y puertas",
+          7500,
+          10500,
+          14500,
+          "Meses 2–3",
+          "Reforma",
+          "Baja",
+          "Obra"
+        ],
+        [
+          "Electricidad e iluminación",
+          1000,
+          1800,
+          2800,
+          "Meses 2–3",
+          "Reforma",
+          "Media",
+          "Obra"
+        ],
+        [
+          "CCTV y control de acceso",
+          1500,
+          2500,
+          4000,
+          "Mes 3",
+          "Tecnología",
+          "Media",
+          "Apertura"
+        ],
+        [
+          "Incendios, pintura y suelo",
+          2200,
+          3500,
+          5200,
+          "Meses 2–3",
+          "Reforma",
+          "Baja",
+          "Obra"
+        ],
+        [
+          "Web y software",
+          600,
+          1200,
+          2000,
+          "Mes 3",
+          "Tecnología",
+          "Media",
+          "Apertura"
+        ],
+        [
+          "Marketing de apertura",
+          500,
+          1000,
+          1800,
+          "Meses 3–6",
+          "Marketing",
+          "Baja",
+          "Apertura"
+        ],
+        [
+          "Capital circulante",
+          1800,
+          3000,
+          4500,
+          "Meses 0–6",
+          "Capital circulante",
+          "Media",
+          "Reserva"
+        ],
+        [
+          "Contingencia",
+          2200,
+          3800,
+          6000,
+          "Antes de obra",
+          "Contingencia",
+          "Baja",
+          "Reserva"
+        ],
+        [
+          "Reserva de caja",
+          1200,
+          2200,
+          3500,
+          "Antes de abrir",
+          "Reserva de caja",
+          "Media",
+          "Reserva"
+        ]
+      ],
+      "steps": [
+        [
+          "Validar licencia y demanda",
+          "1–3k €",
+          "arquitecto + operador",
+          "informe/campaña",
+          "2–4 semanas",
+          "ninguna",
+          "uso o demanda insuficiente",
+          "NO-GO si no caben unidades rentables"
+        ],
+        [
+          "Comprar",
+          "23–28k €",
+          "comprador",
+          "escritura",
+          "1 mes",
+          "viabilidad",
+          "cargas",
+          "GO con título limpio"
+        ],
+        [
+          "Proyectar 11 unidades",
+          "2–4k €",
+          "arquitecto",
+          "proyecto",
+          "1 mes",
+          "medición",
+          "mal mix",
+          "GO con m² alquilables"
+        ],
+        [
+          "Construir y securizar",
+          "12–23k €",
+          "contratista",
+          "certificados",
+          "2–3 meses",
+          "licencia",
+          "PCI/sobrecoste",
+          "NO-GO sin licencia"
+        ],
+        [
+          "Lanzar y llenar",
+          "2–4k €",
+          "operador",
+          "contratos",
+          "3–12 meses",
+          "apertura",
+          "ocupación baja",
+          "ajustar mix/precio"
+        ]
+      ],
+      "checklist": [
+        "nota simple y superficie útil",
+        "compatibilidad urbanística",
+        "licencia y protección contra incendios",
+        "presupuesto por 11 unidades",
+        "tres comparables de demanda",
+        "humedad y seguro"
+      ]
     },
     "campers": {
-      "what":"Dos vehículos recreativos de mayor ticket y fuerte componente estacional.","returnSources":["ADR","ocupación y temporada","extras","gestión multicanal","valor residual"],
-      "timeline":[["Mes 0","Elegir campers terminadas o furgón + camperización"],["Meses 1–6","Comprar, transformar/homologar dos unidades"],["Mes 6","Seguro, fotos y publicación"],["Mes 7+","Alquiler estacional"],["Año 2","Revisión de hub/rotación y segunda decisión si se escalona 1+1"]],
-      "alternatives":"Comparar dos campers terminadas (93.000 / 108.000 / 132.000 €) frente a dos furgones + camperización (78.000 / 96.000 / 121.000 €). La tabla usa esta segunda ruta.",
-      "items":[["Dos furgones base",42000,50000,60000,"Mes 0","Adquisición","Baja","Vehículos"],["Camperización de dos unidades",26000,36000,48000,"Meses 1–5","Reforma","Baja","Conversión"],["Homologación e ITV",1800,2800,4200,"Mes 5","Licencias","Media","Conversión"],["Seguro de dos campers",1800,2600,3800,"Mes 6","Seguro","Baja","Apertura"],["Revisión, neumáticos y puesta a punto",1800,3000,4800,"Meses 0–6","Mantenimiento inicial","Media","Apertura"],["GPS, menaje y equipamiento",1800,3200,5000,"Mes 6","Equipamiento","Media","Apertura"],["Fotos, plataformas, web y marketing",700,1400,2500,"Mes 6","Marketing","Baja","Apertura"],["Gestoría y parking inicial",900,1600,2600,"Meses 1–6","Puesta en marcha","Media","Apertura"],["Capital circulante",3500,6000,9000,"Meses 1–9","Capital circulante","Media","Reserva"],["Contingencia",4200,7000,11000,"Antes de transformar","Contingencia","Baja","Reserva"],["Reserva de caja",2500,4500,7000,"Antes de publicar","Reserva de caja","Media","Reserva"]],
-      "steps":[["Elegir ruta","0–1k €","operador","comparativa de ofertas","2 semanas","ninguna","coste incompleto","NO-GO sin coste homologado"],["Inspeccionar bases","400–800 €","taller","diagnóstico","1 semana","ruta","avería","NO-GO ante daño estructural"],["Comprar dos","44–64k €","empresa","facturas","1 mes","inspección","fiscalidad","GO con fondos"],["Camperizar y homologar","28–52k €","taller + ingeniero","proyecto/ITV","4–7 meses","compra","retraso/sobrepeso","NO-GO sin homologabilidad"],["Publicar y operar","8–15k €","operador","póliza/contratos","continuo","seguro","estacionalidad/daños","piloto 1+1 si falta capital"]],
-      "checklist":["inspección mecánica","presupuesto cerrado de camperización","homologación y pesos","seguro profesional","elegibilidad de plataformas","parking y demanda estacional"]
+      "what": "Dos vehículos recreativos de mayor ticket y fuerte componente estacional.",
+      "returnSources": [
+        "ADR",
+        "ocupación y temporada",
+        "extras",
+        "gestión multicanal",
+        "valor residual"
+      ],
+      "timeline": [
+        [
+          "Mes 0",
+          "Elegir campers terminadas o furgón + camperización"
+        ],
+        [
+          "Meses 1–6",
+          "Comprar, transformar/homologar dos unidades"
+        ],
+        [
+          "Mes 6",
+          "Seguro, fotos y publicación"
+        ],
+        [
+          "Mes 7+",
+          "Alquiler estacional"
+        ],
+        [
+          "Año 2",
+          "Revisión de hub/rotación y segunda decisión si se escalona 1+1"
+        ]
+      ],
+      "alternatives": "Comparar dos campers terminadas (93.000 / 108.000 / 132.000 €) frente a dos furgones + camperización (78.000 / 96.000 / 121.000 €). La tabla usa esta segunda ruta.",
+      "items": [
+        [
+          "Dos furgones base",
+          42000,
+          50000,
+          60000,
+          "Mes 0",
+          "Adquisición",
+          "Baja",
+          "Vehículos"
+        ],
+        [
+          "Camperización de dos unidades",
+          26000,
+          36000,
+          48000,
+          "Meses 1–5",
+          "Reforma",
+          "Baja",
+          "Conversión"
+        ],
+        [
+          "Homologación e ITV",
+          1800,
+          2800,
+          4200,
+          "Mes 5",
+          "Licencias",
+          "Media",
+          "Conversión"
+        ],
+        [
+          "Seguro de dos campers",
+          1800,
+          2600,
+          3800,
+          "Mes 6",
+          "Seguro",
+          "Baja",
+          "Apertura"
+        ],
+        [
+          "Revisión, neumáticos y puesta a punto",
+          1800,
+          3000,
+          4800,
+          "Meses 0–6",
+          "Mantenimiento inicial",
+          "Media",
+          "Apertura"
+        ],
+        [
+          "GPS, menaje y equipamiento",
+          1800,
+          3200,
+          5000,
+          "Mes 6",
+          "Equipamiento",
+          "Media",
+          "Apertura"
+        ],
+        [
+          "Fotos, plataformas, web y marketing",
+          700,
+          1400,
+          2500,
+          "Mes 6",
+          "Marketing",
+          "Baja",
+          "Apertura"
+        ],
+        [
+          "Gestoría y parking inicial",
+          900,
+          1600,
+          2600,
+          "Meses 1–6",
+          "Puesta en marcha",
+          "Media",
+          "Apertura"
+        ],
+        [
+          "Capital circulante",
+          3500,
+          6000,
+          9000,
+          "Meses 1–9",
+          "Capital circulante",
+          "Media",
+          "Reserva"
+        ],
+        [
+          "Contingencia",
+          4200,
+          7000,
+          11000,
+          "Antes de transformar",
+          "Contingencia",
+          "Baja",
+          "Reserva"
+        ],
+        [
+          "Reserva de caja",
+          2500,
+          4500,
+          7000,
+          "Antes de publicar",
+          "Reserva de caja",
+          "Media",
+          "Reserva"
+        ]
+      ],
+      "steps": [
+        [
+          "Elegir ruta",
+          "0–1k €",
+          "operador",
+          "comparativa de ofertas",
+          "2 semanas",
+          "ninguna",
+          "coste incompleto",
+          "NO-GO sin coste homologado"
+        ],
+        [
+          "Inspeccionar bases",
+          "400–800 €",
+          "taller",
+          "diagnóstico",
+          "1 semana",
+          "ruta",
+          "avería",
+          "NO-GO ante daño estructural"
+        ],
+        [
+          "Comprar dos",
+          "44–64k €",
+          "empresa",
+          "facturas",
+          "1 mes",
+          "inspección",
+          "fiscalidad",
+          "GO con fondos"
+        ],
+        [
+          "Camperizar y homologar",
+          "28–52k €",
+          "taller + ingeniero",
+          "proyecto/ITV",
+          "4–7 meses",
+          "compra",
+          "retraso/sobrepeso",
+          "NO-GO sin homologabilidad"
+        ],
+        [
+          "Publicar y operar",
+          "8–15k €",
+          "operador",
+          "póliza/contratos",
+          "continuo",
+          "seguro",
+          "estacionalidad/daños",
+          "piloto 1+1 si falta capital"
+        ]
+      ],
+      "checklist": [
+        "inspección mecánica",
+        "presupuesto cerrado de camperización",
+        "homologación y pesos",
+        "seguro profesional",
+        "elegibilidad de plataformas",
+        "parking y demanda estacional"
+      ]
     },
     "el-ejido-outsourced-last-mile": {
-    "what": "Un local comercial en propiedad y una operación logística externalizada en dos puntos; el segundo espacio se arrienda y no genera residual.",
-    "returnSources": ["renta del local en propiedad","margen unitario del servicio logístico externalizado","valor residual del único inmueble en propiedad"],
-    "timeline": [
-        ["Mes 0","Due diligence y compra del local"],
-        ["Mes 0–1","Validación contractual y puesta en marcha"],
-        ["Mes 1","Contratación del segundo espacio y colaborador"],
-        ["Años 1–10","Operación externalizada, alquiler y seguimiento contractual"]
-    ],
-    "items": [
-        ["Compra del inmueble",29000,29000,29000,"Mes 0","Adquisición","Media","Fase 1"],
-        ["Bolsa de adquisición + puesta en marcha",5000,5000,5000,"Mes 0–1","Puesta en marcha","Baja · sin desglose confirmado","Fase 1"],
-        ["Capital circulante no cuantificado (excluido)",0,0,0,"Antes de operar","Capital circulante","Pendiente · no equivale a coste cero","Fuera del presupuesto"],
-        ["Fianza y suministros segundo espacio (excluidos)",0,0,0,"Antes de operar","Contingencia","Pendiente · no equivale a coste cero","Fuera del presupuesto"],
-        ["Reserva de caja no cuantificada (excluida)",0,0,0,"Antes de operar","Reserva de caja","Pendiente · no equivale a coste cero","Fuera del presupuesto"]
-    ],
-    "steps": [
-        ["Validar inmueble y renta","Incluido en bolsa provisional","comprador + técnico","nota simple, contrato y revisión","1–3 semanas","ninguna","valor/renta no validados","NO-GO sin due diligence"],
-        ["Validar operador y delegación","Pendiente","titular + abogado","contrato operador","antes de compra","oferta operativa","delegación prohibida","NO-GO sin permiso escrito"],
-        ["Contratar colaborador","0,40 €/paquete","titular + colaborador","contrato mercantil","antes de operar","delegación permitida","economía insostenible","GO solo con cobertura y sustitución"],
-        ["Contratar segundo espacio","100 €/mes + importes pendientes","titular","arrendamiento, fianza y suministros","antes de operar","contrato operador","costes omitidos","GO tras cuantificar caja máxima"],
-        ["Operar dos puntos","Coste variable incluido","colaborador","SLA y trazabilidad de paquetes","continuo","contratos firmados","volumen/tarifa","revisar unit economics mensualmente"]
-    ],
-    "checklist": ["nota simple, cargas y estado del local","renta de mercado y solvencia del inquilino","contrato y volumen del operador","derecho escrito a delegar reparto","contrato, alta, seguro y sustitución del colaborador","fianza, suministros y condiciones del segundo espacio","cuota efectiva, fiscalidad y elegibilidad SEPE","circulante y maximum cash requirement"]
-}
+      "what": "Un local comercial en propiedad y una operación logística externalizada en dos puntos; el segundo espacio se arrienda y no genera residual.",
+      "returnSources": [
+        "renta del local en propiedad",
+        "margen unitario del servicio logístico externalizado",
+        "valor residual del único inmueble en propiedad"
+      ],
+      "timeline": [
+        [
+          "Mes 0",
+          "Due diligence y compra del local"
+        ],
+        [
+          "Mes 0–1",
+          "Validación contractual y puesta en marcha"
+        ],
+        [
+          "Mes 1",
+          "Contratación del segundo espacio y colaborador"
+        ],
+        [
+          "Años 1–10",
+          "Operación externalizada, alquiler y seguimiento contractual"
+        ]
+      ],
+      "items": [
+        [
+          "Compra del inmueble",
+          29000,
+          29000,
+          29000,
+          "Mes 0",
+          "Adquisición",
+          "Media",
+          "Fase 1"
+        ],
+        [
+          "Bolsa de adquisición + puesta en marcha",
+          5000,
+          5000,
+          5000,
+          "Mes 0–1",
+          "Puesta en marcha",
+          "Baja · sin desglose confirmado",
+          "Fase 1"
+        ],
+        [
+          "Capital circulante no cuantificado (excluido)",
+          0,
+          0,
+          0,
+          "Antes de operar",
+          "Capital circulante",
+          "Pendiente · no equivale a coste cero",
+          "Fuera del presupuesto"
+        ],
+        [
+          "Fianza y suministros segundo espacio (excluidos)",
+          0,
+          0,
+          0,
+          "Antes de operar",
+          "Contingencia",
+          "Pendiente · no equivale a coste cero",
+          "Fuera del presupuesto"
+        ],
+        [
+          "Reserva de caja no cuantificada (excluida)",
+          0,
+          0,
+          0,
+          "Antes de operar",
+          "Reserva de caja",
+          "Pendiente · no equivale a coste cero",
+          "Fuera del presupuesto"
+        ]
+      ],
+      "steps": [
+        [
+          "Validar inmueble y renta",
+          "Incluido en bolsa provisional",
+          "comprador + técnico",
+          "nota simple, contrato y revisión",
+          "1–3 semanas",
+          "ninguna",
+          "valor/renta no validados",
+          "NO-GO sin due diligence"
+        ],
+        [
+          "Validar operador y delegación",
+          "Pendiente",
+          "titular + abogado",
+          "contrato operador",
+          "antes de compra",
+          "oferta operativa",
+          "delegación prohibida",
+          "NO-GO sin permiso escrito"
+        ],
+        [
+          "Contratar colaborador",
+          "0,40 €/paquete",
+          "titular + colaborador",
+          "contrato mercantil",
+          "antes de operar",
+          "delegación permitida",
+          "economía insostenible",
+          "GO solo con cobertura y sustitución"
+        ],
+        [
+          "Contratar segundo espacio",
+          "100 €/mes + importes pendientes",
+          "titular",
+          "arrendamiento, fianza y suministros",
+          "antes de operar",
+          "contrato operador",
+          "costes omitidos",
+          "GO tras cuantificar caja máxima"
+        ],
+        [
+          "Operar dos puntos",
+          "Coste variable incluido",
+          "colaborador",
+          "SLA y trazabilidad de paquetes",
+          "continuo",
+          "contratos firmados",
+          "volumen/tarifa",
+          "revisar unit economics mensualmente"
+        ]
+      ],
+      "checklist": [
+        "nota simple, cargas y estado del local",
+        "renta de mercado y solvencia del inquilino",
+        "contrato y volumen del operador",
+        "derecho escrito a delegar reparto",
+        "contrato, alta, seguro y sustitución del colaborador",
+        "fianza, suministros y condiciones del segundo espacio",
+        "cuota efectiva, fiscalidad y elegibilidad SEPE",
+        "circulante y maximum cash requirement"
+      ]
+    },
+    "oliva-cambio-uso-habitaciones": {
+      "what": "Almacén/entreplanta sujeto a gates para convertirlo en una única vivienda legal y alquilar habitaciones.",
+      "returnSources": [
+        "alquiler estable por habitaciones",
+        "legalización y value-add",
+        "valor residual no tasado"
+      ],
+      "timeline": [
+        [
+          "Fase 0",
+          "Due diligence antes de arras"
+        ],
+        [
+          "Fase 1",
+          "Informe urbanístico"
+        ],
+        [
+          "Fase 2",
+          "Visita + anteproyecto"
+        ],
+        [
+          "Fase 3",
+          "Registro + comunidad + proyecto original"
+        ],
+        [
+          "Fase 4",
+          "Financiación + SEPE"
+        ],
+        [
+          "Fase 5",
+          "Compra condicionada"
+        ],
+        [
+          "Fase 6",
+          "Proyecto / certificación"
+        ],
+        [
+          "Fase 7",
+          "Obra"
+        ],
+        [
+          "Fase 8",
+          "Final de obra / ocupación"
+        ],
+        [
+          "Fase 9",
+          "Amueblamiento y alquiler"
+        ]
+      ],
+      "items": [
+        [
+          "Due diligence previa",
+          1500,
+          2000,
+          2500,
+          "Antes de arras",
+          "Due diligence",
+          "Media",
+          "Fase 0"
+        ],
+        [
+          "Compra + ITP + cierre",
+          55800,
+          55800,
+          55800,
+          "Compra",
+          "Adquisición",
+          "Alta",
+          "Fase 5"
+        ],
+        [
+          "Proyecto, obra y equipamiento",
+          30000,
+          42500,
+          59000,
+          "Meses 1–15",
+          "Reforma",
+          "Baja",
+          "Fases 6–9"
+        ],
+        [
+          "Capital circulante",
+          1000,
+          2000,
+          3000,
+          "Antes de alquilar",
+          "Capital circulante",
+          "Baja",
+          "Fase 9"
+        ],
+        [
+          "Contingencia",
+          1500,
+          3000,
+          6000,
+          "Durante obra",
+          "Contingencia",
+          "Baja",
+          "Fase 7"
+        ]
+      ],
+      "steps": [
+        [
+          "Due diligence",
+          "1.500–2.500 €",
+          "abogado + arquitecto",
+          "informes y mediciones",
+          "2–4 semanas",
+          "ninguna",
+          "inviabilidad",
+          "NO-GO con cualquier gate técnico/jurídico fallido"
+        ],
+        [
+          "Urbanismo",
+          "incluido previo",
+          "arquitecto + ayuntamiento",
+          "informe favorable",
+          "variable",
+          "due diligence",
+          "uso no permitido",
+          "NO-GO sin informe favorable"
+        ],
+        [
+          "Registro y comunidad",
+          "incluido previo",
+          "abogado",
+          "nota, título y estatutos",
+          "1–3 semanas",
+          "ninguna",
+          "limitaciones",
+          "NO-GO si impide obras/uso"
+        ],
+        [
+          "Financiación y SEPE",
+          "sin compromiso previo",
+          "banco + SEPE",
+          "ofertas y confirmación escrita",
+          "variable",
+          "gates favorables",
+          "gap/uso incompatible",
+          "NO-GO con gap o SEPE no validado"
+        ],
+        [
+          "Compra condicionada",
+          "56.400 €",
+          "comprador",
+          "escritura",
+          "1 mes",
+          "todos los gates",
+          "pérdida de capital",
+          "GO solo con condiciones suspensivas"
+        ],
+        [
+          "Proyecto, obra y alquiler",
+          "30–59k €",
+          "arquitecto + contratista",
+          "licencias y final de obra",
+          "6–16 meses",
+          "compra condicionada",
+          "sobrecoste/retraso",
+          "GO por hitos y presupuesto cerrado"
+        ]
+      ],
+      "checklist": [
+        "informe urbanístico favorable",
+        "anteproyecto: 3–4 dormitorios legales",
+        "nota simple, título y estatutos",
+        "CTE, evacuación y saneamiento",
+        "financiación vinculante para el gap",
+        "confirmación escrita SEPE",
+        "arras con condiciones suspensivas"
+      ]
+    }
   }
 }

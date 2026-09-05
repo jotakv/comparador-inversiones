@@ -50,3 +50,13 @@ test('El Ejido is selectable, ranked and its detail works under Project Pages',a
   assert.equal(errors.length,0,errors.join('\n'));assert.equal(failed.length,0,failed.join('\n'));
   await page.close();
 });
+
+test('Oliva is selectable and its gated detail renders under Project Pages',async()=>{
+  const page=await browser.newPage({viewport:{width:1280,height:900}}),errors=[],failed=[];
+  page.on('console',message=>message.type()==='error'&&errors.push(message.text()));page.on('pageerror',error=>errors.push(error.message));page.on('requestfailed',request=>failed.push(request.url()));
+  await page.goto('http://127.0.0.1:8765/comparador-inversiones/compare.html',{waitUntil:'networkidle'});
+  assert.equal(await page.locator('#a option[value="oliva-cambio-uso-habitaciones"]').count(),1);await page.selectOption('#a','oliva-cambio-uso-habitaciones');assert.match(await page.locator('#comparison').innerText(),/Oliva/);
+  await page.goto('http://127.0.0.1:8765/comparador-inversiones/inversiones/oliva.html',{waitUntil:'networkidle'});const text=await page.locator('main').innerText();
+  for(const value of ['DUE DILIGENCE ONLY','35.184','25.000','9514','2.04','SEPE','Urbanismo'])assert.ok(text.includes(value),value);
+  assert.equal(errors.length,0,errors.join('\n'));assert.equal(failed.length,0,failed.join('\n'));assert.doesNotMatch(text,/undefined|NaN|Infinity/);await page.close();
+});

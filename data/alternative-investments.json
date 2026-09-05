@@ -575,7 +575,8 @@
     "l3h2":{"rating":"Condicionada","note":"Vehículos y seguros deben estar afectados a una actividad de alquiler operada y documentada."},
     "campers":{"rating":"Condicionada","note":"La flota puede ser productiva, pero exige actividad, facturas, seguros, homologación y justificación integral."},
     "tinamus":{"rating":"Dudosa","note":"La sede IT puede ser empresarial; el cambio posterior a vivienda y la renta residencial requieren una justificación separada y son el punto débil."},
-    "el-ejido-outsourced-last-mile":{"rating":"Dudosa","note":"Evaluación preliminar: la elegibilidad exige confirmación del SEPE; la tenencia inmobiliaria y la operación externalizada no acreditan por sí solas autoempleo personal."}
+    "el-ejido-outsourced-last-mile":{"rating":"Dudosa","note":"Evaluación preliminar: la elegibilidad exige confirmación del SEPE; la tenencia inmobiliaria y la operación externalizada no acreditan por sí solas autoempleo personal."},
+    "oliva-cambio-uso-habitaciones":{"rating":"No adecuada","note":"SEPE crítico: no contar 28.000 € para la finalidad residencial sin confirmación escrita y memoria compatible."}
   },
   "moonshots": [
     {"name":"Pods wellness autónomos","validationCapital":5000,"observable":"Existen equipos de acceso, reserva y pago remoto.","hypothesis":"Empresas y hoteles pagarían una cuota por un pod sin personal permanente.","risk":"Ubicación, higiene, seguro y posible regulación sanitaria.","sepeFit":"Dudosa"},

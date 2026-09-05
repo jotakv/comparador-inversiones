@@ -736,5 +736,260 @@
         "fundingGap": 21126
       }
     }
+  },
+  "talavera-reparto-delegado": {
+    "label": "SUPUESTO APORTADO · Talavera · contratos, humedad, volumen y costes pendientes",
+    "unitCount": 2,
+    "classification": [
+      "real-estate",
+      "operating-business",
+      "outsourced",
+      "last-mile",
+      "hybrid-investment",
+      "income-producing-asset"
+    ],
+    "ownerOperated": false,
+    "ownerOperatingHoursMonth": 0,
+    "ownerRouteHours": 0,
+    "ownerDeliveryHours": 0,
+    "imputedOwnerLaborCost": 0,
+    "financing": {
+      "equity": 37661,
+      "debt": 0,
+      "loanPrincipal": 0,
+      "monthlyLoanPayment": 0
+    },
+    "operations": {
+      "locations": 2,
+      "deliveryDaysMonth": 26,
+      "normalDaysYear": 282,
+      "peakDaysYear": 30,
+      "intensiveNormalDaysYear": 234,
+      "intensivePeakDaysYear": 78,
+      "revenuePerPackage": 0.8,
+      "outsourcedCostPerPackage": 0.4,
+      "peakPackagesPerDayPerLocation": 120,
+      "propertyRentMonth": 250,
+      "propertyRentMonths": 11,
+      "secondLocationRentMonth": 100,
+      "monthlyFixedCostsView": 342.5,
+      "propertyCosts": {
+        "community": 300,
+        "ibi": 180,
+        "insurance": 180,
+        "maintenanceReserve": 420
+      },
+      "otherAnnualCosts": {
+        "ownerContributionBudget": 1200,
+        "accounting": 380,
+        "secondLocationRent": 1200
+      },
+      "supplierHours": {
+        "pessimistic": {
+          "daily": 5,
+          "monthly": 130
+        },
+        "base": {
+          "daily": 5.75,
+          "monthly": 149.5
+        },
+        "optimistic": {
+          "daily": 6.5,
+          "monthly": 169
+        },
+        "peak": {
+          "daily": 8,
+          "monthly": 208
+        }
+      },
+      "packagesPerDayPerLocation": {
+        "pessimistic": 80,
+        "base": 90,
+        "optimistic": 100,
+        "peak": 120
+      },
+      "investmentBasis": 37661,
+      "ownerContributionStepAnnual": 2400
+    },
+    "taxReserveSensitivity": [
+      0.15,
+      0.2,
+      0.3
+    ],
+    "ownerContributionStep": {
+      "year": 2,
+      "incrementalAnnualCost": 2400,
+      "status": "budget assumption, not a confirmed legal contribution"
+    },
+    "workingCapital": {
+      "value": null,
+      "status": "pending / excluded"
+    },
+    "property": {
+      "address": "Calle Carretas 12, El Pilar - La Estación, Talavera de la Reina, Toledo, España",
+      "purchasePrice": 32900,
+      "advertisedAreaM2": 50,
+      "cadastralAreaM2": 47,
+      "commercialAreaM2": 41,
+      "commonAreaM2": 6,
+      "use": "Comercial",
+      "yearBuilt": 1964,
+      "regime": "División horizontal",
+      "coefficient": 0.049878,
+      "areaDifferenceM2": 3,
+      "annualRent": 2750,
+      "annualCosts": 1080,
+      "noi": 1670,
+      "operatingYieldBasis": 37661,
+      "damp": {
+        "severity": "ALTO",
+        "status": "PENDIENTE",
+        "cause": null,
+        "responsibility": null,
+        "communityMinutes": null,
+        "budget": null,
+        "scope": null,
+        "date": null,
+        "repair": null
+      }
+    },
+    "evidence": {
+      "providedAssumptions": [
+        "Precio 32.900 €",
+        "ITP 9 % (2.961 €)",
+        "Cierre 1.000 € y revisión/puesta a punto 800 €",
+        "Renta central 250 €/mes durante 11 meses",
+        "Segundo espacio hasta 100 €/mes",
+        "Ingreso 0,80 €/paquete; pago colaborador 0,40 €/paquete",
+        "Dos puntos; 80/90/100 y pico 120 paquetes/día/punto"
+      ],
+      "calculated": [
+        "revenue",
+        "outsourcing cost",
+        "cash flow",
+        "ROI",
+        "IRR",
+        "payback",
+        "final wealth",
+        "residual"
+      ],
+      "unconfirmed": [
+        "contrato operador y derecho a subcontratar",
+        "volumen y tarifa reales",
+        "causa, responsabilidad y reparación de humedad",
+        "comisión inmobiliaria",
+        "reforma extraordinaria",
+        "fianza segundo local",
+        "circulante y adaptación logística",
+        "fiscalidad definitiva",
+        "sostenibilidad y sustitución del colaborador"
+      ]
+    },
+    "scenarios": {
+      "pessimistic": {
+        "capex": 37661,
+        "entryCost": 37661,
+        "purchasePrice": 32900,
+        "closingAndStartup": 4761,
+        "revenue": 44606.0,
+        "opex": 24788.0,
+        "growth": 0,
+        "opexGrowth": 0.02,
+        "assetValue": 32900,
+        "appreciation": 0.005,
+        "packages": 52320,
+        "grossLogisticsRevenue": 41856.0,
+        "outsourcedDeliveryCost": 20928.0,
+        "logisticsContribution": 20928.0,
+        "propertyIncome": 2750,
+        "otherOperatingCosts": 3860,
+        "propertyNoi": 1670,
+        "ownerOperatingHours": 0,
+        "imputedOwnerLaborCost": 0,
+        "intensiveCampaignPreTax": 22454,
+        "opexStepYear": 2,
+        "opexStep": 2400
+      },
+      "base": {
+        "capex": 37661,
+        "entryCost": 37661,
+        "purchasePrice": 32900,
+        "closingAndStartup": 4761,
+        "revenue": 49118.0,
+        "opex": 27044.0,
+        "growth": 0,
+        "opexGrowth": 0.02,
+        "assetValue": 32900,
+        "appreciation": 0.02,
+        "packages": 57960,
+        "grossLogisticsRevenue": 46368.0,
+        "outsourcedDeliveryCost": 23184.0,
+        "logisticsContribution": 23184.0,
+        "propertyIncome": 2750,
+        "otherOperatingCosts": 3860,
+        "propertyNoi": 1670,
+        "ownerOperatingHours": 0,
+        "imputedOwnerLaborCost": 0,
+        "intensiveCampaignPreTax": 24326,
+        "opexStepYear": 2,
+        "opexStep": 2400
+      },
+      "optimistic": {
+        "capex": 37661,
+        "entryCost": 37661,
+        "purchasePrice": 32900,
+        "closingAndStartup": 4761,
+        "revenue": 53630.0,
+        "opex": 29300.0,
+        "growth": 0,
+        "opexGrowth": 0.02,
+        "assetValue": 32900,
+        "appreciation": 0.025,
+        "packages": 63600,
+        "grossLogisticsRevenue": 50880.0,
+        "outsourcedDeliveryCost": 25440.0,
+        "logisticsContribution": 25440.0,
+        "propertyIncome": 2750,
+        "otherOperatingCosts": 3860,
+        "propertyNoi": 1670,
+        "ownerOperatingHours": 0,
+        "imputedOwnerLaborCost": 0,
+        "intensiveCampaignPreTax": 26198,
+        "opexStepYear": 2,
+        "opexStep": 2400
+      }
+    },
+    "ownerManagementHours": "low",
+    "acquisition": {
+      "purchasePrice": 32900,
+      "transferTaxRate": 0.09,
+      "transferTax": 2961,
+      "closingCosts": 1000,
+      "initialTechnicalAndSetupCosts": 800,
+      "totalInitialInvestment": 37661,
+      "displayInvestment": 37700,
+      "excludedCosts": {
+        "agencyCommission": null,
+        "extraordinaryDampRepair": null,
+        "majorRenovation": null,
+        "financing": null,
+        "secondLocationDeposit": null,
+        "extraordinaryWorkingCapital": null,
+        "specialLogisticsAdaptation": null
+      }
+    },
+    "taxReserveRate": 0.2,
+    "commercialRentSensitivity": [
+      200,
+      250,
+      300,
+      350
+    ],
+    "secondPointRentSensitivity": [
+      100,
+      80,
+      60,
+      50
+    ]
   }
 }

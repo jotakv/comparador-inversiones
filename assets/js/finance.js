@@ -13,7 +13,8 @@ export function outsourcedLastMileMetrics(operations,scenario='base',campaign='s
  const calculate=packages=>{const grossLogisticsRevenue=packages*operations.revenuePerPackage,outsourcingCost=packages*operations.outsourcedCostPerPackage;return{packages,grossLogisticsRevenue,outsourcingCost,logisticsMargin:grossLogisticsRevenue-outsourcingCost}};
  const monthly=calculate(monthlyPackages),annual=calculate(annualPackages),propertyIncome=operations.propertyRentMonth*operations.propertyRentMonths;
  const propertyCosts=Object.values(operations.propertyCosts).reduce((sum,value)=>sum+value,0),otherCosts=Object.values(operations.otherAnnualCosts).reduce((sum,value)=>sum+value,0);
- return{monthly:{...monthly,preTaxCashFlow:monthly.logisticsMargin+operations.propertyRentMonth-operations.monthlyFixedCostsView},annual:{...annual,propertyIncome,operatingExpenses:propertyCosts+otherCosts,preTaxCashFlow:annual.logisticsMargin+propertyIncome-propertyCosts-otherCosts},propertyNoi:propertyIncome-propertyCosts,propertyOperatingYield:(propertyIncome-propertyCosts)/34000};
+ const investmentBasis=operations.investmentBasis??34000;
+ return{monthly:{...monthly,preTaxCashFlow:monthly.logisticsMargin+operations.propertyRentMonth-operations.monthlyFixedCostsView},annual:{...annual,propertyIncome,operatingExpenses:propertyCosts+otherCosts,preTaxCashFlow:annual.logisticsMargin+propertyIncome-propertyCosts-otherCosts},propertyNoi:propertyIncome-propertyCosts,propertyOperatingYield:(propertyIncome-propertyCosts)/investmentBasis};
 }
 export const reusRevenue=(units,rent,occupancy)=>units*rent*12*occupancy;
 export const moic=(proceeds,equity)=>proceeds/equity;

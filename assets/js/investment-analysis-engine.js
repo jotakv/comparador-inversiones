@@ -37,6 +37,16 @@ export function ejidoFallback(operations){
  return{logisticsRevenue:0,propertyIncome,propertyCosts,cashFlow:propertyIncome-propertyCosts};
 }
 
+/** Shared calculator for an owned hub plus outsourced last-mile operation. */
+export function hybridScenario(operations,volume,{locations=operations.locations,secondPointRent=operations.secondLocationRentMonth,taxReserveRate=.2,investment=operations.investmentBasis??34000}={}){
+ const op={...operations,locations,otherAnnualCosts:{...operations.otherAnnualCosts,secondLocationRent:locations>1?secondPointRent*12:0}};
+ const annual=ejidoScenario(op,volume),monthlyExpenses=(operations.monthlyFixedCostsView??(sum(op.propertyCosts)+sum(op.otherAnnualCosts))/12)-(locations>1?0:operations.secondLocationRentMonth);
+ const monthlyPreTax=annual.monthlyPackages*(op.revenuePerPackage-op.outsourcedCostPerPackage)+op.propertyRentMonth-monthlyExpenses;
+ const yearOneAfterReserve=annual.preTaxCashFlow*(1-taxReserveRate),yearTwoCash=(annual.preTaxCashFlow-(op.ownerContributionStepAnnual??2400))*(1-taxReserveRate);
+ const remainingAfterYearOne=Math.max(0,investment-yearOneAfterReserve);
+ return{...annual,monthlyExpenses,monthlyPreTax,monthlyAfterReserve:monthlyPreTax*(1-taxReserveRate),afterReserve:annual.preTaxCashFlow*(1-taxReserveRate),roi:annual.preTaxCashFlow/investment,roiAfterReserve:annual.preTaxCashFlow*(1-taxReserveRate)/investment,paybackMonths:investment/annual.preTaxCashFlow*12,paybackAfterReserveMonths:investment/(annual.preTaxCashFlow*(1-taxReserveRate))*12,conservativePaybackMonths:12+remainingAfterYearOne/(yearTwoCash/12),locations};
+}
+
 export function olivaRoomEconomics({rooms,rentPerRoomMonth,occupancy,opex,annualDebtService,projectCost,equity}){
  const grossRent=rooms*rentPerRoomMonth*12,effectiveRent=grossRent*occupancy,noi=effectiveRent-opex,cashFlow=noi-annualDebtService;
  return{grossRent,effectiveRent,noi,cashFlow,monthlyCashFlow:cashFlow/12,dscr:annualDebtService?noi/annualDebtService:null,yieldOnCost:noi/projectCost,cashOnCash:cashFlow/equity,paybackYears:cashFlow>0?equity/cashFlow:null};

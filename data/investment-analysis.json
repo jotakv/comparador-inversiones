@@ -15,20 +15,114 @@
       "Cash-on-cash": "El cash return pre-IRPF compara el flujo A1 con 34.000 €; no es beneficio neto fiscal.",
       "DSCR": "No aplica: no hay deuda bancaria modelada."
     },
-    "criticalVariables": ["Volumen real por punto", "Tarifa contractual", "Pago y horas reales del colaborador", "Derecho a delegar", "Continuidad y sustitución", "Coste all-in del segundo punto"],
-    "improves": ["Contrato firmado", "Histórico de volumen igual o superior al caso base", "Delegación autorizada", "Colaborador sostenible", "Segundo punto asegurado"],
-    "worsens": ["Tarifa inferior", "Coste del colaborador superior", "Volumen inferior a 80 paquetes/día/punto", "Cancelación del operador", "Ausencia de sustituto"],
-    "questions": ["¿Existe contrato firmado con tarifa, duración y preaviso?", "¿Permite expresamente subcontratar las rutas?", "¿Qué histórico diario acredita el volumen de cada punto?", "¿Hay mínimos garantizados o solo previsiones?", "¿Quién asume incidencias, devoluciones y paquetes fallidos?", "¿Cuánto cuestan fianza, suministros y seguro del segundo punto?", "¿Incluyen las horas todos los desplazamientos y tareas auxiliares?", "¿Acepta el colaborador 0,40 €/paquete después de sus costes?", "¿Qué sustituto cubre bajas, vacaciones y el pico de 240 paquetes?", "¿Cuál es la fiscalidad y cuota efectiva aplicable?", "¿Qué renta y residual acredita una tasación independiente?"],
+    "criticalVariables": [
+      "Volumen real por punto",
+      "Tarifa contractual",
+      "Pago y horas reales del colaborador",
+      "Derecho a delegar",
+      "Continuidad y sustitución",
+      "Coste all-in del segundo punto"
+    ],
+    "improves": [
+      "Contrato firmado",
+      "Histórico de volumen igual o superior al caso base",
+      "Delegación autorizada",
+      "Colaborador sostenible",
+      "Segundo punto asegurado"
+    ],
+    "worsens": [
+      "Tarifa inferior",
+      "Coste del colaborador superior",
+      "Volumen inferior a 80 paquetes/día/punto",
+      "Cancelación del operador",
+      "Ausencia de sustituto"
+    ],
+    "questions": [
+      "¿Existe contrato firmado con tarifa, duración y preaviso?",
+      "¿Permite expresamente subcontratar las rutas?",
+      "¿Qué histórico diario acredita el volumen de cada punto?",
+      "¿Hay mínimos garantizados o solo previsiones?",
+      "¿Quién asume incidencias, devoluciones y paquetes fallidos?",
+      "¿Cuánto cuestan fianza, suministros y seguro del segundo punto?",
+      "¿Incluyen las horas todos los desplazamientos y tareas auxiliares?",
+      "¿Acepta el colaborador 0,40 €/paquete después de sus costes?",
+      "¿Qué sustituto cubre bajas, vacaciones y el pico de 240 paquetes?",
+      "¿Cuál es la fiscalidad y cuota efectiva aplicable?",
+      "¿Qué renta y residual acredita una tasación independiente?"
+    ],
     "evidence": [
-      ["Precio local", "29.000 €", "SUPUESTO APORTADO", "Informe pasivo El Ejido", "s/f", "Media"],
-      ["Bolsa adquisición/arranque", "5.000 €", "SUPUESTO APORTADO", "Informe pasivo El Ejido", "s/f", "Baja"],
-      ["Tarifa", "0,80 €/paquete", "SUPUESTO APORTADO", "Pendiente contrato", "s/f", "Baja"],
-      ["Coste colaborador", "0,40 €/paquete", "SUPUESTO APORTADO", "Pendiente aceptación", "s/f", "Baja"],
-      ["Volumen base", "90/día/punto + pico", "SUPUESTO DEL MODELO", "Informe pasivo El Ejido", "s/f", "Baja"],
-      ["Renta inmueble", "350 € × 11 meses", "SUPUESTO APORTADO", "Informe pasivo El Ejido", "s/f", "Media"],
-      ["Deuda", "0 €", "SUPUESTO DEL MODELO", "Modelo V4", "2026-09-05", "Alta"],
-      ["Horas propietario", "0 operativas; gestión N/D", "CÁLCULO / PENDIENTE", "Modelo V4", "2026-09-05", "Media"],
-      ["Residual", "apreciación 2 % anual", "SUPUESTO DEL MODELO", "Modelo V4", "2026-09-05", "Baja"]
+      [
+        "Precio local",
+        "29.000 €",
+        "SUPUESTO APORTADO",
+        "Informe pasivo El Ejido",
+        "s/f",
+        "Media"
+      ],
+      [
+        "Bolsa adquisición/arranque",
+        "5.000 €",
+        "SUPUESTO APORTADO",
+        "Informe pasivo El Ejido",
+        "s/f",
+        "Baja"
+      ],
+      [
+        "Tarifa",
+        "0,80 €/paquete",
+        "SUPUESTO APORTADO",
+        "Pendiente contrato",
+        "s/f",
+        "Baja"
+      ],
+      [
+        "Coste colaborador",
+        "0,40 €/paquete",
+        "SUPUESTO APORTADO",
+        "Pendiente aceptación",
+        "s/f",
+        "Baja"
+      ],
+      [
+        "Volumen base",
+        "90/día/punto + pico",
+        "SUPUESTO DEL MODELO",
+        "Informe pasivo El Ejido",
+        "s/f",
+        "Baja"
+      ],
+      [
+        "Renta inmueble",
+        "350 € × 11 meses",
+        "SUPUESTO APORTADO",
+        "Informe pasivo El Ejido",
+        "s/f",
+        "Media"
+      ],
+      [
+        "Deuda",
+        "0 €",
+        "SUPUESTO DEL MODELO",
+        "Modelo V4",
+        "2026-09-05",
+        "Alta"
+      ],
+      [
+        "Horas propietario",
+        "0 operativas; gestión N/D",
+        "CÁLCULO / PENDIENTE",
+        "Modelo V4",
+        "2026-09-05",
+        "Media"
+      ],
+      [
+        "Residual",
+        "apreciación 2 % anual",
+        "SUPUESTO DEL MODELO",
+        "Modelo V4",
+        "2026-09-05",
+        "Baja"
+      ]
     ]
   },
   "oliva-cambio-uso-habitaciones": {
@@ -47,21 +141,204 @@
       "Cash-on-cash": "Caja tras deuda sobre equity modelada; no mide el coste total del activo.",
       "DSCR": "NOI / servicio de deuda ING: muestra colchón de pago, no viabilidad urbanística."
     },
-    "criticalVariables": ["Informe urbanístico individualizado", "Cuatro dormitorios legalmente configurables", "Presupuesto de obra", "Funding gap", "Compatibilidad SEPE", "Valor residual no tasado"],
-    "improves": ["Informe urbanístico favorable", "Cuatro dormitorios legales", "Presupuesto no superior al central", "Financiación adicional vinculante", "SEPE compatible o excluido del cierre"],
-    "worsens": ["Solo caben tres dormitorios", "Project cost superior a 100.000 €", "Entreplanta incompatible", "SEPE no disponible", "Residual inferior a 105.000 €"],
-    "questions": ["¿Confirma el informe urbanístico una nueva vivienda independiente?", "¿Qué subzona y densidad residencial aplican?", "¿Permite la licencia original el cambio en la entreplanta?", "¿Qué altura libre, ventanas, luz y ventilación se miden?", "¿Caben cuatro dormitorios y segunda pieza higiénica legales?", "¿Cumplen acceso, evacuación, saneamiento y CTE?", "¿Qué dicen nota simple, título, estatutos y comunidad?", "¿Hay tres presupuestos comparables con contingencia?", "¿Quién financia los 35.184 € hasta primer ingreso?", "¿Confirma SEPE por escrito la compatibilidad de 28.000 €?", "¿Qué tasación independiente sostiene el residual?", "¿Qué demanda observada sostiene renta y ocupación?"],
+    "criticalVariables": [
+      "Informe urbanístico individualizado",
+      "Cuatro dormitorios legalmente configurables",
+      "Presupuesto de obra",
+      "Funding gap",
+      "Compatibilidad SEPE",
+      "Valor residual no tasado"
+    ],
+    "improves": [
+      "Informe urbanístico favorable",
+      "Cuatro dormitorios legales",
+      "Presupuesto no superior al central",
+      "Financiación adicional vinculante",
+      "SEPE compatible o excluido del cierre"
+    ],
+    "worsens": [
+      "Solo caben tres dormitorios",
+      "Project cost superior a 100.000 €",
+      "Entreplanta incompatible",
+      "SEPE no disponible",
+      "Residual inferior a 105.000 €"
+    ],
+    "questions": [
+      "¿Confirma el informe urbanístico una nueva vivienda independiente?",
+      "¿Qué subzona y densidad residencial aplican?",
+      "¿Permite la licencia original el cambio en la entreplanta?",
+      "¿Qué altura libre, ventanas, luz y ventilación se miden?",
+      "¿Caben cuatro dormitorios y segunda pieza higiénica legales?",
+      "¿Cumplen acceso, evacuación, saneamiento y CTE?",
+      "¿Qué dicen nota simple, título, estatutos y comunidad?",
+      "¿Hay tres presupuestos comparables con contingencia?",
+      "¿Quién financia los 35.184 € hasta primer ingreso?",
+      "¿Confirma SEPE por escrito la compatibilidad de 28.000 €?",
+      "¿Qué tasación independiente sostiene el residual?",
+      "¿Qué demanda observada sostiene renta y ocupación?"
+    ],
     "evidence": [
-      ["Precio", "50.000 €", "DATO DOCUMENTADO", "Anuncio / informe Oliva", "2026-09-05", "Media"],
-      ["Destino individual", "ALMACÉN", "DATO DOCUMENTADO", "Catastro", "2026-09-05", "Alta"],
-      ["Superficie", "98 m² construidos", "DATO DOCUMENTADO", "Catastro", "2026-09-05", "Alta"],
-      ["Viabilidad residencial", "ND", "PENDIENTE DE VALIDACIÓN", "Informe urbanístico pendiente", "2026-09-05", "Baja"],
-      ["Project cost central", "98.900 €", "ESTIMACIÓN", "Informe Oliva", "2026-09-05", "Media"],
-      ["Préstamo ING", "25.000 € / 389,42 € mes", "DATO DOCUMENTADO", "Oferta identificada", "2026-09-05", "Media"],
-      ["SEPE", "28.000 € condicionales", "PENDIENTE DE VALIDACIÓN", "Confirmación escrita pendiente", "2026-09-05", "Baja"],
-      ["Renta 4 habitaciones", "340 €/habitación", "SUPUESTO DEL MODELO", "Informe Oliva", "2026-09-05", "Media"],
-      ["Ocupación", "92 %", "SUPUESTO DEL MODELO", "Informe Oliva", "2026-09-05", "Baja"],
-      ["Residual central", "120.000 €", "SUPUESTO", "Rango prudencial; no tasación", "2026-09-05", "Baja"]
+      [
+        "Precio",
+        "50.000 €",
+        "DATO DOCUMENTADO",
+        "Anuncio / informe Oliva",
+        "2026-09-05",
+        "Media"
+      ],
+      [
+        "Destino individual",
+        "ALMACÉN",
+        "DATO DOCUMENTADO",
+        "Catastro",
+        "2026-09-05",
+        "Alta"
+      ],
+      [
+        "Superficie",
+        "98 m² construidos",
+        "DATO DOCUMENTADO",
+        "Catastro",
+        "2026-09-05",
+        "Alta"
+      ],
+      [
+        "Viabilidad residencial",
+        "ND",
+        "PENDIENTE DE VALIDACIÓN",
+        "Informe urbanístico pendiente",
+        "2026-09-05",
+        "Baja"
+      ],
+      [
+        "Project cost central",
+        "98.900 €",
+        "ESTIMACIÓN",
+        "Informe Oliva",
+        "2026-09-05",
+        "Media"
+      ],
+      [
+        "Préstamo ING",
+        "25.000 € / 389,42 € mes",
+        "DATO DOCUMENTADO",
+        "Oferta identificada",
+        "2026-09-05",
+        "Media"
+      ],
+      [
+        "SEPE",
+        "28.000 € condicionales",
+        "PENDIENTE DE VALIDACIÓN",
+        "Confirmación escrita pendiente",
+        "2026-09-05",
+        "Baja"
+      ],
+      [
+        "Renta 4 habitaciones",
+        "340 €/habitación",
+        "SUPUESTO DEL MODELO",
+        "Informe Oliva",
+        "2026-09-05",
+        "Media"
+      ],
+      [
+        "Ocupación",
+        "92 %",
+        "SUPUESTO DEL MODELO",
+        "Informe Oliva",
+        "2026-09-05",
+        "Baja"
+      ],
+      [
+        "Residual central",
+        "120.000 €",
+        "SUPUESTO",
+        "Rango prudencial; no tasación",
+        "2026-09-05",
+        "Baja"
+      ]
+    ]
+  },
+  "talavera-reparto-delegado": {
+    "returnDominance": "OPERACIÓN LOGÍSTICA (>90 % de la caja positiva bruta)",
+    "executionStatus": "DUE DILIGENCE · CONTRATOS Y HUMEDAD PENDIENTES",
+    "thesis": "Inversión híbrida semipasiva: renta de un local en propiedad y margen de dos puntos de reparto, con ejecución física íntegramente externalizada.",
+    "what": "Calle Carretas 12: local comercial comprado y alquilado con zona logística reservada, más un segundo espacio arrendado y un autónomo que realiza todas las rutas.",
+    "reading": {
+      "ROI": "Rentabilidad de la inversión híbrida, no rentabilidad inmobiliaria.",
+      "Reserva fiscal": "Provisión simplificada del 20 %, no IRPF real ni impuesto definitivo.",
+      "Payback": "Recuperación simple; desde año 2 se estresa la cuota presupuestada en 2.400 €/año.",
+      "NOI": "Aísla exclusivamente renta efectiva y costes del inmueble.",
+      "Trabajo": "Cero horas de reparto no significa cero gestión: existe supervisión residual."
+    },
+    "criticalVariables": [
+      "Contrato del operador",
+      "Volumen por punto",
+      "Sostenibilidad del colaborador",
+      "Humedad",
+      "Convivencia inquilino/punto",
+      "Coste segundo espacio"
+    ],
+    "improves": [
+      "Contrato firmado y delegación autorizada",
+      "Humedad diagnosticada y presupuestada",
+      "Segundo punto por debajo de 100 €/mes",
+      "Volumen acreditado"
+    ],
+    "worsens": [
+      "Volumen no garantizado",
+      "Reparación extraordinaria",
+      "Colaborador no sostenible",
+      "Inquilino incompatible con zona reservada"
+    ],
+    "questions": [
+      "¿Quién responde de la humedad y qué acta/presupuesto lo acredita?",
+      "¿Permite el operador subcontratar y operar dos puntos?",
+      "¿Permite el alquiler reservar zona, acceso, paquetes y horarios?",
+      "¿Qué sustituto cubre bajas, vacaciones y campaña?"
+    ],
+    "evidence": [
+      [
+        "Precio",
+        "32.900 €",
+        "DATO APORTADO",
+        "Informe Talavera",
+        "2026-09-05",
+        "Media"
+      ],
+      [
+        "Catastro",
+        "47 m²; comercio 41 + comunes 6",
+        "DATO APORTADO",
+        "Informe Talavera",
+        "2026-09-05",
+        "Media"
+      ],
+      [
+        "Anuncio",
+        "≈50 m²",
+        "DATO APORTADO",
+        "Anuncio",
+        "2026-09-05",
+        "Baja"
+      ],
+      [
+        "Humedad",
+        "ALTO / PENDIENTE",
+        "PENDIENTE DE VALIDACIÓN",
+        "Comercial; revisión independiente pendiente",
+        "2026-09-05",
+        "Baja"
+      ],
+      [
+        "Volumen central",
+        "90/día/punto + 30 días pico",
+        "SUPUESTO DEL MODELO",
+        "Informe Talavera",
+        "2026-09-05",
+        "Baja"
+      ]
     ]
   }
 }

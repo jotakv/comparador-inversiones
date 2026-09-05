@@ -576,6 +576,7 @@
     "campers":{"rating":"Condicionada","note":"La flota puede ser productiva, pero exige actividad, facturas, seguros, homologación y justificación integral."},
     "tinamus":{"rating":"Dudosa","note":"La sede IT puede ser empresarial; el cambio posterior a vivienda y la renta residencial requieren una justificación separada y son el punto débil."},
     "el-ejido-outsourced-last-mile":{"rating":"Dudosa","note":"Evaluación preliminar: la elegibilidad exige confirmación del SEPE; la tenencia inmobiliaria y la operación externalizada no acreditan por sí solas autoempleo personal."},
+    "talavera-reparto-delegado":{"rating":"Dudosa","note":"La tenencia semipasiva y la operación delegada requieren confirmación escrita del SEPE; no se presume elegibilidad."},
     "oliva-cambio-uso-habitaciones":{"rating":"No adecuada","note":"SEPE crítico: no contar 28.000 € para la finalidad residencial sin confirmación escrita y memoria compatible."}
   },
   "moonshots": [

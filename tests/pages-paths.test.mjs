@@ -10,7 +10,7 @@ const publicHtml = [
   'fuentes.html', 'glosario.html', 'inversiones/aguilas.html',
   'inversiones/reus-trasteros.html', 'inversiones/l3h2-madrid.html',
   'inversiones/campers.html', 'inversiones/tinamus.html',
-  'inversiones/el-ejido-delegado.html', 'inversiones/oliva.html', 'one-page-oliva.html',
+  'inversiones/el-ejido-delegado.html', 'inversiones/el-ejido-outsourced-last-mile.html', 'inversiones/oliva.html', 'inversiones/oliva-cambio-uso-habitaciones.html', 'one-page-oliva.html',
   'inversiones/local-generico.html'
 ];
 

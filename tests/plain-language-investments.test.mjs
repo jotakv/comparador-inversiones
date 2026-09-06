@@ -6,9 +6,9 @@ import{model}from'../assets/js/finance.js';
 
 const bySlug=Object.fromEntries(registry.investments.map(item=>[item.slug,item]));
 
-test('plain-language registry exposes the four requested, unique routes',()=>{
-  assert.deepEqual(Object.keys(bySlug).sort(),['aguilas','castellon','el-ejido','talavera']);
-  assert.equal(new Set(registry.investments.map(item=>item.page)).size,4);
+test('plain-language registry exposes the requested, unique routes',()=>{
+  assert.deepEqual(Object.keys(bySlug).sort(),['aguilas','castellon','el-ejido','oliva-hibrida-habitaciones','talavera']);
+  assert.equal(new Set(registry.investments.map(item=>item.page)).size,5);
   for(const item of registry.investments){
     assert.ok(item.summary.length>60,`${item.slug}: summary`);
     for(const field of['steps','moneyIn','moneyOut','work','success','failure','dataStates','glossary'])assert.ok(item[field].length,`${item.slug}: ${field}`);

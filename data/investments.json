@@ -209,6 +209,38 @@
       "ownerOperated": false
     },
     {
+      "id": "oliva-hibrida-hub-vivienda",
+      "name": "Oliva Híbrida — Amazon Hub 2 años + Cambio de Uso + Alquiler Temporada/Turístico",
+      "displayName": "Oliva Híbrida — Amazon Hub 2 años + Cambio de Uso + Alquiler Temporada/Turístico",
+      "shortName": "Oliva Híbrida Hub + Vivienda",
+      "assetName": "Local de 98 m² + operación Hub temporal + vivienda completa",
+      "type": "Inversión híbrida · logística + inmobiliaria",
+      "risk": 10,
+      "passivity": 6,
+      "liquidity": 4,
+      "effort": 6,
+      "legalRisk": 10,
+      "operatingRisk": 9,
+      "scalability": 4,
+      "scores": {
+        "cash": 7,
+        "residual": 8,
+        "inflation": 8,
+        "finance": 3,
+        "exit": 5
+      },
+      "tags": [
+        "hybrid",
+        "last-mile",
+        "change-of-use",
+        "seasonal-rental",
+        "tourism-conditional"
+      ],
+      "ownerOperated": false,
+      "decisionStatus": "VIABLE CONDICIONADA",
+      "executionEligibility": "NOT YET ELIGIBLE"
+    },
+    {
       "id": "local",
       "name": "Local comercial genérico",
       "type": "Inmobiliario",

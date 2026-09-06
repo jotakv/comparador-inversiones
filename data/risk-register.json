@@ -481,5 +481,83 @@
     "assumption": true,
     "mitigation": "Condicionar compra y reservar caja para humedad, comisión y reparaciones.",
     "residualRisk": "MEDIO-ALTO"
+  },
+  {
+    "id": "OH-01",
+    "investment": "oliva-hibrida-hub-vivienda",
+    "risk": "Tarifa, volumen, continuidad y delegación Amazon no confirmados",
+    "category": "Operativo",
+    "probability": 0.65,
+    "impact": 30000,
+    "mitigation": "Contrato escrito, piloto y break-even; no comprar por promesa verbal",
+    "expectedLoss": 19500.0,
+    "probabilitySource": "SUPUESTO DEL MODELO",
+    "assumption": true,
+    "residualRisk": "ALTO"
+  },
+  {
+    "id": "OH-02",
+    "investment": "oliva-hibrida-hub-vivienda",
+    "risk": "Segundo punto o autónomo indisponibles / incapaces de cubrir volumen",
+    "category": "Terceros",
+    "probability": 0.55,
+    "impact": 12000,
+    "mitigation": "Acuerdos rescindibles, SLA, seguro y sensibilidad a un punto",
+    "expectedLoss": 6600.000000000001,
+    "probabilitySource": "SUPUESTO DEL MODELO",
+    "assumption": true,
+    "residualRisk": "ALTO"
+  },
+  {
+    "id": "OH-03",
+    "investment": "oliva-hibrida-hub-vivienda",
+    "risk": "Cambio de uso denegado o sobrecoste/retraso",
+    "category": "Urbanístico",
+    "probability": 0.5,
+    "impact": 59000,
+    "mitigation": "Informe municipal y técnico antes de arras; contingencia y precio cerrado",
+    "expectedLoss": 29500.0,
+    "probabilitySource": "SUPUESTO DEL MODELO",
+    "assumption": true,
+    "residualRisk": "ALTO"
+  },
+  {
+    "id": "OH-04",
+    "investment": "oliva-hibrida-hub-vivienda",
+    "risk": "VUT incompatible, sin registro o sin aprobación comunitaria",
+    "category": "Regulatorio",
+    "probability": 0.55,
+    "impact": 18000,
+    "mitigation": "Gate separado; base fallback sin turismo; revisar estatutos y acuerdo",
+    "expectedLoss": 9900.0,
+    "probabilitySource": "SUPUESTO DEL MODELO",
+    "assumption": true,
+    "residualRisk": "ALTO"
+  },
+  {
+    "id": "OH-05",
+    "investment": "oliva-hibrida-hub-vivienda",
+    "risk": "Pago único SEPE: afectación, fiscalidad o cambio posterior",
+    "category": "Administrativo",
+    "probability": 0.35,
+    "impact": 28000,
+    "mitigation": "Consulta escrita SEPE/asesor antes de destinar fondos o desafectar",
+    "expectedLoss": 9800.0,
+    "probabilitySource": "SUPUESTO DEL MODELO",
+    "assumption": true,
+    "residualRisk": "ALTO"
+  },
+  {
+    "id": "OH-06",
+    "investment": "oliva-hibrida-hub-vivienda",
+    "risk": "Déficit de CAPEX y cuota ING durante meses sin ingreso",
+    "category": "Financiación",
+    "probability": 0.6,
+    "impact": 20000,
+    "mitigation": "Financiación vinculante y reserva antes de cerrar Hub",
+    "expectedLoss": 12000.0,
+    "probabilitySource": "SUPUESTO DEL MODELO",
+    "assumption": true,
+    "residualRisk": "ALTO"
   }
 ]

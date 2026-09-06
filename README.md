@@ -32,6 +32,10 @@ En otra terminal, ejecute:
 npm test
 ```
 
+## Inversiones explicadas de forma sencilla
+
+La página `entender-inversiones.html` explica individualmente Águilas, Castellón, Talavera de la Reina y El Ejido para lectores sin conocimientos financieros. Describe qué se compra, cómo entra y sale el dinero, la dedicación, los riesgos, los escenarios y lo que podría quedar tras diez años. Las cifras calculadas se obtienen de `data/model-assumptions.json`; `data/plain-language-investments.json` mantiene la narrativa y distingue datos confirmados, estimaciones, hipótesis y asuntos pendientes. Cuando el repositorio no contiene datos —actualmente, Castellón— la interfaz lo dice expresamente en vez de completar los huecos con cifras de otra operación.
+
 ## GitHub Pages
 
 ### Producción

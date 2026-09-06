@@ -6,12 +6,12 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const publicHtml = [
-  'index.html', 'projections.html', 'executive-summary.html', 'analytics.html', 'alternatives.html', 'data-quality.html', 'report.html', 'decision-lab.html', 'compare.html', 'escenarios.html', 'riesgos.html', 'metodologia.html',
+  'index.html', 'projections.html', 'executive-summary.html', 'analytics.html', 'alternatives.html', 'data-quality.html', 'report.html', 'decision-lab.html', 'compare.html', 'escenarios.html', 'riesgos.html', 'metodologia.html', 'entender-inversiones.html',
   'fuentes.html', 'glosario.html', 'inversiones/aguilas.html',
   'inversiones/reus-trasteros.html', 'inversiones/l3h2-madrid.html',
   'inversiones/campers.html', 'inversiones/tinamus.html',
   'inversiones/el-ejido-delegado.html', 'inversiones/talavera-reparto-delegado.html', 'inversiones/el-ejido-outsourced-last-mile.html', 'inversiones/oliva.html', 'inversiones/oliva-cambio-uso-habitaciones.html', 'inversiones/oliva-hibrida-hub-vivienda.html', 'inversiones/Informe_inversion_hibrida_Oliva_Amazon_Hub_cambio_uso_temporada_turistico.html', 'one-page-oliva.html',
-  'inversiones/local-generico.html'
+  'inversiones/local-generico.html', 'inversiones/entender-aguilas.html', 'inversiones/entender-castellon.html', 'inversiones/entender-talavera.html', 'inversiones/entender-el-ejido.html'
 ];
 
 async function filesBelow(directory, extensions) {

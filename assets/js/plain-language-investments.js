@@ -6,12 +6,12 @@ mount();
 
 const cards=registry.investments.map(item=>{
   const result=item.modelId&&assumptions[item.modelId]?model(assumptions[item.modelId]):null;
-  const amount=result?euro(result.projectCost):'No disponible';
+  const amount=item.projectCostText||(result?euro(result.projectCost):'No disponible');
   return`<article class="simple-card">
-    <div class="simple-card-head"><span class="tag">${item.modelId?'MODELO DISPONIBLE':'DATOS PENDIENTES'}</span><h3>${item.name}</h3></div>
+    <div class="simple-card-head"><span class="tag">${item.modelId||item.projectCostText?'MODELO DISPONIBLE':'DATOS PENDIENTES'}</span><h3>${item.name}</h3></div>
     <p>${item.summary}</p>
     <dl class="quick-list">
-      <div><dt>Dinero aproximado</dt><dd>${amount}${result?'<small> coste total del proyecto central</small>':''}</dd></div>
+      <div><dt>Dinero aproximado</dt><dd>${amount}${result||item.projectCostText?'<small> coste total del proyecto central</small>':''}</dd></div>
       <div><dt>Cómo entra dinero</dt><dd>${item.income}</dd></div>
       <div><dt>Trabajo del propietario</dt><dd>${item.effort}</dd></div>
       <div><dt>Principal ventaja</dt><dd>${item.advantage}</dd></div>

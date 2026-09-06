@@ -1,0 +1,55 @@
+{
+  "asOf": "2026-09-06",
+  "property": {
+    "address": "C/ Guillem de Castro 16, Esc. 1, planta AL, puerta 13, Oliva (Valencia)",
+    "cadastralReference": "0024606YJ5102S0068AS",
+    "currentUse": "ALMACÉN/LOCAL",
+    "privateAreaM2": 93,
+    "commonAreaM2": 5,
+    "builtAreaM2": 98,
+    "listingAreaM2": 101,
+    "yearBuilt": 2006,
+    "floor": "AL / entreplanta",
+    "condition": "Diáfano; suelo, paredes, ventanas y puerta existentes; baño alicatado sin sanitarios",
+    "facade": "Huecos existentes, pero geometría, orientación y suficiencia no medidas",
+    "clearHeight": null,
+    "registryStatus": "Nota simple, título, estatutos y licencia original pendientes",
+    "planningStatus": "Cambio de uso no determinado; requiere informe municipal y proyecto favorable"
+  },
+  "acquisition": {"purchasePrice": 50000, "itp": 4500, "notaryRegistryManagement": 1300, "dueDiligence": 600},
+  "financing": {"principal": 25000, "tin": 0.0799, "termMonths": 84, "monthlyPayment": 389.42},
+  "logistics": {
+    "durationMonths": 24, "points": 2, "daysPerMonth": 26, "feePerPackage": 0.8,
+    "contractorShare": 0.5, "ownerDeliveryHours": 0, "secondSpaceMonthly": 100,
+    "monthlyCosts": {"insurance": 45, "accounting": 55, "utilities": 70, "maintenance": 45, "other": 35},
+    "evidenceStatus": "HIPÓTESIS DE MODELO: tarifa, volumen, dos puntos y reparto delegado requieren contrato o piloto en Oliva"
+  },
+  "roomMarket": {
+    "scope": "Oliva pueblo",
+    "observedRange": {"ordinaryMin": 250, "ordinaryMax": 360, "premiumMin": 415, "premiumMax": 435},
+    "statisticsStatus": "El informe fuente conserva rangos, no anuncios individuales; no es posible calcular una media o mediana muestral auditables",
+    "baseRent": 350,
+    "utilitiesIncludedInModel": true,
+    "evidence": [
+      {"type":"habitaciones en alquiler", "municipality":"Oliva", "price":"250–360 €/mes", "features":"producto corriente; varias ofertas incluían suministros", "date":"2026-07", "url":"https://www.idealista.com/alquiler-habitacion/oliva-valencia/", "status":"RESUMEN DOCUMENTADO; anuncios individuales no conservados"},
+      {"type":"habitaciones en alquiler", "municipality":"Oliva", "price":"415–435 €/mes", "features":"producto premium; inclusión de suministros variable", "date":"2026-07", "url":"https://www.idealista.com/alquiler-habitacion/oliva-valencia/", "status":"RESUMEN DOCUMENTADO; anuncios individuales no conservados"},
+      {"type":"precio residencial anunciado", "municipality":"Oliva", "price":"1.219 €/m²", "features":"vivienda en Oliva pueblo; no es tasación ni precio de cierre", "date":"2026-07", "url":"https://www.idealista.com/venta-viviendas/oliva-valencia/", "status":"REFERENCIA MECÁNICA DOCUMENTADA"}
+    ]
+  },
+  "renovation": {
+    "status": "ESTIMACIONES DE DECISIÓN, no ofertas contractuales",
+    "baseBreakdown": {"architect":4500,"licensesTaxes":2200,"completionCertificates":1800,"partitionsDoors":6000,"bathroom1":2750,"bathroom2":2400,"kitchenAppliances":5000,"plumbingElectrical":5500,"ventilationClimateCte":4000,"furniture":4500,"finishesContingency":3850},
+    "bathroom2": {"incrementalCost":2400,"rentPremium":0,"occupancyPremium":0,"valuePremium":0,"status":"Coste estimado; beneficio económico no cuantificado"}
+  },
+  "scenarios": {
+    "prudent": {"label":"Prudente", "rooms":3, "conditional":false, "packagesPerDay":60, "conversionCost":59000, "transitionMonths":10, "rentPerRoom":300, "occupancy":0.88, "annualRoomOpex":5000, "postConversionValue":105000, "appreciation":0},
+    "base": {"label":"Base", "rooms":3, "conditional":false, "packagesPerDay":90, "conversionCost":42500, "transitionMonths":7, "rentPerRoom":350, "occupancy":0.92, "annualRoomOpex":4710, "postConversionValue":120000, "appreciation":0.01},
+    "favorable": {"label":"Favorable condicionado", "rooms":4, "conditional":true, "packagesPerDay":100, "conversionCost":59000, "transitionMonths":6, "rentPerRoom":360, "occupancy":0.94, "annualRoomOpex":5700, "postConversionValue":125000, "appreciation":0.01}
+  },
+  "sources": [
+    {"title":"Informe de viabilidad de cambio de uso de Oliva", "path":"inversiones/Informe_viabilidad_cambio_uso_Oliva (1).md", "status":"FUENTE INTERNA PRINCIPAL"},
+    {"title":"Informe de inversión híbrida de Oliva", "path":"inversiones/Informe_inversion_hibrida_Oliva_Amazon_Hub_cambio_uso_temporada_turistico.md", "status":"FUENTE INTERNA PARA LA FASE LOGÍSTICA"},
+    {"title":"Ayuntamiento de Oliva", "url":"https://www.oliva.es/", "status":"CONSULTA URBANÍSTICA PENDIENTE"},
+    {"title":"Amazon Hub Delivery", "url":"https://www.amazon.es/hubdelivery", "status":"CONTRATO Y TARIFA PENDIENTES"}
+  ]
+}

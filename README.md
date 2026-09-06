@@ -85,3 +85,7 @@ Los recursos se resuelven en `assets/js/common.js` desde `import.meta.url`. Por 
 ## Nombres y presupuestos de arranque
 
 Los nombres visibles se centralizan en `data/investments.json` (`displayName`, `shortName` y `assetName`) sin cambiar los IDs ni las URLs. Los presupuestos LOW/BASE/HIGH, fases, timeline, checklist y pasos operativos de las cinco estrategias se mantienen en `data/startup-budgets.json`; `assets/js/startup-plan.js` los presenta de forma común en cada ficha. Purchase price, all-in cost, project cost y maximum cash requirement no son conceptos intercambiables.
+
+### Talavera: locker pasivo complementario
+
+Talavera conserva el modelo de local comercial y dos puntos de reparto delegado y añade, como ingreso independiente, un locker exterior operado por un tercero. La valoración y el ranking usan **50 €/mes (hipótesis prudente)** hasta obtener una oferta contractual; la página permite comparar sin locker, 70 €/mes (base), 100 €/mes (optimista) y 120 €/mes (optimista alto). La oferta, aprobación del emplazamiento/comunidad, instalación, electricidad, licencia, duración y terminación contractual siguen pendientes. El supuesto provisional de coste incremental es 0 € exclusivamente para reproducir la valoración y no acredita que los costes reales sean cero.

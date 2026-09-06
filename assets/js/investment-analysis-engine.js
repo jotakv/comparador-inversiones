@@ -38,13 +38,18 @@ export function ejidoFallback(operations){
 }
 
 /** Shared calculator for an owned hub plus outsourced last-mile operation. */
-export function hybridScenario(operations,volume,{locations=operations.locations,secondPointRent=operations.secondLocationRentMonth,taxReserveRate=.2,investment=operations.investmentBasis??34000}={}){
+export const LOCKER_SCENARIOS=Object.freeze({none:0,prudent:50,base:70,optimistic:100,optimisticHigh:120});
+export function lockerAnnualIncome(monthlyRent,incrementalOperatingCost=0){return monthlyRent*12-incrementalOperatingCost}
+
+export function hybridScenario(operations,volume,{locations=operations.locations,secondPointRent=operations.secondLocationRentMonth,taxReserveRate=.2,investment=operations.investmentBasis??34000,lockerEnabled=false,lockerMonthlyRent=0,lockerIncrementalOperatingCost=0}={}){
  const op={...operations,locations,otherAnnualCosts:{...operations.otherAnnualCosts,secondLocationRent:locations>1?secondPointRent*12:0}};
- const annual=ejidoScenario(op,volume),monthlyExpenses=(operations.monthlyFixedCostsView??(sum(op.propertyCosts)+sum(op.otherAnnualCosts))/12)-(locations>1?0:operations.secondLocationRentMonth);
- const monthlyPreTax=annual.monthlyPackages*(op.revenuePerPackage-op.outsourcedCostPerPackage)+op.propertyRentMonth-monthlyExpenses;
+ const legacyAnnual=ejidoScenario(op,volume),annualLockerIncome=lockerEnabled?lockerAnnualIncome(lockerMonthlyRent,lockerIncrementalOperatingCost):0;
+ const annual={...legacyAnnual,lockerIncome:annualLockerIncome,preTaxCashFlow:legacyAnnual.preTaxCashFlow+annualLockerIncome};
+ const monthlyExpenses=(operations.monthlyFixedCostsView??(sum(op.propertyCosts)+sum(op.otherAnnualCosts))/12)-(locations>1?0:operations.secondLocationRentMonth);
+ const monthlyPreTax=annual.monthlyPackages*(op.revenuePerPackage-op.outsourcedCostPerPackage)+op.propertyRentMonth-monthlyExpenses+(lockerEnabled?lockerMonthlyRent-lockerIncrementalOperatingCost/12:0);
  const yearOneAfterReserve=annual.preTaxCashFlow*(1-taxReserveRate),yearTwoCash=(annual.preTaxCashFlow-(op.ownerContributionStepAnnual??2400))*(1-taxReserveRate);
  const remainingAfterYearOne=Math.max(0,investment-yearOneAfterReserve);
- return{...annual,monthlyExpenses,monthlyPreTax,monthlyAfterReserve:monthlyPreTax*(1-taxReserveRate),afterReserve:annual.preTaxCashFlow*(1-taxReserveRate),roi:annual.preTaxCashFlow/investment,roiAfterReserve:annual.preTaxCashFlow*(1-taxReserveRate)/investment,paybackMonths:investment/annual.preTaxCashFlow*12,paybackAfterReserveMonths:investment/(annual.preTaxCashFlow*(1-taxReserveRate))*12,conservativePaybackMonths:12+remainingAfterYearOne/(yearTwoCash/12),locations};
+ return{...annual,legacyPreTaxCashFlow:legacyAnnual.preTaxCashFlow,monthlyExpenses,monthlyPreTax,monthlyAfterReserve:monthlyPreTax*(1-taxReserveRate),afterReserve:annual.preTaxCashFlow*(1-taxReserveRate),roi:annual.preTaxCashFlow/investment,roiAfterReserve:annual.preTaxCashFlow*(1-taxReserveRate)/investment,paybackMonths:investment/annual.preTaxCashFlow*12,paybackAfterReserveMonths:investment/(annual.preTaxCashFlow*(1-taxReserveRate))*12,conservativePaybackMonths:12+remainingAfterYearOne/(yearTwoCash/12),locations};
 }
 
 export function olivaRoomEconomics({rooms,rentPerRoomMonth,occupancy,opex,annualDebtService,projectCost,equity}){

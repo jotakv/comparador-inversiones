@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-05",
+  "asOf": "2026-09-06",
   "note": "Los enlaces de categoría y seeds orientan la muestra, pero cada anuncio y condición contractual está PENDIENTE DE REVALIDACIÓN por bloqueo de acceso durante esta revisión.",
   "sources": [
     {
@@ -51,6 +51,54 @@
       "location": "Oliva, València",
       "date": "05/09/2026",
       "status": "DOCUMENTADO; cálculos derivados identificados; urbanismo/arquitectura/SEPE PENDIENTES o NO VERIFICADOS"
+    },
+    {
+      "variable": "Régimen autonómico VUT Comunitat Valenciana",
+      "source": "Generalitat Valenciana — trámite de declaración responsable de viviendas de uso turístico",
+      "url": "https://www.gva.es/es/inicio/procedimientos?id_proc=19207",
+      "location": "Comunitat Valenciana",
+      "date": "06/09/2026",
+      "status": "FUENTE OFICIAL; exige verificar requisitos y compatibilidad antes del alta"
+    },
+    {
+      "variable": "VUT: definición, validez e informe municipal",
+      "source": "Decreto-ley 9/2024, de 2 de agosto, del Consell",
+      "url": "https://dogv.gva.es/datos/2024/08/07/pdf/2024_8209_es.pdf",
+      "location": "Comunitat Valenciana",
+      "date": "06/09/2026",
+      "status": "FUENTE OFICIAL DOGV; texto vigente sujeto a consolidación/revalidación"
+    },
+    {
+      "variable": "Aprobación comunitaria previa para nueva actividad turística",
+      "source": "Ley Orgánica 1/2025 — modificación de la Ley de Propiedad Horizontal",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76",
+      "location": "España",
+      "date": "06/09/2026",
+      "status": "FUENTE OFICIAL BOE; aplicabilidad concreta requiere revisión jurídica"
+    },
+    {
+      "variable": "Compatibilidad y restricciones municipales VUT en C/ Guillem de Castro 16",
+      "source": "Ayuntamiento de Oliva / Urbanismo",
+      "url": "https://www.oliva.es/",
+      "location": "Oliva",
+      "date": "06/09/2026",
+      "status": "ND / NO VERIFICABLE con evidencia parcelaria disponible; solicitar informe municipal"
+    },
+    {
+      "variable": "Renta temporada, ADR, ocupación y valor de salida Oliva",
+      "source": "Muestra de mercado no transaccional; pendiente de estudio firmado",
+      "url": "https://www.idealista.com/alquiler-viviendas/oliva-valencia/",
+      "location": "Oliva",
+      "date": "06/09/2026",
+      "status": "HIPÓTESIS; anuncios no prueban ocupación, renta cobrada ni precio de cierre"
+    },
+    {
+      "variable": "Tarifa y volumen Amazon Hub",
+      "source": "Contrato específico no aportado",
+      "url": "https://www.amazon.es/hubdelivery",
+      "location": "Oliva",
+      "date": "06/09/2026",
+      "status": "ND / NO VERIFICABLE; 0,80 €/paquete y volumen son HIPÓTESIS, no tarifa oficial"
     }
   ]
 }

@@ -991,5 +991,284 @@
       60,
       50
     ]
+  },
+  "oliva-hibrida-hub-vivienda": {
+    "hybridModel": "oliva-hybrid-v1",
+    "label": "HECHOS DOCUMENTADOS + HIPÓTESIS EDITABLES + CÁLCULOS DERIVADOS · PRE-TAX",
+    "classification": [
+      "real-estate",
+      "operating-business",
+      "last-mile",
+      "change-of-use",
+      "seasonal-rental",
+      "tourism-conditional",
+      "leveraged"
+    ],
+    "property": {
+      "address": "C/ Guillem de Castro 16, Oliva (València)",
+      "builtAreaM2": 98,
+      "currentUse": "ALMACÉN/LOCAL",
+      "condition": "Diáfano; suelo, paredes, ventanas y puerta existentes; baño alicatado sin sanitarios",
+      "sourceStatus": "HECHO / DOCUMENTADO en informe previo",
+      "recommendedLayout": "3 dormitorios, sujeto a proyecto, iluminación, ventilación y habitabilidad"
+    },
+    "acquisition": {
+      "purchasePrice": 50000,
+      "itp": 4500,
+      "notaryRegistryManagement": 1300,
+      "dueDiligence": 600,
+      "entryCost": 56400
+    },
+    "funding": {
+      "sepeConditional": 28000,
+      "ownAdditional": 15000,
+      "loan": 25000,
+      "totalInitial": 68000,
+      "initialLiquidity": 11600,
+      "safeWithoutSepe": 40000,
+      "status": "28.000 € SEPE condicionados; no confundir recursos con equity del proyecto"
+    },
+    "financing": {
+      "principal": 25000,
+      "tin": 0.0799,
+      "tae": 0.0829,
+      "termMonths": 84,
+      "quotedMonthlyPayment": 389.42,
+      "status": "DATO FACILITADO; tabla calculada por interés efectivo mensual sobre TIN"
+    },
+    "amazon": {
+      "durationMonths": 24,
+      "points": 2,
+      "daysPerMonth": 26,
+      "grossFeePerPackage": 0.8,
+      "contractorShare": 0.5,
+      "secondSpaceMonthly": 100,
+      "otherOpexMonthly": {
+        "insurance": 45,
+        "accounting": 55,
+        "incrementalUtilities": 70,
+        "maintenance": 45,
+        "other": 35
+      },
+      "volumeSensitivity": [
+        20,
+        30,
+        40,
+        60,
+        80,
+        90,
+        100,
+        120
+      ],
+      "status": "HIPÓTESIS OPERATIVA; tarifa, volumen, delegación, dos puntos y coste deben validarse por contrato"
+    },
+    "conversion": {
+      "layouts": [
+        {
+          "bedrooms": 2,
+          "incrementalCost": 30000,
+          "assessment": "menor obra y capacidad"
+        },
+        {
+          "bedrooms": 3,
+          "incrementalCost": 42500,
+          "assessment": "preferida provisional: equilibrio huésped/reventa"
+        },
+        {
+          "bedrooms": 4,
+          "incrementalCost": 59000,
+          "assessment": "solo si huecos y habitabilidad lo soportan"
+        }
+      ],
+      "transitionMonths": {
+        "fast": 4,
+        "central": 7,
+        "adverse": 10
+      },
+      "status": "HIPÓTESIS basada en rangos del informe; cero ingresos durante obra/legalización"
+    },
+    "residential": {
+      "seasonMonths": 10,
+      "seasonRent": {
+        "conservative": 700,
+        "central": 825,
+        "optimistic": 950
+      },
+      "seasonOccupancy": {
+        "conservative": 0.85,
+        "central": 0.92,
+        "optimistic": 0.96
+      },
+      "residentialOpexRate": {
+        "conservative": 0.25,
+        "central": 0.22,
+        "optimistic": 0.2
+      },
+      "fixedOpexMonthly": 75,
+      "adr": {
+        "conservative": 90,
+        "central": 120,
+        "optimistic": 150
+      },
+      "summerOccupancy": {
+        "conservative": 0.5,
+        "central": 0.7,
+        "optimistic": 0.82
+      },
+      "summerAvailableNights": 62,
+      "platformRate": 0.16,
+      "managementRate": 0.15,
+      "summerVariableOpexMonthly": 220,
+      "status": "HIPÓTESIS DE MERCADO; anuncios no equivalen a rentas cobradas"
+    },
+    "legal": {
+      "vutStatus": "CONDITIONED",
+      "display": "Viabilidad VUT: CONDICIONADA / NO CONFIRMADA",
+      "baseUsesTourism": false,
+      "requirements": [
+        "Cambio de uso y título de ocupación",
+        "informe municipal de compatibilidad urbanística",
+        "declaración responsable e inscripción turística",
+        "referencia catastral individualizada",
+        "periodos de hasta 10 días para VUT autonómica",
+        "acuerdo expreso previo de la comunidad cuando sea aplicable desde 03/04/2025",
+        "revisar estatutos, acceso, seguro y requisitos vigentes"
+      ],
+      "fallback": "Vivienda completa de temporada/residencial los 12 meses; nunca simular VUT sin gate aprobado"
+    },
+    "exit": {
+      "saleCostRate": 0.06,
+      "appreciation": 0.01,
+      "status": "HIPÓTESIS; 6 % costes de salida, fiscalidad personal no modelizada"
+    },
+    "discountRate": 0.08,
+    "timeline": {
+      "startCalendarMonth": 9
+    },
+    "modelInputs": {
+      "ownerHoursMonth": 6,
+      "probabilityLoss": 0.48,
+      "dataConfidence": 0.28
+    },
+    "decisionStatus": "VIABLE CONDICIONADA / DUE DILIGENCE ONLY",
+    "executionEligible": false,
+    "gates": [
+      {
+        "id": "amazonContract",
+        "label": "Contrato Amazon/operador",
+        "status": "pending",
+        "blocking": true,
+        "requirement": "Tarifa, volúmenes, delegación y dos puntos por escrito"
+      },
+      {
+        "id": "urbanisticCompatibility",
+        "label": "Cambio de uso",
+        "status": "pending",
+        "blocking": true,
+        "requirement": "Informe municipal y proyecto técnico favorable"
+      },
+      {
+        "id": "vut",
+        "label": "VUT",
+        "status": "pending",
+        "blocking": true,
+        "requirement": "Gate independiente; el caso base usa fallback hasta confirmación"
+      },
+      {
+        "id": "community",
+        "label": "Comunidad/registro",
+        "status": "pending",
+        "blocking": true,
+        "requirement": "Estatutos, título y acuerdo aplicable"
+      },
+      {
+        "id": "funding",
+        "label": "CAPEX",
+        "status": "failed",
+        "blocking": true,
+        "requirement": "Cubrir déficit máximo sin asumir autofinanciación total"
+      },
+      {
+        "id": "sepe",
+        "label": "SEPE",
+        "status": "critical",
+        "blocking": true,
+        "requirement": "Confirmación administrativa y fiscal escrita sobre pago único, afectación y cambio posterior"
+      }
+    ],
+    "scenarios": {
+      "pessimistic": {
+        "label": "Estrés",
+        "packagesPerDay": 30,
+        "capex": 59000,
+        "transitionMonths": 10,
+        "residentialRent": 700,
+        "seasonOccupancy": 0.85,
+        "residentialOpexRate": 0.25,
+        "adr": 90,
+        "occupancy": 0.5,
+        "exitValue": 105000
+      },
+      "base": {
+        "label": "Base",
+        "packagesPerDay": 80,
+        "capex": 42500,
+        "transitionMonths": 7,
+        "residentialRent": 825,
+        "seasonOccupancy": 0.92,
+        "residentialOpexRate": 0.22,
+        "adr": 120,
+        "occupancy": 0.7,
+        "exitValue": 120000
+      },
+      "central": {
+        "label": "Central",
+        "packagesPerDay": 90,
+        "capex": 42500,
+        "transitionMonths": 7,
+        "residentialRent": 825,
+        "seasonOccupancy": 0.92,
+        "residentialOpexRate": 0.22,
+        "adr": 120,
+        "occupancy": 0.7,
+        "exitValue": 120000
+      },
+      "optimistic": {
+        "label": "Alto",
+        "packagesPerDay": 100,
+        "capex": 30000,
+        "transitionMonths": 4,
+        "residentialRent": 950,
+        "seasonOccupancy": 0.96,
+        "residentialOpexRate": 0.2,
+        "adr": 150,
+        "occupancy": 0.82,
+        "exitValue": 135000
+      },
+      "upside": {
+        "label": "Upside",
+        "packagesPerDay": 120,
+        "capex": 30000,
+        "transitionMonths": 4,
+        "residentialRent": 950,
+        "seasonOccupancy": 0.96,
+        "residentialOpexRate": 0.2,
+        "adr": 150,
+        "occupancy": 0.82,
+        "exitValue": 135000
+      },
+      "conservative": {
+        "label": "Conservador",
+        "packagesPerDay": 60,
+        "capex": 42500,
+        "transitionMonths": 7,
+        "residentialRent": 700,
+        "seasonOccupancy": 0.85,
+        "residentialOpexRate": 0.25,
+        "adr": 90,
+        "occupancy": 0.5,
+        "exitValue": 105000
+      }
+    }
   }
 }

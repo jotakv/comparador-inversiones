@@ -990,7 +990,26 @@
       80,
       60,
       50
-    ]
+    ],
+    "locker": {
+      "enabled": true,
+      "incomeType": "PASSIVE_ANCILLARY_INCOME",
+      "scenario": "prudent",
+      "monthlyRent": 50,
+      "contractStatus": "pending",
+      "incrementalOperatingCostAssumption": 0,
+      "incrementalOperatingCostStatus": "unknown / provisional calculation assumption",
+      "installationCostToInvestor": null,
+      "electricityCost": null,
+      "installationStatus": "pending",
+      "scenarios": {
+        "none": 0,
+        "prudent": 50,
+        "base": 70,
+        "optimistic": 100,
+        "optimisticHigh": 120
+      }
+    }
   },
   "oliva-hibrida-hub-vivienda": {
     "hybridModel": "oliva-hybrid-v1",

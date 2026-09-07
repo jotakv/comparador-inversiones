@@ -1012,7 +1012,7 @@
     }
   },
   "oliva-hibrida-hub-vivienda": {
-    "hybridModel": "oliva-hybrid-v1",
+    "hybridModel": "oliva-hybrid-v2",
     "label": "HECHOS DOCUMENTADOS + HIPÓTESIS EDITABLES + CÁLCULOS DERIVADOS · PRE-TAX",
     "classification": [
       "real-estate",
@@ -1079,7 +1079,8 @@
         100,
         120
       ],
-      "status": "HIPÓTESIS OPERATIVA; tarifa, volumen, delegación, dos puntos y coste deben validarse por contrato"
+      "status": "HIPÓTESIS/PENDIENTE: tarifa 0,80 €, reparto 50/50, volumen, delegación, dos puntos, contrato del autónomo, plazos de cobro/pago, seguros/licencias y continuidad de plataforma",
+      "agencyShare": 0.5
     },
     "conversion": {
       "layouts": [
@@ -1180,6 +1181,13 @@
         "requirement": "Tarifa, volúmenes, delegación y dos puntos por escrito"
       },
       {
+        "id": "catcherContract",
+        "label": "Contrato Catcher/autónomo nº2",
+        "status": "pending",
+        "blocking": true,
+        "requirement": "Validar Catcher, reparto 25/75, delegación, falso autónomo, cobros/pagos, seguro y licencia"
+      },
+      {
         "id": "urbanisticCompatibility",
         "label": "Cambio de uso",
         "status": "pending",
@@ -1226,7 +1234,8 @@
         "residentialOpexRate": 0.25,
         "adr": 90,
         "occupancy": 0.5,
-        "exitValue": 105000
+        "exitValue": 105000,
+        "catcherAgencyMarginMonthly": 383
       },
       "base": {
         "label": "Base",
@@ -1238,7 +1247,8 @@
         "residentialOpexRate": 0.22,
         "adr": 120,
         "occupancy": 0.7,
-        "exitValue": 120000
+        "exitValue": 120000,
+        "catcherAgencyMarginMonthly": 421.5
       },
       "central": {
         "label": "Central",
@@ -1250,7 +1260,8 @@
         "residentialOpexRate": 0.22,
         "adr": 120,
         "occupancy": 0.7,
-        "exitValue": 120000
+        "exitValue": 120000,
+        "catcherAgencyMarginMonthly": 421.5
       },
       "optimistic": {
         "label": "Alto",
@@ -1262,7 +1273,8 @@
         "residentialOpexRate": 0.2,
         "adr": 150,
         "occupancy": 0.82,
-        "exitValue": 135000
+        "exitValue": 135000,
+        "catcherAgencyMarginMonthly": 459.75
       },
       "upside": {
         "label": "Upside",
@@ -1274,7 +1286,8 @@
         "residentialOpexRate": 0.2,
         "adr": 150,
         "occupancy": 0.82,
-        "exitValue": 135000
+        "exitValue": 135000,
+        "catcherAgencyMarginMonthly": 498
       },
       "conservative": {
         "label": "Conservador",
@@ -1286,8 +1299,24 @@
         "residentialOpexRate": 0.25,
         "adr": 90,
         "occupancy": 0.5,
-        "exitValue": 105000
+        "exitValue": 105000,
+        "catcherAgencyMarginMonthly": 383
       }
+    },
+    "catcher": {
+      "durationMonths": 24,
+      "weeklyHours": 42,
+      "monthlyHours": 182,
+      "ordersPerHour": 2.2,
+      "reconciledOrdersMonth": 400,
+      "grossPerOrder": 4.5,
+      "platformFeePerOrder": 0.29,
+      "reconciledNetMonthly": 1684,
+      "sourceNetMonthly": 1686,
+      "contractorShare": 0.75,
+      "agencyShare": 0.25,
+      "sourceDiscrepancy": 2,
+      "status": "HIPÓTESIS/PENDIENTE: input fuente, comisión, reparto 25/75, contrato de otro autónomo, falso autónomo, plazos de cobro/pago, seguros/licencias y continuidad de Catcher"
     }
   },
   "madrid-last-mile-agency": {

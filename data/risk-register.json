@@ -509,6 +509,32 @@
     "residualRisk": "ALTO"
   },
   {
+    "id": "OH-07",
+    "investment": "oliva-hibrida-hub-vivienda",
+    "risk": "Catcher, reparto 25/75, contrato y continuidad no confirmados",
+    "category": "Operativo",
+    "probability": 0.6,
+    "impact": 10116,
+    "mitigation": "Contrato/piloto separado; validar input fuente y discrepancia de 2 €",
+    "expectedLoss": 6069.6,
+    "probabilitySource": "SUPUESTO DEL MODELO",
+    "assumption": true,
+    "residualRisk": "ALTO"
+  },
+  {
+    "id": "OH-08",
+    "investment": "oliva-hibrida-hub-vivienda",
+    "risk": "Falso autónomo, desfases de cobro/pago, seguros o licencias en ambos canales",
+    "category": "Laboral/legal",
+    "probability": 0.5,
+    "impact": 18000,
+    "mitigation": "Dictamen laboral/fiscal, contratos independientes, seguro, licencias y reserva de circulante",
+    "expectedLoss": 9000,
+    "probabilitySource": "SUPUESTO DEL MODELO",
+    "assumption": true,
+    "residualRisk": "ALTO"
+  },
+  {
     "id": "OH-03",
     "investment": "oliva-hibrida-hub-vivienda",
     "risk": "Cambio de uso denegado o sobrecoste/retraso",

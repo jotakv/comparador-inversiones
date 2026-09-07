@@ -241,6 +241,37 @@
       "executionEligibility": "NOT YET ELIGIBLE"
     },
     {
+      "id": "madrid-last-mile-agency",
+      "name": "Agencia última milla Madrid — Catcher + Amazon",
+      "displayName": "Agencia última milla Madrid — Catcher + Amazon",
+      "shortName": "Agencia Madrid Catcher + Amazon",
+      "assetName": "Microagencia logística operativa sin activo inmobiliario",
+      "type": "Negocio operativo · microagencia logística semi-delegada",
+      "risk": 9,
+      "passivity": 2,
+      "liquidity": 6,
+      "effort": 8,
+      "legalRisk": 10,
+      "operatingRisk": 9,
+      "scalability": 6,
+      "scores": {
+        "cash": 6,
+        "residual": 0,
+        "inflation": 3,
+        "finance": 7,
+        "exit": 1
+      },
+      "tags": [
+        "operating-business",
+        "last-mile",
+        "outsourced",
+        "platform-dependent"
+      ],
+      "ownerOperated": true,
+      "decisionStatus": "DUE DILIGENCE",
+      "executionEligibility": "NOT YET ELIGIBLE"
+    },
+    {
       "id": "local",
       "name": "Local comercial genérico",
       "type": "Inmobiliario",

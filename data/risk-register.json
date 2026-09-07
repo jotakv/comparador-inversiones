@@ -559,5 +559,77 @@
     "probabilitySource": "SUPUESTO DEL MODELO",
     "assumption": true,
     "residualRisk": "ALTO"
+  },
+  {
+    "investment": "madrid-last-mile-agency",
+    "category": "Volumen",
+    "risk": "Volumen Catcher o Amazon inferior al supuesto",
+    "probability": 0.35,
+    "impact": 8000,
+    "expectedLoss": 2800.0,
+    "mitigation": "Validación contractual, asesoría jurídica/fiscal, reserva de caja y plan de sustitución",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-last-mile-agency",
+    "category": "Tarifa/plataforma",
+    "risk": "Cambio de tarifas, dependencia o terminación contractual",
+    "probability": 0.35,
+    "impact": 11250,
+    "expectedLoss": 3937.4999999999995,
+    "mitigation": "Validación contractual, asesoría jurídica/fiscal, reserva de caja y plan de sustitución",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-last-mile-agency",
+    "category": "Laboral/legal",
+    "risk": "Falso autónomo o encaje jurídico inadecuado",
+    "probability": 0.35,
+    "impact": 15000,
+    "expectedLoss": 5250.0,
+    "mitigation": "Validación contractual, asesoría jurídica/fiscal, reserva de caja y plan de sustitución",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-last-mile-agency",
+    "category": "Operación",
+    "risk": "Abandono o falta de sustitución de autónomos",
+    "probability": 0.35,
+    "impact": 6000,
+    "expectedLoss": 2100.0,
+    "mitigation": "Validación contractual, asesoría jurídica/fiscal, reserva de caja y plan de sustitución",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-last-mile-agency",
+    "category": "Regulatorio",
+    "risk": "RETA, local, licencia o seguro superiores/no viables",
+    "probability": 0.35,
+    "impact": 5000,
+    "expectedLoss": 1750.0,
+    "mitigation": "Validación contractual, asesoría jurídica/fiscal, reserva de caja y plan de sustitución",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-last-mile-agency",
+    "category": "Circulante/fiscal",
+    "risk": "Desfase cobros-pagos, IVA o impuestos no modelizados",
+    "probability": 0.35,
+    "impact": 7000,
+    "expectedLoss": 2450.0,
+    "mitigation": "Validación contractual, asesoría jurídica/fiscal, reserva de caja y plan de sustitución",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
   }
 ]

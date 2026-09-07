@@ -449,6 +449,97 @@
           "Valor estimado del local al final; no está garantizado."
         ]
       ]
+    },
+    {
+      "slug": "madrid-agencia",
+      "modelId": "madrid-last-mile-agency",
+      "name": "Agencia última milla Madrid",
+      "page": "inversiones/entender-madrid-last-mile-agency.html",
+      "summary": "Coordinar Catcher y dos puntos Amazon con dos autónomos distintos. La empresa factura 4.182 €/mes en el objetivo, pero solo quedan 937,50 €/mes pre-tax después de repartidores y estructura.",
+      "ownership": "No se compra un inmueble ni existe residual inmobiliario. Se financian fianza, equipo, seguros y circulante estimados.",
+      "income": "Catcher deja el 25 % del ingreso tras comisión y Amazon deja 0,30 € por paquete. Tarifas y volúmenes son hipótesis pendientes.",
+      "effort": "Negocio operativo, no pasivo: 8–12 horas semanales estimadas del promotor para contratos, coordinación, incidencias, facturación y colaboradores.",
+      "advantage": "Bajo capital inicial y reparto físico delegado.",
+      "risk": "Dependencia de plataformas y autónomos, encaje jurídico, tarifas, volumen y desfase de circulante.",
+      "steps": [
+        "Firmar y validar contratos y delegación",
+        "Coordinar un autónomo para Catcher",
+        "Coordinar otro autónomo para Amazon",
+        "Cobrar plataformas y pagar repartidores",
+        "Pagar estructura y conservar el resultado pre-tax"
+      ],
+      "moneyIn": [
+        "Catcher: 1.686 €/mes tras comisión de plataforma",
+        "Amazon: 2.496 €/mes de facturación objetivo"
+      ],
+      "moneyOut": [
+        "Dos repartidores: 2.824,50 €/mes",
+        "Local, gestoría y RETA provisional: 420 €/mes"
+      ],
+      "work": [
+        "Contratos y relación con plataformas",
+        "Coordinación, sustituciones e incidencias",
+        "Facturación y control del circulante"
+      ],
+      "success": [
+        "Contratos permiten delegación",
+        "Volúmenes y tarifas se acreditan",
+        "Autónomos estables y sustituibles",
+        "Cobros llegan antes de tensionar pagos"
+      ],
+      "failure": [
+        "Caída de volumen o tarifa",
+        "Terminación de plataforma",
+        "Falso autónomo o encaje jurídico adverso",
+        "Necesidad de más circulante"
+      ],
+      "thesisFor": "Puede funcionar como microagencia si los contratos y unit economics se confirman.",
+      "thesisAgainst": "No hay activo residual y el retorno aparente exige trabajo y concentra riesgos contractuales.",
+      "dataStates": [
+        [
+          "Facturación objetivo",
+          "4.182 €/mes",
+          "HIPÓTESIS"
+        ],
+        [
+          "Resultado objetivo",
+          "937,50 €/mes pre-tax",
+          "HIPÓTESIS"
+        ],
+        [
+          "Contratos",
+          "No acreditados",
+          "PENDIENTE"
+        ],
+        [
+          "RETA",
+          "80 €/mes provisional",
+          "HIPÓTESIS"
+        ],
+        [
+          "Horas promotor",
+          "8–12 h/semana",
+          "HIPÓTESIS"
+        ]
+      ],
+      "glossary": [
+        [
+          "Facturación",
+          "Todo lo cobrado antes de pagar repartidores y estructura."
+        ],
+        [
+          "Margen",
+          "Facturación menos costes directos del reparto."
+        ],
+        [
+          "Pre-tax",
+          "Antes de impuestos."
+        ],
+        [
+          "Circulante",
+          "Caja para cubrir desfases entre cobros y pagos."
+        ]
+      ]
     }
   ]
 }

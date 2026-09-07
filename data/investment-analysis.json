@@ -340,5 +340,53 @@
         "Baja"
       ]
     ]
+  },
+  "madrid-last-mile-agency": {
+    "returnDominance": "OPERACIÓN LOGÍSTICA SIN ACTIVO RESIDUAL",
+    "executionStatus": "DUE DILIGENCE · CONTRATOS Y ENCAJE JURÍDICO PENDIENTES",
+    "thesis": "Microagencia operativa semi-delegada: dos autónomos reparten y el promotor gestiona.",
+    "what": "Catcher y Amazon Delivery Hub en Madrid, sin compra inmobiliaria.",
+    "reading": {
+      "ROI": "Ratio elevado mecánicamente por capital inicial bajo; no elimina trabajo ni riesgo.",
+      "Payback": "Recuperación simple pre-tax sin valor residual.",
+      "Trabajo": "8–12 h/semana estimadas; reparto físico delegado.",
+      "Fiscalidad": "IVA e impuestos excluidos y pendientes de asesoría."
+    },
+    "criticalVariables": [
+      "contratos",
+      "volumen Catcher",
+      "volumen Amazon",
+      "tarifas",
+      "encaje jurídico",
+      "circulante"
+    ],
+    "improves": [
+      "contratos firmados",
+      "histórico de volumen",
+      "autónomos sustituibles",
+      "calendario de cobros favorable"
+    ],
+    "worsens": [
+      "dependencia de plataforma",
+      "bajada de tarifa",
+      "desfase de caja",
+      "recalificación laboral"
+    ],
+    "questions": [
+      "¿Permiten los contratos delegar?",
+      "¿Qué plazos de cobro y pago aplican?",
+      "¿Qué licencias y seguros exige el local?",
+      "¿Cómo se cubren bajas?"
+    ],
+    "evidence": [
+      [
+        "Todas las cifras operativas",
+        "Inputs aportados",
+        "HIPÓTESIS/ESTIMACIÓN",
+        "data/madrid-last-mile-agency.json",
+        "2026-09-07",
+        "Baja"
+      ]
+    ]
   }
 }

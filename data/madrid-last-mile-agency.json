@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "id": "madrid-last-mile-agency",
+  "status": "PRE-TAX · HIPÓTESIS/ESTIMACIONES PENDIENTES DE CONFIRMAR",
+  "promoter": {
+    "hoursWeekLow": 8,
+    "hoursWeekBase": 10,
+    "hoursWeekHigh": 12,
+    "hourOpportunityCost": 20,
+    "tasks": [
+      "contratos",
+      "coordinación",
+      "incidencias",
+      "facturación",
+      "relación con plataformas",
+      "gestión de colaboradores"
+    ]
+  },
+  "catcher": {
+    "couriers": 1,
+    "hoursWeek": 42,
+    "hoursMonth": 182,
+    "ordersHour": 2.2,
+    "ordersMonthDisplay": 400,
+    "grossFeeOrder": 4.5,
+    "platformCommissionOrder": 0.29,
+    "netRevenueMonthly": 1686,
+    "courierShare": 0.75,
+    "agencyShare": 0.25
+  },
+  "amazon": {
+    "couriers": 1,
+    "points": 2,
+    "packagesDayPoint": 60,
+    "daysMonth": 26,
+    "grossFeePackage": 0.8,
+    "courierFeePackage": 0.5
+  },
+  "fixedCostsMonthly": {
+    "madridPremisesIncluded": 300,
+    "accounting": 40,
+    "provisionalReta": 80
+  },
+  "initialCapitalEstimates": {
+    "low": {
+      "depositAndSetup": 500,
+      "equipmentAndInsurance": 500,
+      "workingCapital": 1500
+    },
+    "base": {
+      "depositAndSetup": 900,
+      "equipmentAndInsurance": 1600,
+      "workingCapital": 2000
+    },
+    "high": {
+      "depositAndSetup": 1200,
+      "equipmentAndInsurance": 2300,
+      "workingCapital": 3500
+    }
+  },
+  "scenarios": [
+    {
+      "id": "very-prudent",
+      "name": "Muy prudente",
+      "amazonPackagesDayPoint": 30,
+      "catcherAgencyMargin": 383
+    },
+    {
+      "id": "prudent",
+      "name": "Prudente/base",
+      "amazonPackagesDayPoint": 50,
+      "catcherAgencyMargin": 421.5
+    },
+    {
+      "id": "target",
+      "name": "Objetivo",
+      "amazonPackagesDayPoint": 60,
+      "catcherAgencyMargin": 421.5
+    },
+    {
+      "id": "good",
+      "name": "Bueno",
+      "amazonPackagesDayPoint": 80,
+      "catcherAgencyMargin": 459.75
+    },
+    {
+      "id": "very-good",
+      "name": "Muy bueno",
+      "amazonPackagesDayPoint": 100,
+      "catcherAgencyMargin": 498
+    }
+  ],
+  "assumptions": [
+    "RETA de 80 €/mes",
+    "alquiler con gastos incluidos de 300 €/mes",
+    "tarifas de Catcher y Amazon",
+    "volúmenes y días operativos",
+    "contratos y posibilidad de delegar",
+    "capital inicial LOW/BASE/HIGH"
+  ],
+  "risks": [
+    "volumen Catcher",
+    "volumen Amazon",
+    "tarifas",
+    "dependencia de plataformas",
+    "abandono o sustitución de autónomos",
+    "falso autónomo y encaje jurídico",
+    "RETA",
+    "local, licencias y seguro",
+    "circulante por desfase de cobros y pagos",
+    "IVA e impuestos"
+  ]
+}

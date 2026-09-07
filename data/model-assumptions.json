@@ -1289,5 +1289,103 @@
         "exitValue": 105000
       }
     }
+  },
+  "madrid-last-mile-agency": {
+    "label": "HIPÓTESIS/ESTIMACIONES · tarifas, volúmenes, contratos, RETA y local pendientes de confirmar",
+    "classification": [
+      "operating-business",
+      "micro-agency",
+      "outsourced",
+      "last-mile"
+    ],
+    "ownerOperated": true,
+    "ownerOperatingHoursMonth": 43.33,
+    "ownerRouteHours": 0,
+    "ownerDeliveryHours": 0,
+    "imputedOwnerLaborCost": 866.6,
+    "modelInputs": {
+      "ownerHoursMonth": 43.33,
+      "ownerHoursWeekRange": [
+        8,
+        12
+      ],
+      "ownerHourCost": 20,
+      "probabilityLoss": 0.45,
+      "dataConfidence": 0.2
+    },
+    "financing": {
+      "equity": 4500,
+      "debt": 0,
+      "loanPrincipal": 0,
+      "monthlyLoanPayment": 0
+    },
+    "workingCapital": {
+      "base": 2000,
+      "status": "ESTIMACIÓN; riesgo por desfase entre cobros de plataformas y pagos a repartidores"
+    },
+    "evidence": {
+      "calculated": [
+        "facturación",
+        "pagos a repartidores",
+        "margen de contribución",
+        "resultado pre-tax",
+        "ROI",
+        "TIR",
+        "payback",
+        "FCF"
+      ],
+      "unconfirmed": [
+        "contrato Catcher",
+        "contrato Amazon Delivery Hub",
+        "volúmenes",
+        "tarifas",
+        "encaje de autónomos",
+        "RETA efectiva",
+        "local, licencia y seguro",
+        "IVA e impuestos",
+        "plazos de cobro y pago"
+      ]
+    },
+    "scenarios": {
+      "pessimistic": {
+        "name": "Muy prudente",
+        "capex": 7000,
+        "entryCost": 7000,
+        "revenue": 35456.0000000004,
+        "opex": 30284.0000000004,
+        "growth": 0,
+        "opexGrowth": 0.02,
+        "assetValue": 0,
+        "residualFactor": 0,
+        "appreciation": 0,
+        "monthsToFirstIncome": 1
+      },
+      "base": {
+        "name": "Objetivo",
+        "capex": 4500,
+        "entryCost": 4500,
+        "revenue": 50184,
+        "opex": 38934.0,
+        "growth": 0,
+        "opexGrowth": 0.02,
+        "assetValue": 0,
+        "residualFactor": 0,
+        "appreciation": 0,
+        "monthsToFirstIncome": 1
+      },
+      "optimistic": {
+        "name": "Muy bueno",
+        "capex": 2500,
+        "entryCost": 2500,
+        "revenue": 71520,
+        "opex": 51864,
+        "growth": 0,
+        "opexGrowth": 0.02,
+        "assetValue": 0,
+        "residualFactor": 0,
+        "appreciation": 0,
+        "monthsToFirstIncome": 1
+      }
+    }
   }
 }

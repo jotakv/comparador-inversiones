@@ -578,7 +578,8 @@
     "el-ejido-outsourced-last-mile":{"rating":"Dudosa","note":"Evaluación preliminar: la elegibilidad exige confirmación del SEPE; la tenencia inmobiliaria y la operación externalizada no acreditan por sí solas autoempleo personal."},
     "talavera-reparto-delegado":{"rating":"Dudosa","note":"La tenencia semipasiva y la operación delegada requieren confirmación escrita del SEPE; no se presume elegibilidad."},
     "oliva-cambio-uso-habitaciones":{"rating":"No adecuada","note":"SEPE crítico: no contar 28.000 € para la finalidad residencial sin confirmación escrita y memoria compatible."},
-    "oliva-hibrida-hub-vivienda":{"rating":"Condicionada","note":"Actividad inicial y cambio posterior requieren memoria, trazabilidad de afectación y confirmación escrita del SEPE."}
+    "oliva-hibrida-hub-vivienda":{"rating":"Condicionada","note":"Actividad inicial y cambio posterior requieren memoria, trazabilidad de afectación y confirmación escrita del SEPE."},
+    "madrid-last-mile-agency":{"rating":"Condicionada","note":"Negocio operativo; contratos, gasto elegible, autónomos y afectación requieren confirmación escrita del SEPE."}
   },
   "moonshots": [
     {"name":"Pods wellness autónomos","validationCapital":5000,"observable":"Existen equipos de acceso, reserva y pago remoto.","hypothesis":"Empresas y hoteles pagarían una cuota por un pod sin personal permanente.","risk":"Ubicación, higiene, seguro y posible regulación sanitaria.","sepeFit":"Dudosa"},

@@ -93,3 +93,7 @@ Los nombres visibles se centralizan en `data/investments.json` (`displayName`, `
 ### Talavera: locker pasivo complementario
 
 Talavera conserva el modelo de local comercial y dos puntos de reparto delegado y añade, como ingreso independiente, un locker exterior operado por un tercero. La valoración y el ranking usan **50 €/mes (hipótesis prudente)** hasta obtener una oferta contractual; la página permite comparar sin locker, 70 €/mes (base), 100 €/mes (optimista) y 120 €/mes (optimista alto). La oferta, aprobación del emplazamiento/comunidad, instalación, electricidad, licencia, duración y terminación contractual siguen pendientes. El supuesto provisional de coste incremental es 0 € exclusivamente para reproducir la valoración y no acredita que los costes reales sean cero.
+
+### Agencia última milla Madrid — Catcher + Amazon
+
+La alternativa `madrid-last-mile-agency` es un negocio operativo semi-delegado, no una inversión pasiva. Sus inputs auditables, cinco escenarios y estados de evidencia están en `data/madrid-last-mile-agency.json`; las fórmulas puras de ambos canales están en `assets/js/madrid-last-mile-engine.js`. El caso objetivo distingue 4.182 € facturados, 2.824,50 € pagados a dos repartidores, 1.357,50 € de margen antes de estructura y 937,50 €/mes pre-tax. Contratos, tarifas, volúmenes, RETA, local, fiscalidad y capital de arranque siguen marcados como hipótesis o pendientes.

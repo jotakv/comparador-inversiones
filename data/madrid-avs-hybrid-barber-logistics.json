@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "id": "madrid-avs-hybrid-barber-logistics",
+  "status": "PRE-TAX · HIPÓTESIS/ESTIMACIONES PENDIENTES DE CONFIRMAR",
+  "premises": [
+    {
+      "name": "Boldano 41",
+      "usableSqm": 36.78,
+      "chairs": 3,
+      "microhubFloorprintSqm": 1,
+      "remainingSqm": 35.78
+    },
+    {
+      "name": "Puntallana 20",
+      "usableSqm": 29.7,
+      "chairs": 3,
+      "microhubFloorprintSqm": 1,
+      "remainingSqm": 28.7
+    }
+  ],
+  "barber": {
+    "installedChairs": 6,
+    "chairMonthlyPrice": 400,
+    "baseOccupancy": 0.9,
+    "baseEquivalentChairs": 5.4,
+    "chairScenarios": [
+      4,
+      5,
+      5.4,
+      6
+    ]
+  },
+  "operatingCosts": {
+    "scope": "Una sola suma auditable: los costes logísticos compartibles no se vuelven a sumar.",
+    "perLocation": [
+      {
+        "electricity": 90,
+        "water": 20,
+        "internet": 25,
+        "tpv": 10,
+        "alarm": 22,
+        "cameraCloud": 5,
+        "insurance": 25,
+        "cleaning": 45,
+        "commonConsumables": 18,
+        "maintenance": 25,
+        "otherUtilities": 10
+      },
+      {
+        "electricity": 90,
+        "water": 20,
+        "internet": 25,
+        "tpv": 10,
+        "alarm": 22,
+        "cameraCloud": 5,
+        "insurance": 25,
+        "cleaning": 45,
+        "commonConsumables": 18,
+        "maintenance": 25,
+        "otherUtilities": 10
+      }
+    ],
+    "sharedBusiness": {
+      "reta": 80,
+      "accounting": 40,
+      "administration": 70,
+      "software": 20,
+      "sharedInsurance": 20,
+      "sharedTelecom": 10,
+      "otherSharedCosts": 20
+    }
+  },
+  "logistics": {
+    "basePackagesDayPoint": 50,
+    "matrixPackages": [
+      30,
+      50,
+      60
+    ],
+    "incrementalStructureMonthly": 120,
+    "excludedIndependentPremisesRent": 300,
+    "agency": {
+      "catcher": {
+        "ordersMonthDisplay": 400,
+        "grossFeeOrder": 4.5,
+        "platformCommissionOrder": 0.29,
+        "netRevenueMonthly": 1686,
+        "courierShare": 0.75,
+        "agencyShare": 0.25
+      },
+      "amazon": {
+        "points": 2,
+        "packagesDayPoint": 50,
+        "daysMonth": 26,
+        "grossFeePackage": 0.8,
+        "courierFeePackage": 0.5
+      }
+    },
+    "catcherAgencyMarginByPackages": {
+      "30": 383,
+      "50": 421.5,
+      "60": 421.5,
+      "80": 459.75,
+      "100": 498
+    }
+  },
+  "avsRent": {
+    "stabilizedMonthly": 585.64,
+    "yearFactors": [
+      0.125,
+      0.5,
+      0.75,
+      1,
+      1
+    ],
+    "evidence": "HIPÓTESIS PENDIENTE DE CONFIRMACIÓN DOCUMENTAL AVS"
+  },
+  "equipment": {
+    "barberChairQty": 6,
+    "barberChairUnitCost": {
+      "low": 250,
+      "base": 350,
+      "high": 500
+    },
+    "mirrorQty": 4,
+    "alternativeMirrorQty": 6,
+    "mirrorUnitCost": {
+      "low": 80,
+      "base": 130,
+      "high": 220
+    },
+    "basicFurnitureCost": {
+      "low": 900,
+      "base": 1500,
+      "high": 2400
+    },
+    "lightingCost": {
+      "low": 600,
+      "base": 1000,
+      "high": 1600
+    },
+    "electricalAdaptationCost": {
+      "low": 700,
+      "base": 1300,
+      "high": 2500
+    },
+    "sharedDryersCost": {
+      "low": 120,
+      "base": 220,
+      "high": 350
+    },
+    "securityHardwareCost": {
+      "low": 650,
+      "base": 1000,
+      "high": 1600
+    },
+    "tpvHardwareCost": {
+      "low": 250,
+      "base": 450,
+      "high": 700
+    },
+    "microhubEquipmentCost": {
+      "low": 800,
+      "base": 1150,
+      "high": 1500
+    },
+    "avsDeposit": {
+      "low": 1171.28,
+      "base": 1171.28,
+      "high": 1171.28
+    },
+    "logisticsWorkingCapital": {
+      "low": 1500,
+      "base": 2000,
+      "high": 2500
+    },
+    "contingency": {
+      "low": 2000,
+      "base": 2500,
+      "high": 3000
+    },
+    "excludedOwnerEquipment": [
+      "kits profesionales individuales",
+      "máquinas de corte",
+      "patilleras",
+      "afeitadoras",
+      "tijeras y herramientas personales",
+      "consumibles y productos profesionales",
+      "lavacabezas e instalación hidráulica",
+      "maquinaria especializada individual"
+    ],
+    "initialWashbasinQty": 0
+  }
+}

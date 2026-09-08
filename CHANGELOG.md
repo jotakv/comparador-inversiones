@@ -1,5 +1,10 @@
 # Changelog
 
+## Madrid AVS hybrid — 2026-09-08
+
+- feat: add Madrid AVS hybrid barber and last-mile investment with lean barber setup.
+- Added auditable shared costs, bottom-up LOW/BASE/HIGH CAPEX, AVS ramp, scenarios, gates, risks and no-double-counting tests.
+
 ## Alternative Capitalization Lab — 2026-08-23
 
 - Added a €45,000 opportunity lab with €28,000 SEPE, €12,000 indemnification and €5,000 savings kept separate; 24 screened models, ten finalists and four moonshots.

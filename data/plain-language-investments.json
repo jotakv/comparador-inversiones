@@ -540,6 +540,80 @@
           "Caja para cubrir desfases entre cobros y pagos."
         ]
       ]
+    },
+    {
+      "slug": "madrid-avs-hybrid-barber-logistics",
+      "modelId": "madrid-avs-hybrid-barber-logistics",
+      "name": "AVS híbrido Madrid",
+      "page": "inversiones/entender-madrid-avs-hybrid.html",
+      "summary": "Dos locales alquilados, cada uno con tres puestos de barbería y un microhub: ocho canales de monetización sobre una infraestructura, no ocho negocios independientes.",
+      "ownership": "No se compran inmuebles. Se financian adecuación, seis sillas, mínimo cuatro espejos, mobiliario, luz, electricidad, seguridad, TPV, microhubs, fianza y circulante.",
+      "income": "Rentas de puestos más margen de Catcher y Amazon después de pagar repartidores; IVA no es beneficio.",
+      "effort": "Negocio semi-delegado y operativo; requiere captación, coordinación, incidencias, contratos y control.",
+      "advantage": "Barbería y logística comparten alquiler, RETA, gestoría, internet, cámaras, alarma, seguros y suministros sin duplicarlos.",
+      "risk": "AVS, licencia, contratos, ocupación, diseño físico y costes siguen pendientes.",
+      "steps": [
+        "Validar AVS y licencia",
+        "Precomprometer 4–5 barberos",
+        "Confirmar Amazon/Catcher y delegación",
+        "Adecuar de forma lean",
+        "Operar y medir"
+      ],
+      "moneyIn": [
+        "400 €/mes + IVA por silla ocupada",
+        "Margen Catcher y Amazon tras repartidores"
+      ],
+      "moneyOut": [
+        "CAPEX bottom-up y fianza",
+        "Renta AVS, luz, agua, internet, TPV, alarmas, seguros, gestoría, RETA, limpieza y mantenimiento",
+        "120 €/mes exclusivamente incremental de logística"
+      ],
+      "work": [
+        "Captar barberos",
+        "Coordinar autónomos y plataformas",
+        "Gestionar seguridad, paquetes e incidencias"
+      ],
+      "success": [
+        "Permisos escritos",
+        "Ocupación estable",
+        "Volumen contractual",
+        "Paquetes contenidos en microhub"
+      ],
+      "failure": [
+        "Uso no permitido",
+        "Paquetes invaden pasillos",
+        "Rotación de barberos",
+        "Costes o CAPEX mayores"
+      ],
+      "thesisFor": "Diversifica ingresos y comparte infraestructura con poco capital inicial.",
+      "thesisAgainst": "ROI alto de negocio operativo sin activo residual y con gates críticos.",
+      "dataStates": [
+        [
+          "Ocupación 90 %",
+          "5,4 sillas equivalentes",
+          "HIPÓTESIS"
+        ],
+        [
+          "Amazon/Catcher",
+          "tarifas y volúmenes",
+          "PENDIENTE"
+        ],
+        [
+          "AVS/licencia",
+          "uso híbrido y sin lavacabezas",
+          "PENDIENTE"
+        ],
+        [
+          "CAPEX",
+          "bottom-up LOW/BASE/HIGH",
+          "ESTIMADO"
+        ]
+      ],
+      "glossary": [
+        "CAPEX: inversión inicial",
+        "Margen: ingresos menos pagos directos",
+        "Pre-tax: antes de impuestos"
+      ]
     }
   ]
 }

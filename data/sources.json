@@ -99,6 +99,14 @@
       "location": "Oliva",
       "date": "06/09/2026",
       "status": "ND / NO VERIFICABLE; 0,80 €/paquete y volumen son HIPÓTESIS, no tarifa oficial"
+    },
+    {
+      "variable": "Madrid AVS híbrido: configuración, costes, CAPEX, tarifas y volúmenes",
+      "source": "Inputs de decisión facilitados; sin documentación contractual adjunta",
+      "url": "",
+      "location": "Madrid — Boldano 41 y Puntallana 20",
+      "date": "08/09/2026",
+      "status": "HIPÓTESIS/ESTIMACIÓN; autorización AVS, licencia, presupuestos y contratos pendientes de evidencia escrita"
     }
   ]
 }

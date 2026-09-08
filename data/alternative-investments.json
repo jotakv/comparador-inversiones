@@ -579,6 +579,7 @@
     "talavera-reparto-delegado":{"rating":"Dudosa","note":"La tenencia semipasiva y la operación delegada requieren confirmación escrita del SEPE; no se presume elegibilidad."},
     "oliva-cambio-uso-habitaciones":{"rating":"No adecuada","note":"SEPE crítico: no contar 28.000 € para la finalidad residencial sin confirmación escrita y memoria compatible."},
     "oliva-hibrida-hub-vivienda":{"rating":"Condicionada","note":"Actividad inicial y cambio posterior requieren memoria, trazabilidad de afectación y confirmación escrita del SEPE."},
+    "madrid-avs-hybrid-barber-logistics": { "rating": "Condicionada", "note": "Negocio operativo híbrido de cowork profesional y logística de última milla. La compatibilidad del pago único SEPE depende de la afectación real de los locales, equipamiento, gastos de puesta en marcha y actividad desarrollada; requiere trazabilidad y confirmación de las partidas elegibles." },
     "madrid-last-mile-agency":{"rating":"Condicionada","note":"Negocio operativo; contratos, gasto elegible, autónomos y afectación requieren confirmación escrita del SEPE."}
   },
   "moonshots": [

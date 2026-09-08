@@ -97,3 +97,7 @@ Talavera conserva el modelo de local comercial y dos puntos de reparto delegado 
 ### Agencia última milla Madrid — Catcher + Amazon
 
 La alternativa `madrid-last-mile-agency` es un negocio operativo semi-delegado, no una inversión pasiva. Sus inputs auditables, cinco escenarios y estados de evidencia están en `data/madrid-last-mile-agency.json`; las fórmulas puras de ambos canales están en `assets/js/madrid-last-mile-engine.js`. El caso objetivo distingue 4.182 € facturados, 2.824,50 € pagados a dos repartidores, 1.357,50 € de margen antes de estructura y 937,50 €/mes pre-tax. Contratos, tarifas, volúmenes, RETA, local, fiscalidad y capital de arranque siguen marcados como hipótesis o pendientes.
+
+### Madrid AVS híbrido — barbería + Catcher + Amazon
+
+La inversión independiente `madrid-avs-hybrid-barber-logistics` opera dos locales AVS alquilados con seis sillas, cuatro espejos mínimos editables y dos microhubs. La infraestructura es compartida y lean: cada barbero aporta su maquinaria profesional y no se instala inicialmente lavacabezas. El caso base es 90 % de ocupación y 50 paquetes/día/punto; la referencia anterior era ≈22.300 €/año pre-tax, mientras el modelo principal usa gastos auditados y CAPEX bottom-up LOW/BASE/HIGH (objetivo histórico 16.000–18.000 €, no dogma). Es un negocio operativo, sin inmueble residual; contratos, licencia y autorización AVS están pendientes.

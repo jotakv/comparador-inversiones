@@ -657,5 +657,77 @@
     "residualRisk": "Alto",
     "assumption": true,
     "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-avs-hybrid-barber-logistics",
+    "category": "AVS/licencia",
+    "risk": "Uso híbrido o alquiler de puestos no autorizado",
+    "probability": 0.55,
+    "impact": 20000,
+    "expectedLoss": 11000.0,
+    "mitigation": "Confirmación escrita AVS y técnico antes de invertir",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-avs-hybrid-barber-logistics",
+    "category": "Operación física",
+    "risk": "Seis puestos, cuatro espejos o 1 m² por hub no funcionan",
+    "probability": 0.4,
+    "impact": 8000,
+    "expectedLoss": 3200.0,
+    "mitigation": "Plano, visita técnica y piloto sin invadir circulación",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-avs-hybrid-barber-logistics",
+    "category": "Plataformas",
+    "risk": "Tarifa, volumen o delegación Amazon/Catcher no confirmados",
+    "probability": 0.5,
+    "impact": 12000,
+    "expectedLoss": 6000.0,
+    "mitigation": "Contrato y SLA escritos",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-avs-hybrid-barber-logistics",
+    "category": "Laboral",
+    "risk": "Configuración de autónomos o cobertura insuficiente",
+    "probability": 0.35,
+    "impact": 10000,
+    "expectedLoss": 3500.0,
+    "mitigation": "Asesoría laboral, sustituciones y contratos",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-avs-hybrid-barber-logistics",
+    "category": "CAPEX/suministros",
+    "risk": "CAPEX >20.000 € o luz/agua/alarma superiores",
+    "probability": 0.4,
+    "impact": 6000,
+    "expectedLoss": 2400.0,
+    "mitigation": "Presupuestos cerrados, medición y contingencia",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-avs-hybrid-barber-logistics",
+    "category": "Seguridad",
+    "risk": "DIY insuficiente para seguro, RGPD o plataformas",
+    "probability": 0.3,
+    "impact": 5000,
+    "expectedLoss": 1500.0,
+    "mitigation": "Validación aseguradora, cartelería y diseño RGPD",
+    "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
   }
 ]

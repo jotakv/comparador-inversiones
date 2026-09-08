@@ -1514,6 +1514,182 @@
         "confirmación escrita SEPE",
         "arras con condiciones suspensivas"
       ]
+    },
+    "madrid-avs-hybrid-barber-logistics": {
+      "what": "Adecuar dos locales AVS alquilados como cowork lean de barbería y microhubs compartidos; no se compra inmueble.",
+      "returnSources": [
+        "renta de seis puestos",
+        "margen Catcher",
+        "margen Amazon",
+        "cost sharing"
+      ],
+      "items": [
+        [
+          "6 sillas (coste unitario)",
+          1500,
+          2100,
+          3000,
+          "Antes de abrir",
+          "Equipamiento",
+          "Baja",
+          "Puesta en marcha"
+        ],
+        [
+          "4 espejos mínimos",
+          320,
+          520,
+          880,
+          "Antes de abrir",
+          "Equipamiento",
+          "Baja",
+          "Puesta en marcha"
+        ],
+        [
+          "Mobiliario funcional",
+          900,
+          1500,
+          2400,
+          "Antes de abrir",
+          "Equipamiento",
+          "Baja",
+          "Puesta en marcha"
+        ],
+        [
+          "Iluminación general y técnica",
+          600,
+          1000,
+          1600,
+          "Antes de abrir",
+          "Instalaciones",
+          "Baja",
+          "Puesta en marcha"
+        ],
+        [
+          "Adaptación eléctrica",
+          700,
+          1300,
+          2500,
+          "Antes de abrir",
+          "Instalaciones",
+          "Baja",
+          "Puesta en marcha"
+        ],
+        [
+          "Secadores básicos compartidos",
+          120,
+          220,
+          350,
+          "Antes de abrir",
+          "Equipamiento",
+          "Baja",
+          "Puesta en marcha"
+        ],
+        [
+          "Seguridad DIY hardware",
+          650,
+          1000,
+          1600,
+          "Antes de abrir",
+          "Seguridad",
+          "Baja",
+          "Puesta en marcha"
+        ],
+        [
+          "TPV dos locales",
+          250,
+          450,
+          700,
+          "Antes de abrir",
+          "Tecnología",
+          "Media",
+          "Puesta en marcha"
+        ],
+        [
+          "Dos microhubs",
+          800,
+          1150,
+          1500,
+          "Antes de abrir",
+          "Equipamiento logístico",
+          "Baja",
+          "Puesta en marcha"
+        ],
+        [
+          "Fianza AVS",
+          1171.28,
+          1171.28,
+          1171.28,
+          "Firma",
+          "Fianza",
+          "Alta",
+          "Puesta en marcha"
+        ],
+        [
+          "Circulante logística",
+          1500,
+          2000,
+          2500,
+          "Inicio",
+          "Capital circulante",
+          "Baja",
+          "Operación"
+        ],
+        [
+          "Reserva e imprevistos",
+          2000,
+          2500,
+          3000,
+          "Inicio",
+          "Contingencia",
+          "Baja",
+          "Operación"
+        ]
+      ],
+      "timeline": [
+        [
+          "Antes de invertir",
+          "Gates AVS, licencia, contratos y plano"
+        ],
+        [
+          "Meses 1–2",
+          "Adecuación lean y captación"
+        ],
+        [
+          "Mes 3+",
+          "Operación semi-delegada"
+        ]
+      ],
+      "steps": [
+        [
+          "Validar gates",
+          "coste de informes",
+          "AVS + técnico + abogado",
+          "confirmaciones escritas",
+          "2–6 semanas",
+          "ninguna",
+          "uso incompatible",
+          "NO-GO sin permisos"
+        ],
+        [
+          "Contratar y adecuar",
+          "LOW/BASE/HIGH",
+          "propietario + industriales",
+          "dos locales operativos",
+          "1–2 meses",
+          "gates superados",
+          "sobrecoste",
+          "parar sobre 20.000 € sin revalidar"
+        ]
+      ],
+      "checklist": [
+        "autorización AVS escrita",
+        "licencia y requisitos higiénicos",
+        "plano con seis puestos y dos microhubs",
+        "4–5 barberos precomprometidos",
+        "contratos Amazon/Catcher y delegación",
+        "presupuesto eléctrico y suministros",
+        "seguro y RGPD de cámaras"
+      ]
     }
   }
 }

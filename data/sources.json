@@ -131,6 +131,13 @@
       "location": "Madrid",
       "date": "09/09/2026",
       "status": "ESTIMADO · referencia de materiales; no incluye mano de obra profesional"
+    },
+    {
+      "variable": "Madrid AVS wellness · inputs y fórmulas",
+      "source": "Modelo interno auditable",
+      "location": "data/madrid-avs-hybrid-wellness-logistics.json",
+      "date": "09/09/2026",
+      "status": "MIXTO · superficies/fórmulas documentadas; CAPEX estimado; demanda, revenue shares, permisos y contratos HIPÓTESIS/PENDIENTES"
     }
   ]
 }

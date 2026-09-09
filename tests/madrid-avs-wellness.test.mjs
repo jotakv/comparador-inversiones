@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {calculateAvsRentForMonth,calculateWellnessContribution,calculateLogistics,calculateWellnessLogisticsMonth,projectWellnessInvestment,scenarioResult,startupCapital} from '../assets/js/madrid-avs-wellness-engine.js';
+const input=JSON.parse(await readFile(new URL('../data/madrid-avs-hybrid-wellness-logistics.json',import.meta.url)));
+const near=(actual,expected,tolerance)=>assert.ok(Math.abs(actual-expected)<=tolerance,`${actual} ≈ ${expected}`);
+test('AVS rent follows monthly bands rather than a ten-year average',()=>{for(const [m,v] of [[1,0],[6,0],[7,146.41],[12,146.41],[13,292.82],[24,292.82],[25,439.23],[36,439.23],[37,585.64]])assert.equal(calculateAvsRentForMonth(input,m),v)});
+test('wellness BASE formulas are auditable',()=>{const x=calculateWellnessContribution(input);near(x.regular.gross,3928,1);near(x.regular.studioContribution,1964,1);assert.equal(x.workshops.gross,792);near(x.workshops.studioContribution,277,1);near(x.total,2241,1)});
+test('shared last-mile engine preserves Amazon and Catcher economics',()=>{const x=calculateLogistics(input,50);near(x.revenue,3766,1);near(x.courierPayments,2565,1);near(x.contribution,1202,1);near(x.afterIncrementalStructure,1082,1)});
+test('steady, ramp, projections and zero residual reconcile',()=>{const steady=calculateWellnessLogisticsMonth(input),p=projectWellnessInvestment(input);near(steady.cashFlow,2087,1);near(steady.cashFlow*12,25048,3);near(p.annual[0].fcf,25925,2);near(p.annual.slice(0,5).reduce((n,x)=>n+x.fcf,0),131388,15);near(p.annual[4].cumulative,123888,15);near(p.operatingFcf,256630,30);near(p.netCash,249130,30);assert.equal(p.propertyResidual,0);assert.ok(p.annual.every(x=>x.propertyResidual===0));near(steady.cashFlow*12/startupCapital(input).total,3.34,.01)});
+test('prudent payback and defensive stress remain coherent',()=>{near(projectWellnessInvestment(input,{prudentLogistics:true}).payback,6.1,.1);near(scenarioResult(input,'defensive').cashFlow,570,3)});
+test('couriers cannot be double-counted in general expenses',()=>{const x=calculateWellnessLogisticsMonth(input);assert.equal(x.courierPaymentsAlreadyDeducted,true);assert.match(input.operatingCosts.excluded.join(' '),/repartidores/);assert.equal(x.cashFlow,x.wellness.total+x.logistics.contribution-x.incrementalLogisticsStructure-x.wellnessStructure-x.rent)});

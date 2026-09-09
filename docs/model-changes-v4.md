@@ -21,3 +21,7 @@ Fiscalidad no validada, incertidumbre de mercado a largo plazo y comparables con
 - Escenarios producen trayectorias distintas.
 - Fuentes y freshness visibles.
 - Ejes comunes y ROI acumulado etiquetado correctamente.
+
+## Motor Madrid AVS wellness + logística
+
+`madrid-avs-wellness-engine.js` centraliza clases, talleres, bonificación AVS mensual, reutilización del motor Amazon/Catcher, ramp-up, escenarios, payback y proyección pre-tax. Los pagos a repartidores se descuentan dentro del motor compartido y no en la estructura wellness. Todas las proyecciones asignan residual inmobiliario cero.

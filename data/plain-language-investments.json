@@ -619,6 +619,84 @@
         "Margen: ingresos menos pagos directos",
         "Pre-tax: antes de impuestos"
       ]
+    },
+    {
+      "slug": "madrid-avs-hybrid-wellness-logistics",
+      "modelId": "madrid-avs-hybrid-wellness-logistics",
+      "name": "AVS Wellness + logística",
+      "page": "inversiones/madrid-avs-hybrid-wellness-logistics.html",
+      "summary": "Alquilamos dos locales AVS y los usamos como estudios wellness y microhubs de última milla.",
+      "ownership": "Equipamiento lean; no compramos ningún inmueble y el residual es 0 €.",
+      "income": "Clases, talleres, Amazon y Catcher.",
+      "effort": "Semi-delegado: marketing, captación, coordinación, contratos, calendario, incidencias, logística y control.",
+      "advantage": "Muy poco CAPEX, bonificación AVS, docentes variables y usos temporales múltiples.",
+      "risk": "Permisos, demanda wellness y contratos Amazon/Catcher.",
+      "steps": [
+        "Validar AVS, licencia y aforo",
+        "Contratar profesores autónomos",
+        "Confirmar Amazon/Catcher y delegación",
+        "Delimitar microhubs",
+        "Lanzar, medir ocupación y controlar"
+      ],
+      "moneyIn": [
+        "Clases y talleres",
+        "Margen Amazon y Catcher"
+      ],
+      "moneyOut": [
+        "Profesores y repartidores",
+        "Renta AVS, estructura, utilities, seguros, gestoría y mantenimiento"
+      ],
+      "work": [
+        "Captación y marketing propio",
+        "Calendario y contratos",
+        "Incidencias y control"
+      ],
+      "success": [
+        "Permisos escritos",
+        "Ocupación sostenible",
+        "Contratos logísticos",
+        "Separación física segura"
+      ],
+      "failure": [
+        "Uso incompatible",
+        "Menos de cuatro alumnos",
+        "Plataformas discontinuadas",
+        "Paquetes interfieren con alumnos"
+      ],
+      "thesisFor": "Capital reducido y cuatro capas de ingreso sobre los mismos alquileres.",
+      "thesisAgainst": "Negocio operativo dependiente de permisos, ocupación y plataformas.",
+      "dataStates": [
+        [
+          "Superficies",
+          "66,48 m²",
+          "CONFIRMADO"
+        ],
+        [
+          "CAPEX físico / total",
+          "2.850 € / 7.500 €",
+          "ESTIMADO"
+        ],
+        [
+          "Clases, ocupación y shares",
+          "18/semana; 60 %; 50/50",
+          "HIPÓTESIS"
+        ],
+        [
+          "Amazon/Catcher",
+          "contrato, tarifa, volumen y delegación",
+          "PENDIENTE"
+        ],
+        [
+          "AVS/licencia/aforo",
+          "validación escrita y técnica",
+          "PENDIENTE"
+        ]
+      ],
+      "glossary": [
+        "FCF: caja después de costes, antes de impuestos",
+        "Residual: 0 €, porque no se compra inmueble",
+        "Revenue share: reparto del ingreso con el profesor"
+      ]
     }
   ]
 }

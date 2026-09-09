@@ -1,0 +1,306 @@
+{
+  "version": 1,
+  "id": "madrid-avs-hybrid-wellness-logistics",
+  "status": "PRE-TAX · HIPÓTESIS/ESTIMACIONES · GATES PENDIENTES",
+  "premises": [
+    {
+      "name": "Boldano 41",
+      "usableSqm": 36.78,
+      "indicativeCapacity": "8–10 personas"
+    },
+    {
+      "name": "Puntallana 20",
+      "usableSqm": 29.7,
+      "indicativeCapacity": "6–8 personas"
+    }
+  ],
+  "totalUsableSqm": 66.48,
+  "wellness": {
+    "regular": {
+      "classesPerWeek": 18,
+      "weeksPerMonth": 4.33,
+      "classCapacity": 8,
+      "occupancyRate": 0.6,
+      "effectiveRevenuePerAttendance": 10.5,
+      "studioShare": 0.5
+    },
+    "workshops": {
+      "workshopsPerMonth": 6,
+      "attendeesPerWorkshop": 6,
+      "effectiveWorkshopPrice": 22,
+      "studioShare": 0.35
+    },
+    "teacherShares": {
+      "regular": 0.5,
+      "workshops": 0.65
+    },
+    "residentTeacherHourlyRange": "20–25 €/hora · HIPÓTESIS"
+  },
+  "operatingCosts": {
+    "wellnessStructureMonthly": 650,
+    "scope": [
+      "utilities",
+      "limpieza",
+      "alarmas",
+      "seguro",
+      "gestoría",
+      "RETA/promotor",
+      "software/reservas",
+      "mantenimiento",
+      "consumibles comunes",
+      "telecomunicaciones"
+    ],
+    "excluded": [
+      "agencia externa de marketing",
+      "desarrollador web externo",
+      "pagos a repartidores (ya descontados por el motor logístico)"
+    ]
+  },
+  "logistics": {
+    "basePackagesDayPoint": 50,
+    "matrixPackages": [
+      30,
+      50,
+      60
+    ],
+    "incrementalStructureMonthly": 120,
+    "agency": {
+      "catcher": {
+        "ordersMonthDisplay": 400,
+        "grossFeeOrder": 4.5,
+        "platformCommissionOrder": 0.29,
+        "netRevenueMonthly": 1686,
+        "courierShare": 0.75,
+        "agencyShare": 0.25
+      },
+      "amazon": {
+        "points": 2,
+        "packagesDayPoint": 50,
+        "daysMonth": 26,
+        "grossFeePackage": 0.8,
+        "courierFeePackage": 0.5
+      }
+    },
+    "catcherAgencyMarginByPackages": {
+      "30": 383,
+      "50": 421.5,
+      "60": 421.5
+    }
+  },
+  "avsRent": {
+    "stabilizedMonthly": 585.64,
+    "bands": [
+      {
+        "throughMonth": 6,
+        "factor": 0
+      },
+      {
+        "throughMonth": 12,
+        "factor": 0.25
+      },
+      {
+        "throughMonth": 24,
+        "factor": 0.5
+      },
+      {
+        "throughMonth": 36,
+        "factor": 0.75
+      },
+      {
+        "throughMonth": 1200,
+        "factor": 1
+      }
+    ],
+    "evidence": "Esquema AVS aportado; autorización y aplicación contractual PENDIENTES"
+  },
+  "rampUp": [
+    {
+      "throughMonth": 3,
+      "classesPerWeek": 10,
+      "occupancyRate": 0.4,
+      "workshopsPerMonth": 2,
+      "packagesDayPoint": 50,
+      "effectiveRevenuePerAttendance": 10.299
+    },
+    {
+      "throughMonth": 6,
+      "classesPerWeek": 14,
+      "occupancyRate": 0.5,
+      "workshopsPerMonth": 4,
+      "packagesDayPoint": 50,
+      "effectiveRevenuePerAttendance": 10.25
+    },
+    {
+      "throughMonth": 9,
+      "classesPerWeek": 18,
+      "occupancyRate": 0.6,
+      "workshopsPerMonth": 6,
+      "packagesDayPoint": 50
+    },
+    {
+      "throughMonth": 12,
+      "classesPerWeek": 20,
+      "occupancyRate": 0.65,
+      "workshopsPerMonth": 8,
+      "packagesDayPoint": 50
+    }
+  ],
+  "scenarios": {
+    "defensive": {
+      "classesPerWeek": 12,
+      "occupancyRate": 0.45,
+      "workshopsPerMonth": 4,
+      "packagesDayPoint": 30,
+      "effectiveRevenuePerAttendance": 9.5
+    },
+    "base": {
+      "classesPerWeek": 18,
+      "occupancyRate": 0.6,
+      "workshopsPerMonth": 6,
+      "packagesDayPoint": 50
+    },
+    "upside": {
+      "classesPerWeek": 24,
+      "occupancyRate": 0.7,
+      "workshopsPerMonth": 8,
+      "packagesDayPoint": 60
+    }
+  },
+  "startup": {
+    "physicalItems": [
+      "mats",
+      "cushions",
+      "shelves",
+      "coatStorage",
+      "sound",
+      "diyPaint",
+      "lighting",
+      "signage",
+      "safety",
+      "microhubShelves",
+      "cctv",
+      "other"
+    ],
+    "items": {
+      "mats": {
+        "low": 300,
+        "base": 400,
+        "high": 550
+      },
+      "cushions": {
+        "low": 300,
+        "base": 400,
+        "high": 550
+      },
+      "shelves": {
+        "low": 180,
+        "base": 250,
+        "high": 350
+      },
+      "coatStorage": {
+        "low": 100,
+        "base": 150,
+        "high": 250
+      },
+      "sound": {
+        "low": 100,
+        "base": 150,
+        "high": 250
+      },
+      "diyPaint": {
+        "low": 180,
+        "base": 250,
+        "high": 400
+      },
+      "lighting": {
+        "low": 150,
+        "base": 250,
+        "high": 450
+      },
+      "signage": {
+        "low": 70,
+        "base": 100,
+        "high": 180
+      },
+      "safety": {
+        "low": 100,
+        "base": 150,
+        "high": 250
+      },
+      "microhubShelves": {
+        "low": 180,
+        "base": 250,
+        "high": 400
+      },
+      "cctv": {
+        "low": 140,
+        "base": 200,
+        "high": 350
+      },
+      "other": {
+        "low": 200,
+        "base": 300,
+        "high": 470
+      },
+      "deposit": {
+        "low": 1171,
+        "base": 1171,
+        "high": 1171
+      },
+      "workingCapital": {
+        "low": 1000,
+        "base": 1500,
+        "high": 2200
+      },
+      "technicalPermits": {
+        "low": 750,
+        "base": 1000,
+        "high": 1700
+      },
+      "buffer": {
+        "low": 729,
+        "base": 979,
+        "high": 1099
+      }
+    },
+    "total": {
+      "low": 5500,
+      "base": 7500,
+      "high": 10170
+    }
+  },
+  "evidence": {
+    "confirmed": [
+      "superficies aportadas",
+      "fórmulas del modelo",
+      "curva temporal AVS aportada"
+    ],
+    "estimated": [
+      "CAPEX lean",
+      "equipamiento",
+      "gastos recurrentes",
+      "ocupación"
+    ],
+    "hypotheses": [
+      "18 clases/semana",
+      "60 % ocupación",
+      "10,50 €/asistencia",
+      "revenue shares",
+      "6 talleres/mes",
+      "profesores residentes 20–25 €/hora",
+      "50 paquetes/día/punto"
+    ],
+    "pending": [
+      "aprobación AVS",
+      "licencia/declaración responsable",
+      "aforo, evacuación, accesibilidad y ventilación",
+      "Amazon",
+      "Catcher",
+      "tarifas y volumen contractual",
+      "delegación",
+      "seguro",
+      "suficiencia física del microhub",
+      "contratos de profesores"
+    ]
+  }
+}

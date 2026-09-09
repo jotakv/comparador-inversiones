@@ -10,7 +10,7 @@ const publicHtml = [
   'fuentes.html', 'glosario.html', 'inversiones/aguilas.html',
   'inversiones/reus-trasteros.html', 'inversiones/l3h2-madrid.html',
   'inversiones/campers.html', 'inversiones/tinamus.html',
-  'inversiones/el-ejido-delegado.html', 'inversiones/madrid-avs-hybrid-barber-logistics.html', 'inversiones/entender-madrid-avs-hybrid.html', 'one-page-madrid-avs-hybrid.html', 'inversiones/madrid-last-mile-agency.html', 'inversiones/entender-madrid-last-mile-agency.html', 'inversiones/talavera-reparto-delegado.html', 'inversiones/el-ejido-outsourced-last-mile.html', 'inversiones/oliva.html', 'inversiones/oliva-cambio-uso-habitaciones.html', 'inversiones/oliva-hibrida-hub-vivienda.html', 'inversiones/Informe_inversion_hibrida_Oliva_Amazon_Hub_cambio_uso_temporada_turistico.html', 'one-page-oliva.html',
+  'inversiones/el-ejido-delegado.html', 'inversiones/madrid-avs-hybrid-barber-logistics.html', 'inversiones/madrid-avs-hybrid-wellness-logistics.html', 'inversiones/entender-madrid-avs-hybrid.html', 'one-page-madrid-avs-hybrid.html', 'one-page-madrid-avs-wellness-hybrid.html', 'inversiones/madrid-last-mile-agency.html', 'inversiones/entender-madrid-last-mile-agency.html', 'inversiones/talavera-reparto-delegado.html', 'inversiones/el-ejido-outsourced-last-mile.html', 'inversiones/oliva.html', 'inversiones/oliva-cambio-uso-habitaciones.html', 'inversiones/oliva-hibrida-hub-vivienda.html', 'inversiones/Informe_inversion_hibrida_Oliva_Amazon_Hub_cambio_uso_temporada_turistico.html', 'one-page-oliva.html',
   'inversiones/local-generico.html', 'inversiones/entender-aguilas.html', 'inversiones/entender-castellon.html', 'inversiones/entender-talavera.html', 'inversiones/entender-el-ejido.html'
 ];
 

@@ -304,6 +304,37 @@
       "executionEligibility": "NOT YET ELIGIBLE"
     },
     {
+      "id": "madrid-avs-hybrid-wellness-logistics",
+      "name": "Madrid AVS — 2 microestudios wellness + Amazon + Catcher",
+      "displayName": "Madrid AVS — 2 microestudios wellness + Amazon + Catcher",
+      "shortName": "AVS Wellness + logística",
+      "assetName": "2 microestudios wellness + 2 microhubs AVS",
+      "type": "Negocio operativo híbrido · wellness + logística última milla",
+      "risk": 9,
+      "passivity": 2,
+      "liquidity": 4,
+      "effort": 8,
+      "legalRisk": 10,
+      "operatingRisk": 9,
+      "scalability": 7,
+      "scores": {
+        "cash": 9,
+        "residual": 0,
+        "inflation": 3,
+        "finance": 7,
+        "exit": 1
+      },
+      "tags": [
+        "operating-business",
+        "wellness",
+        "last-mile",
+        "shared-infrastructure"
+      ],
+      "ownerOperated": true,
+      "decisionStatus": "DUE DILIGENCE",
+      "executionEligibility": "NOT YET ELIGIBLE"
+    },
+    {
       "id": "local",
       "name": "Local comercial genérico",
       "type": "Inmobiliario",

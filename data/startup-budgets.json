@@ -1680,6 +1680,80 @@
         "presupuesto eléctrico y suministros",
         "seguro y RGPD de cámaras"
       ]
+    },
+    "madrid-avs-hybrid-wellness-logistics": {
+      "what": "Equipamiento lean wellness, dos microhubs, fianza, circulante, técnico/licencias y colchón sobre dos locales AVS alquilados; ningún inmueble.",
+      "returnSources": [
+        "clases 50/50",
+        "talleres 35/65",
+        "margen Amazon",
+        "margen Catcher"
+      ],
+      "items": [
+        [
+          "CAPEX físico lean",
+          2100,
+          2850,
+          4450,
+          "Antes de abrir",
+          "Equipamiento",
+          "Baja",
+          "Puesta en marcha"
+        ],
+        [
+          "Fianza AVS",
+          1171,
+          1171,
+          1171,
+          "Firma",
+          "Fianza",
+          "Media",
+          "Puesta en marcha"
+        ],
+        [
+          "Capital circulante",
+          1000,
+          1500,
+          2200,
+          "Apertura",
+          "Circulante",
+          "Baja",
+          "Puesta en marcha"
+        ],
+        [
+          "Técnico/licencias/trámites",
+          750,
+          1000,
+          1700,
+          "Antes de abrir",
+          "Licencias",
+          "Baja",
+          "Gate"
+        ],
+        [
+          "Colchón",
+          729,
+          979,
+          649,
+          "Apertura",
+          "Reserva",
+          "Baja",
+          "Puesta en marcha"
+        ]
+      ],
+      "totals": {
+        "low": 5500,
+        "base": 7500,
+        "high": 10170
+      },
+      "checklist": [
+        "autorización AVS escrita",
+        "licencia, aforo y compatibilidad híbrida",
+        "contratos profesores",
+        "contratos Amazon/Catcher y delegación",
+        "plano de separación y evacuación",
+        "seguro y RGPD/CCTV"
+      ]
     }
   }
 }

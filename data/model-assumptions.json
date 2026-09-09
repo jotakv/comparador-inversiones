@@ -1521,5 +1521,112 @@
         "monthsToFirstIncome": 1
       }
     }
+  },
+  "madrid-avs-hybrid-wellness-logistics": {
+    "label": "HIPÓTESIS · AVS, licencia, aforo, profesores y plataformas pendientes",
+    "classification": [
+      "operating-business",
+      "wellness",
+      "last-mile"
+    ],
+    "ownerOperated": true,
+    "modelInputs": {
+      "ownerHoursMonth": 40,
+      "probabilityLoss": 0.5,
+      "dataConfidence": 0.16
+    },
+    "financing": {
+      "equity": 7500,
+      "debt": 0
+    },
+    "evidence": {
+      "calculated": [
+        "clases",
+        "talleres",
+        "margen Amazon/Catcher",
+        "renta AVS mensual",
+        "FCF",
+        "ROI",
+        "payback",
+        "TIR"
+      ],
+      "unconfirmed": [
+        "autorización AVS",
+        "licencia y aforo",
+        "contratos profesores",
+        "demanda y ocupación",
+        "Amazon/Catcher",
+        "delegación",
+        "seguro",
+        "CAPEX"
+      ]
+    },
+    "gates": [
+      {
+        "id": "avs",
+        "label": "Autorización escrita AVS para wellness y microhub",
+        "status": "pending",
+        "blocking": true
+      },
+      {
+        "id": "technical",
+        "label": "Licencia, aforo, evacuación, ventilación, accesibilidad y separación",
+        "status": "pending",
+        "blocking": true
+      },
+      {
+        "id": "platforms",
+        "label": "Contratos Amazon/Catcher y delegación",
+        "status": "pending",
+        "blocking": true
+      },
+      {
+        "id": "teachers",
+        "label": "Contratos de profesores y demanda prevalidada",
+        "status": "pending",
+        "blocking": true
+      }
+    ],
+    "scenarios": {
+      "pessimistic": {
+        "name": "Defensivo",
+        "capex": 10170,
+        "entryCost": 10170,
+        "revenue": 22000,
+        "opex": 15176,
+        "growth": 0,
+        "opexGrowth": 0,
+        "assetValue": 0,
+        "residualFactor": 0,
+        "appreciation": 0,
+        "monthsToFirstIncome": 2
+      },
+      "base": {
+        "name": "Central",
+        "capex": 7500,
+        "entryCost": 7500,
+        "revenue": 70000,
+        "opex": 44954.2,
+        "growth": 0,
+        "opexGrowth": 0,
+        "assetValue": 0,
+        "residualFactor": 0,
+        "appreciation": 0,
+        "monthsToFirstIncome": 0
+      },
+      "optimistic": {
+        "name": "UPSIDE / OBJETIVO",
+        "capex": 5500,
+        "entryCost": 5500,
+        "revenue": 95000,
+        "opex": 54000,
+        "growth": 0,
+        "opexGrowth": 0,
+        "assetValue": 0,
+        "residualFactor": 0,
+        "appreciation": 0,
+        "monthsToFirstIncome": 0
+      }
+    }
   }
 }

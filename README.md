@@ -101,3 +101,7 @@ La alternativa `madrid-last-mile-agency` es un negocio operativo semi-delegado, 
 ### Madrid AVS híbrido — barbería + Catcher + Amazon
 
 La inversión independiente `madrid-avs-hybrid-barber-logistics` opera dos locales AVS **alquilados** con seis puestos (sillón hidráulico usado, espejo de pared y balda) y dos microhubs de ≈1 m². El promotor pinta y monta; cada barbero aporta herramientas y consumibles. El caso central mantiene 90 % de ocupación, 400 €/mes + IVA por silla y 50 paquetes/día/punto: CAPEX físico ESTIMADO de 3.500 €, capital total BASE de 9.000 €, beneficio estabilizado ≈22.270 €/año pre-tax y ROI simple ≈247,4 %. LOW/BASE/HIGH combinan capital y operación coherentemente. Es un negocio operativo, no una rentabilidad inmobiliaria: no se compra inmueble, su residual es 0 €, y contratos, licencia, ausencia de lavacabezas de cliente y autorización AVS están PENDIENTES.
+
+## Madrid AVS híbrido — wellness + Catcher + Amazon
+
+La alternativa `madrid-avs-hybrid-wellness-logistics` alquila los dos locales AVS como microestudios atendidos por profesores autónomos (clases 50/50 y talleres 35/65) y dos microhubs Amazon + Catcher con reparto delegado. El BASE compromete aproximadamente 7.500 € (2.850 € de CAPEX físico) y produce aproximadamente 25.046 € de FCF anual estabilizado pre-tax según el motor. No compra inmueble y su residual es 0 €. La bonificación AVS se aplica mensualmente. Autorización AVS, licencia/aforo, separación física, seguros, contratos docentes, tarifas/volumen Amazon y Catcher y delegación son gates pendientes.

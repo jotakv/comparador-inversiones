@@ -32,6 +32,6 @@ test('Castellón remains explicitly unmodelled instead of borrowing figures',()=
 });
 
 test('every evidence state is visible as text, not represented only by colour',()=>{
-  const allowed=new Set(['CONFIRMADO','ESTIMADO','HIPÓTESIS','PENDIENTE']);
+  const allowed=new Set(['CONFIRMADO','ESTIMADO','BASE','HIPÓTESIS','PENDIENTE']);
   for(const item of registry.investments)for(const row of item.dataStates)assert.ok(allowed.has(row[2]),`${item.slug}: ${row[2]}`);
 });

@@ -63,11 +63,11 @@
     "sharedBusiness": {
       "reta": 80,
       "accounting": 40,
-      "administration": 70,
+      "administration": 40,
       "software": 20,
       "sharedInsurance": 20,
       "sharedTelecom": 10,
-      "otherSharedCosts": 20
+      "otherSharedCosts": 0
     }
   },
   "logistics": {
@@ -118,51 +118,71 @@
   "equipment": {
     "barberChairQty": 6,
     "barberChairUnitCost": {
-      "low": 250,
-      "base": 350,
-      "high": 500
+      "low": 120,
+      "base": 150,
+      "high": 180
     },
-    "mirrorQty": 4,
+    "mirrorQty": 6,
     "alternativeMirrorQty": 6,
     "mirrorUnitCost": {
-      "low": 80,
-      "base": 130,
-      "high": 220
+      "low": 40,
+      "base": 66.6666666667,
+      "high": 100
+    },
+    "shelvesCost": {
+      "low": 90,
+      "base": 150,
+      "high": 210
     },
     "basicFurnitureCost": {
-      "low": 900,
-      "base": 1500,
-      "high": 2400
+      "low": 70,
+      "base": 100,
+      "high": 180
+    },
+    "waitingFurnitureCost": {
+      "low": 60,
+      "base": 100,
+      "high": 180
     },
     "lightingCost": {
-      "low": 600,
-      "base": 1000,
-      "high": 1600
+      "low": 100,
+      "base": 160,
+      "high": 300
     },
     "electricalAdaptationCost": {
-      "low": 700,
-      "base": 1300,
-      "high": 2500
+      "low": 60,
+      "base": 100,
+      "high": 300
     },
-    "sharedDryersCost": {
-      "low": 120,
-      "base": 220,
-      "high": 350
+    "cleaningBinsCost": {
+      "low": 50,
+      "base": 80,
+      "high": 120
     },
-    "securityHardwareCost": {
-      "low": 650,
-      "base": 1000,
-      "high": 1600
-    },
-    "tpvHardwareCost": {
-      "low": 250,
-      "base": 450,
-      "high": 700
+    "diyPaintingCost": {
+      "low": 160,
+      "base": 200,
+      "high": 240
     },
     "microhubEquipmentCost": {
-      "low": 800,
-      "base": 1150,
-      "high": 1500
+      "low": 80,
+      "base": 120,
+      "high": 240
+    },
+    "signageCost": {
+      "low": 50,
+      "base": 80,
+      "high": 150
+    },
+    "transportCost": {
+      "low": 80,
+      "base": 160,
+      "high": 300
+    },
+    "physicalContingency": {
+      "low": 340,
+      "base": 950,
+      "high": 1100
     },
     "avsDeposit": {
       "low": 1171.28,
@@ -174,21 +194,72 @@
       "base": 2000,
       "high": 2500
     },
-    "contingency": {
-      "low": 2000,
-      "base": 2500,
-      "high": 3000
+    "launchBuffer": {
+      "low": 800,
+      "base": 1000,
+      "high": 2500
+    },
+    "technicalAndPermits": {
+      "low": 1428.72,
+      "base": 1328.72,
+      "high": 3739.72
     },
     "excludedOwnerEquipment": [
-      "kits profesionales individuales",
       "máquinas de corte",
-      "patilleras",
-      "afeitadoras",
+      "secadores",
       "tijeras y herramientas personales",
-      "consumibles y productos profesionales",
-      "lavacabezas e instalación hidráulica",
-      "maquinaria especializada individual"
+      "productos, champús, capas y consumibles",
+      "lavacabezas de cliente",
+      "tocadores profesionales completos"
     ],
-    "initialWashbasinQty": 0
+    "initialWashbasinQty": 0,
+    "chairRationale": "ESTIMADO: 120–180 € por sillón hidráulico usado; base 150 €. Se evita la silla más barata porque es el elemento crítico y debe soportar uso profesional continuado.",
+    "marketConfidence": "ESTIMADO · MEDIUM: precios observables de segunda mano, dependientes de disponibilidad, negociación, estado y transporte."
+  },
+  "rampUp": {
+    "status": "HIPÓTESIS · NO VALIDADO",
+    "chairOccupancy": [
+      0.3,
+      0.5,
+      0.65,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "logisticsFactor": [
+      0.25,
+      0.4,
+      0.55,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "capitalScenarios": {
+    "low": {
+      "range": "6.500–7.500 €",
+      "representative": 7000
+    },
+    "base": {
+      "range": "8.500–9.000 €",
+      "representative": 9000
+    },
+    "high": {
+      "range": "11.000–14.911 €",
+      "representative": 14911,
+      "note": "Límite histórico muy conservador; no es el caso central."
+    }
   }
 }

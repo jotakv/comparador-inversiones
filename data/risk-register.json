@@ -673,7 +673,7 @@
   {
     "investment": "madrid-avs-hybrid-barber-logistics",
     "category": "Operación física",
-    "risk": "Seis puestos, cuatro espejos o 1 m² por hub no funcionan",
+    "risk": "Seis puestos, ausencia de lavacabezas de cliente o 1 m² por hub no funcionan",
     "probability": 0.4,
     "impact": 8000,
     "expectedLoss": 3200.0,
@@ -709,11 +709,11 @@
   {
     "investment": "madrid-avs-hybrid-barber-logistics",
     "category": "CAPEX/suministros",
-    "risk": "CAPEX >20.000 € o luz/agua/alarma superiores",
+    "risk": "CAPEX físico lean o luz/agua/alarma superiores al rango",
     "probability": 0.4,
-    "impact": 6000,
-    "expectedLoss": 2400.0,
-    "mitigation": "Presupuestos cerrados, medición y contingencia",
+    "impact": 5000,
+    "expectedLoss": 2000,
+    "mitigation": "Presupuestos, compras por hitos, medición y contingencia",
     "residualRisk": "Alto",
     "assumption": true,
     "probabilitySource": "assumption"
@@ -727,6 +727,18 @@
     "expectedLoss": 1500.0,
     "mitigation": "Validación aseguradora, cartelería y diseño RGPD",
     "residualRisk": "Alto",
+    "assumption": true,
+    "probabilitySource": "assumption"
+  },
+  {
+    "investment": "madrid-avs-hybrid-barber-logistics",
+    "category": "Mobiliario usado",
+    "risk": "Fallo hidráulico, desgaste o reposición temprana de sillones usados",
+    "probability": 0.35,
+    "impact": 1200,
+    "expectedLoss": 420,
+    "mitigation": "Revisar hidráulico, probar antes de comprar, priorizar lotes profesionales, evitar unidades deterioradas y reservar margen de reposición",
+    "residualRisk": "Medio",
     "assumption": true,
     "probabilitySource": "assumption"
   }

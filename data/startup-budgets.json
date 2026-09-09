@@ -1516,7 +1516,7 @@
       ]
     },
     "madrid-avs-hybrid-barber-logistics": {
-      "what": "Adecuar dos locales AVS alquilados como cowork lean de barbería y microhubs compartidos; no se compra inmueble.",
+      "what": "Financiar seis puestos lean, mobiliario usado, pintura DIY, dos microhubs, fianza y circulante para operar sobre dos locales AVS alquilados; no se compra inmueble.",
       "returnSources": [
         "renta de seis puestos",
         "margen Catcher",
@@ -1525,92 +1525,72 @@
       ],
       "items": [
         [
-          "6 sillas (coste unitario)",
-          1500,
-          2100,
-          3000,
-          "Antes de abrir",
-          "Equipamiento",
-          "Baja",
-          "Puesta en marcha"
-        ],
-        [
-          "4 espejos mínimos",
-          320,
-          520,
-          880,
-          "Antes de abrir",
-          "Equipamiento",
-          "Baja",
-          "Puesta en marcha"
-        ],
-        [
-          "Mobiliario funcional",
+          "6 sillones hidráulicos usados",
+          720,
           900,
-          1500,
-          2400,
+          1080,
           "Antes de abrir",
           "Equipamiento",
-          "Baja",
-          "Puesta en marcha"
-        ],
-        [
-          "Iluminación general y técnica",
-          600,
-          1000,
-          1600,
-          "Antes de abrir",
-          "Instalaciones",
-          "Baja",
-          "Puesta en marcha"
-        ],
-        [
-          "Adaptación eléctrica",
-          700,
-          1300,
-          2500,
-          "Antes de abrir",
-          "Instalaciones",
-          "Baja",
-          "Puesta en marcha"
-        ],
-        [
-          "Secadores básicos compartidos",
-          120,
-          220,
-          350,
-          "Antes de abrir",
-          "Equipamiento",
-          "Baja",
-          "Puesta en marcha"
-        ],
-        [
-          "Seguridad DIY hardware",
-          650,
-          1000,
-          1600,
-          "Antes de abrir",
-          "Seguridad",
-          "Baja",
-          "Puesta en marcha"
-        ],
-        [
-          "TPV dos locales",
-          250,
-          450,
-          700,
-          "Antes de abrir",
-          "Tecnología",
           "Media",
           "Puesta en marcha"
         ],
         [
-          "Dos microhubs",
-          800,
-          1150,
-          1500,
+          "6 espejos grandes de pared",
+          240,
+          400,
+          600,
+          "Antes de abrir",
+          "Equipamiento",
+          "Media",
+          "Puesta en marcha"
+        ],
+        [
+          "Baldas, muebles y espera mínimos",
+          220,
+          350,
+          570,
+          "Antes de abrir",
+          "Equipamiento",
+          "Media",
+          "Puesta en marcha"
+        ],
+        [
+          "Iluminación y pequeños elementos eléctricos",
+          160,
+          260,
+          600,
+          "Antes de abrir",
+          "Instalaciones",
+          "Media",
+          "Puesta en marcha"
+        ],
+        [
+          "Pintura DIY y limpieza básica",
+          210,
+          280,
+          360,
+          "Antes de abrir",
+          "Acondicionamiento",
+          "Media",
+          "Puesta en marcha"
+        ],
+        [
+          "Dos microhubs y cartelería",
+          130,
+          200,
+          390,
           "Antes de abrir",
           "Equipamiento logístico",
+          "Media",
+          "Puesta en marcha"
+        ],
+        [
+          "Transporte y contingencia física",
+          420,
+          1110,
+          1400,
+          "Antes de abrir",
+          "Contingencia",
           "Baja",
           "Puesta en marcha"
         ],
@@ -1635,14 +1615,24 @@
           "Operación"
         ],
         [
-          "Reserva e imprevistos",
-          2000,
+          "Colchón de puesta en marcha",
+          800,
+          1000,
           2500,
-          3000,
           "Inicio",
-          "Contingencia",
+          "Reserva",
           "Baja",
           "Operación"
+        ],
+        [
+          "Técnico, trámites y sorpresas",
+          1428.72,
+          1328.72,
+          3739.72,
+          "Antes de abrir",
+          "Trámites",
+          "Baja",
+          "Puesta en marcha"
         ]
       ],
       "timeline": [
@@ -1672,13 +1662,13 @@
         ],
         [
           "Contratar y adecuar",
-          "LOW/BASE/HIGH",
+          "2.100 / 3.500 / 5.000 € de CAPEX físico",
           "propietario + industriales",
           "dos locales operativos",
           "1–2 meses",
           "gates superados",
           "sobrecoste",
-          "parar sobre 20.000 € sin revalidar"
+          "revalidar si el capital total supera el rango HIGH"
         ]
       ],
       "checklist": [

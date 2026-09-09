@@ -107,6 +107,30 @@
       "location": "Madrid — Boldano 41 y Puntallana 20",
       "date": "08/09/2026",
       "status": "HIPÓTESIS/ESTIMACIÓN; autorización AVS, licencia, presupuestos y contratos pendientes de evidencia escrita"
+    },
+    {
+      "variable": "CAPEX lean AVS · sillones usados",
+      "source": "Milanuncios — mobiliario peluquería / sillas",
+      "url": "https://www.milanuncios.com/mobiliario-de-peluqueria-en-madrid/sillas.htm",
+      "location": "Madrid",
+      "date": "09/09/2026",
+      "status": "ESTIMADO · referencia puntual de mercado de segunda mano para rango LOW/BASE/HIGH; anuncios individuales no prueban precio de cierre"
+    },
+    {
+      "variable": "CAPEX lean AVS · espejos usados",
+      "source": "Milanuncios — espejos / mobiliario",
+      "url": "https://www.milanuncios.com/mobiliario-de-peluqueria-en-madrid/espejos.htm",
+      "location": "Madrid",
+      "date": "09/09/2026",
+      "status": "ESTIMADO · referencia puntual de mercado de segunda mano; disponibilidad, estado, negociación y transporte variables"
+    },
+    {
+      "variable": "CAPEX lean AVS · pintura DIY",
+      "source": "Leroy Merlin — pintura interior",
+      "url": "https://www.leroymerlin.es/productos/pintura/pintura-interior/",
+      "location": "Madrid",
+      "date": "09/09/2026",
+      "status": "ESTIMADO · referencia de materiales; no incluye mano de obra profesional"
     }
   ]
 }

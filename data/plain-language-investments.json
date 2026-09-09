@@ -547,10 +547,10 @@
       "name": "AVS híbrido Madrid",
       "page": "inversiones/entender-madrid-avs-hybrid.html",
       "summary": "Dos locales alquilados, cada uno con tres puestos de barbería y un microhub: ocho canales de monetización sobre una infraestructura, no ocho negocios independientes.",
-      "ownership": "No se compran inmuebles. Se financian adecuación, seis sillas, mínimo cuatro espejos, mobiliario, luz, electricidad, seguridad, TPV, microhubs, fianza y circulante.",
+      "ownership": "6 puestos de barbería, mobiliario lean, pintura, equipamiento mínimo, dos microhubs, fianza y capital circulante para operar sobre dos locales AVS alquilados. Los locales no forman parte del patrimonio del promotor.",
       "income": "Rentas de puestos más margen de Catcher y Amazon después de pagar repartidores; IVA no es beneficio.",
       "effort": "Negocio semi-delegado y operativo; requiere captación, coordinación, incidencias, contratos y control.",
-      "advantage": "Barbería y logística comparten alquiler, RETA, gestoría, internet, cámaras, alarma, seguros y suministros sin duplicarlos.",
+      "advantage": "Alquiler AVS bonificado, mobiliario profesional usado, equipamiento mínimo, autónomos independientes e infraestructura compartida permiten explotar seis puestos y dos canales logísticos con capital inicial reducido.",
       "risk": "AVS, licencia, contratos, ocupación, diseño físico y costes siguen pendientes.",
       "steps": [
         "Validar AVS y licencia",
@@ -564,7 +564,7 @@
         "Margen Catcher y Amazon tras repartidores"
       ],
       "moneyOut": [
-        "CAPEX bottom-up y fianza",
+        "CAPEX físico lean BASE estimado 3.500 €; capital total BASE 9.000 €",
         "Renta AVS, luz, agua, internet, TPV, alarmas, seguros, gestoría, RETA, limpieza y mantenimiento",
         "120 €/mes exclusivamente incremental de logística"
       ],
@@ -589,24 +589,29 @@
       "thesisAgainst": "ROI alto de negocio operativo sin activo residual y con gates críticos.",
       "dataStates": [
         [
-          "Ocupación 90 %",
-          "5,4 sillas equivalentes",
+          "CAPEX lean segunda mano",
+          "≈3.500 € físico",
+          "ESTIMADO"
+        ],
+        [
+          "Capital total",
+          "≈9.000 €",
+          "BASE"
+        ],
+        [
+          "Precio/ocupación",
+          "400 €/mes + IVA; 90 %",
           "HIPÓTESIS"
         ],
         [
           "Amazon/Catcher",
-          "tarifas y volúmenes",
+          "tarifas, volúmenes, contrato y delegación",
           "PENDIENTE"
         ],
         [
-          "AVS/licencia",
-          "uso híbrido y sin lavacabezas",
+          "Actividad/licencia",
+          "compatibilidad híbrida, requisitos y ausencia de lavacabezas de cliente",
           "PENDIENTE"
-        ],
-        [
-          "CAPEX",
-          "bottom-up LOW/BASE/HIGH",
-          "ESTIMADO"
         ]
       ],
       "glossary": [

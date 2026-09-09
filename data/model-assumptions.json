@@ -1431,7 +1431,7 @@
       "dataConfidence": 0.18
     },
     "financing": {
-      "equity": 14911.28,
+      "equity": 9000,
       "debt": 0
     },
     "evidence": {
@@ -1449,7 +1449,7 @@
         "ocupación 90 %",
         "contratos Amazon/Catcher",
         "delegación",
-        "suficiencia de 1 m² y cuatro espejos",
+        "suficiencia de 1 m² y seis espejos",
         "suministros",
         "CAPEX"
       ]
@@ -1482,9 +1482,9 @@
     ],
     "scenarios": {
       "pessimistic": {
-        "name": "Defensivo",
-        "capex": 21201.28,
-        "entryCost": 21201.28,
+        "name": "Prudente · CAPEX HIGH + operación defensiva",
+        "capex": 14911,
+        "entryCost": 14911,
         "revenue": 29364,
         "opex": 18619.68,
         "growth": 0,
@@ -1495,11 +1495,11 @@
         "monthsToFirstIncome": 3
       },
       "base": {
-        "name": "Base de decisión",
-        "capex": 14911.28,
-        "entryCost": 14911.28,
+        "name": "Central · CAPEX BASE + operación base",
+        "capex": 9000,
+        "entryCost": 9000,
         "revenue": 46152,
-        "opex": 24481.68,
+        "opex": 23881.68,
         "growth": 0,
         "opexGrowth": 0.02,
         "assetValue": 0,
@@ -1508,9 +1508,9 @@
         "monthsToFirstIncome": 2
       },
       "optimistic": {
-        "name": "Objetivo",
-        "capex": 10511.28,
-        "entryCost": 10511.28,
+        "name": "Favorable · CAPEX LOW + operación buena",
+        "capex": 7000,
+        "entryCost": 7000,
         "revenue": 47784,
         "opex": 24241.68,
         "growth": 0,
